@@ -1,0 +1,24 @@
+com/example/wpws/BuildConfig.java
+ com.example.wpws.BuildConfig
+com/example/wpws/CondMode.java
+ com.example.wpws.CondMode
+com/example/wpws/Condition.java
+ com.example.wpws.Condition
+ com.example.wpws.Condition$1
+com/example/wpws/CondType.java
+ com.example.wpws.CondType
+com/example/wpws/Day.java
+ com.example.wpws.Day
+com/example/wpws/Location.java
+ com.example.wpws.Location
+com/example/wpws/DayConditions.java
+ com.example.wpws.DayConditions
+com/example/wpws/Alarm.java
+ com.example.wpws.Alarm
+com/example/wpws/Forecast.java
+ com.example.wpws.Forecast
+com/example/wpws/MainActivity.java
+ com.example.wpws.MainActivity
+ com.example.wpws.MainActivity$1
+ com.example.wpws.MainActivity$2
+ com.example.wpws.MainActivity$3
