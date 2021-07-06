@@ -34,7 +34,7 @@ public class Location {
         longitude = lon;
         city_name = cityName;
         country_name = countryName;
-        name = cityName;
+        name = cityName + ", " + countryName;
     }
 
     public float getLatitude() {

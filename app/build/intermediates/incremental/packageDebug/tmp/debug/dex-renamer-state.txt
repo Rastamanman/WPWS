@@ -1,4 +1,4 @@
-#Wed Jun 09 15:36:01 EEST 2021
+#Tue Jul 06 14:36:40 EEST 2021
 base.2=C\:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
 path.2=9/classes.dex
 base.1=C\:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

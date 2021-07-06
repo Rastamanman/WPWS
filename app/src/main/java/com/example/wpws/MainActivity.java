@@ -2,6 +2,8 @@ package com.example.wpws;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
@@ -10,6 +12,7 @@ import android.os.StrictMode;
 import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -34,10 +37,14 @@ public class MainActivity extends AppCompatActivity {
     private static final String OPEN_WEATHER_MAP_URL ="https://api.weatherbit.io/v2.0/forecast/daily?lat=%s&lon=%s&key=%s";
     private static final String OPEN_WEATHER_MAP_API ="6c5da0a9e9694b94aa82f50bfd5e39d5";
 
-    List<Forecast> forecasts = new ArrayList<>();
-    List<Location> locatii = new ArrayList<>();
-    List<Alarm> alarme = new ArrayList<>();
+    private List<Forecast> forecasts = new ArrayList<>();
+    private List<Location> locatii = new ArrayList<>();
+    private List<Alarm> alarme = new ArrayList<>();
 
+    private RecyclerView fcRecycler;
+    private RecyclerView.LayoutManager layoutManager;
+    private ArrayList<ForecastItem> fcItems = new ArrayList<>();
+    private ForecastAdapter fcAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy((policy));
@@ -70,12 +77,43 @@ public class MainActivity extends AppCompatActivity {
         //get forecast for all  aka UPDATE
         getAllForecasts();
 
+        //create forecasts items
+        makeFcItems();
+
+        //build forecasts recycler view
+        buildRecycler();
+
+        //load views
+        loadForecastView();
+
         //check alarms for every location
         checkAlarms();
 
         saveData();
 
         doNothing();
+    }
+
+    //done
+    private void makeFcItems()
+    {
+        fcItems.clear();
+        for(Forecast fc : forecasts)
+        {
+            fcItems.add(new ForecastItem(fc));
+        }
+    }
+
+    //done
+    private void buildRecycler()
+    {
+        fcRecycler = findViewById(R.id.forecasts_recycler);
+        fcRecycler.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        fcAdapter = new ForecastAdapter(fcItems);
+
+        fcRecycler.setLayoutManager(layoutManager);
+        fcRecycler.setAdapter(fcAdapter);
     }
 
     //done
@@ -287,6 +325,11 @@ public class MainActivity extends AppCompatActivity {
     private void requestPermissions()
     {
         ActivityCompat.requestPermissions(this ,new String[]{ACCESS_FINE_LOCATION}, 1);
+    }
+
+    private void loadForecastView()
+    {
+
     }
 
     private void doNothing()

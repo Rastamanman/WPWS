@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/fc_name"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:fontFamily="serif"
+            android:textSize="30sp"
+            android:text="Nume Locatie">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_location"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#c8c8c8"
+            android:layout_below="@+id/fc_name"
+            android:text="(Oras,TRA)"
+            android:textSize="15sp">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_description"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/fc_location"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            android:text="Today: Ploua sau nu ploua">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_temp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fc_description"
+            android:textColor="#000000"
+            android:autoSizeTextType="uniform"
+            android:text="Temperature: 99.9 C">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_rh"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fc_temp"
+            android:textColor="#000000"
+            android:autoSizeTextType="uniform"
+            android:text="Relative Humidity: 99.9%">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_wspeed"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fc_rh"
+            android:textColor="#000000"
+            android:autoSizeTextType="uniform"
+            android:text="Wind Speed: 999.9 m/s">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_pop"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fc_wspeed"
+            android:textColor="#000000"
+            android:autoSizeTextType="uniform"
+            android:text="Chance of Rain: 99.9%">
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>
