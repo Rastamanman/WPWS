@@ -64,6 +64,9 @@ public class DayConditions {
         //snow
         if(toBuild.getSnowMode() != 0)
             addCondition(new Condition(toBuild.getSnowText(), toBuild.getSnowMode(), toBuild.getSnowVal()));
+        //pressure
+        if(toBuild.getPresMode() != 0)
+            addCondition(new Condition(toBuild.getPresText(), toBuild.getPresMode(), toBuild.getPresVal()));
         //clouds
         if(toBuild.getCloudsMode() != 0)
             addCondition(new Condition(toBuild.getCloudsText(), toBuild.getCloudsMode(), toBuild.getCloudsVal()));

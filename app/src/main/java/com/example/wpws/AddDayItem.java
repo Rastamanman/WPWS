@@ -37,6 +37,10 @@ public class AddDayItem {
     private int snowMode;
     private float snowVal;
     private String snowSymb;
+    private String presText;
+    private int presMode;
+    private float presVal;
+    private String presSymb;
     private String cloudsText;
     private int cloudsMode;
     private float cloudsVal;
@@ -76,6 +80,10 @@ public class AddDayItem {
         this.snowMode = 0;
         this.snowVal = 0;
         this.snowSymb = "mm";
+        this.presText = "Pressure";
+        this.presMode = 0;
+        this.presVal = 0;
+        this.presSymb = "mb";
         this.cloudsText = "Clouds";
         this.cloudsMode = 0;
         this.cloudsVal = 0;
@@ -386,4 +394,35 @@ public class AddDayItem {
         this.wspSymb = wspSymb;
     }
 
+    public String getPresText() {
+        return presText;
+    }
+
+    public void setPresText(String presText) {
+        this.presText = presText;
+    }
+
+    public int getPresMode() {
+        return presMode;
+    }
+
+    public void setPresMode(int presMode) {
+        this.presMode = presMode;
+    }
+
+    public float getPresVal() {
+        return presVal;
+    }
+
+    public void setPresVal(float presVal) {
+        this.presVal = presVal;
+    }
+
+    public String getPresSymb() {
+        return presSymb;
+    }
+
+    public void setPresSymb(String presSymb) {
+        this.presSymb = presSymb;
+    }
 }

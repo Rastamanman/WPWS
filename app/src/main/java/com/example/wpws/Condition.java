@@ -36,7 +36,7 @@ public class Condition {
             case "RH":
                 tip = CondType.RH;
                 break;
-            case "PRECIP":
+            case "PRECIPITATION":
                 tip = CondType.PRECIP;
                 break;
             case "CHANCE OF RAIN":
@@ -50,6 +50,9 @@ public class Condition {
                 break;
             case "WIND SPEED":
                 tip = CondType.WND_SPEED;
+                break;
+            case "PRESSURE":
+                tip = CondType.PRES;
                 break;
             default:
                 tip = CondType.NONE;

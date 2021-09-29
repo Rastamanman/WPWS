@@ -32,12 +32,12 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\alarm_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_app_icon_background.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_background.png"
-    },
-    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_background.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_app_icon_background.png.flat",

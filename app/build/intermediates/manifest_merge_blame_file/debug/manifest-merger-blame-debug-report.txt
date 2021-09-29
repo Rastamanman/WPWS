@@ -21,11 +21,11 @@
 13-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:7:22-76
 14
 15    <application
-15-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:5-25:19
+15-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:5-29:19
 16        android:allowBackup="true"
 16-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:10:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-17-->[androidx.core:core:1.5.0] C:\Users\user\.gradle\caches\transforms-3\255d63c0f9f8f5d12ab3191ffb377750\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+17-->[androidx.core:core:1.5.0] C:\Users\user\.gradle\caches\transforms-3\90fb9824b7c639cafcfd19b8aa61b8da\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 18        android:debuggable="true"
 19        android:extractNativeLibs="false"
 20        android:icon="@mipmap/app_icon"
@@ -36,45 +36,54 @@
 22-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:13:9-51
 23        android:supportsRtl="true"
 23-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:14:9-35
-24        android:theme="@style/AppTheme"
-24-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:15:9-40
-25        android:usesCleartextTraffic="true" >
-25-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:16:9-44
-26        <activity android:name="com.example.wpws.ForecastActivity" />
-26-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:17:9-63
-26-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:17:19-51
-27        <activity android:name="com.example.wpws.AlarmActivity" />
-27-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:18:9-51
-27-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:18:19-48
-28        <activity android:name="com.example.wpws.MainActivity" >
-28-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:19:9-24:20
-28-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:19:19-47
-29            <intent-filter>
-29-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:20:13-23:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:21:17-69
-30-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:22:17-77
-32-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:22:27-74
-33            </intent-filter>
-34        </activity>
-35        <activity
-35-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\user\.gradle\caches\transforms-3\a0f533be4226e0a461d64c3db62ac133\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:23:9-26:75
-36            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-36-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\user\.gradle\caches\transforms-3\a0f533be4226e0a461d64c3db62ac133\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:24:13-79
-37            android:exported="false"
-37-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\user\.gradle\caches\transforms-3\a0f533be4226e0a461d64c3db62ac133\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:25:13-37
-38            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-38-->[com.google.android.gms:play-services-base:15.0.1] C:\Users\user\.gradle\caches\transforms-3\a0f533be4226e0a461d64c3db62ac133\transformed\jetified-play-services-base-15.0.1\AndroidManifest.xml:26:13-72
-39
-40        <meta-data
-40-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\user\.gradle\caches\transforms-3\ce3a07091f82567336624a7fe6f9cdf6\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:23:9-25:69
-41            android:name="com.google.android.gms.version"
-41-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\user\.gradle\caches\transforms-3\ce3a07091f82567336624a7fe6f9cdf6\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:24:13-58
-42            android:value="@integer/google_play_services_version" />
-42-->[com.google.android.gms:play-services-basement:15.0.1] C:\Users\user\.gradle\caches\transforms-3\ce3a07091f82567336624a7fe6f9cdf6\transformed\jetified-play-services-basement-15.0.1\AndroidManifest.xml:25:13-66
-43    </application>
-44
-45</manifest>
+24        android:testOnly="true"
+25        android:theme="@style/AppTheme"
+25-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:15:9-40
+26        android:usesCleartextTraffic="true" >
+26-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:16:9-44
+27        <activity android:name="com.example.wpws.ForecastActivity" />
+27-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:17:9-63
+27-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:17:19-51
+28        <activity android:name="com.example.wpws.AlarmActivity" />
+28-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:18:9-51
+28-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:18:19-48
+29        <activity android:name="com.example.wpws.MainActivity" >
+29-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:19:9-24:20
+29-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:19:19-47
+30            <intent-filter>
+30-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:20:13-23:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:21:17-69
+31-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:21:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:22:17-77
+33-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:22:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <meta-data
+37-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:26:9-28:39
+38            android:name="weatherKey"
+38-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:27:13-40
+39            android:value="WW_API" />
+39-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:28:13-37
+40
+41        <activity
+41-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\2ca10e578d7505ad0bf4a2f74b23cc0a\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+42            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+42-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\2ca10e578d7505ad0bf4a2f74b23cc0a\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+43            android:exported="false"
+43-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\2ca10e578d7505ad0bf4a2f74b23cc0a\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+44            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+44-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\2ca10e578d7505ad0bf4a2f74b23cc0a\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+45
+46        <meta-data
+46-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\user\.gradle\caches\transforms-3\e919ab5c3a74666b216793143f89b11f\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+47            android:name="com.google.android.gms.version"
+47-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\user\.gradle\caches\transforms-3\e919ab5c3a74666b216793143f89b11f\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+48            android:value="@integer/google_play_services_version" />
+48-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\user\.gradle\caches\transforms-3\e919ab5c3a74666b216793143f89b11f\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+49    </application>
+50
+51</manifest>

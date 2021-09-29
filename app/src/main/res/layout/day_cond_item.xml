@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp">
+        android:layout_height="190dp">
         <TextView
             android:id="@+id/dc_day_nr"
             android:layout_width="match_parent"
@@ -64,32 +64,22 @@
             android:id="@+id/dc_snow"
             android:layout_width="180dp"
             android:layout_height="25dp"
-            android:layout_marginLeft="20dp"
-            android:autoSizeTextType="uniform"
-            android:text="Snow &lt;= 2000 mm"
-            android:layout_below="@+id/dc_max_temp">
-        </TextView>
-        <TextView
-            android:id="@+id/dc_snow_depth"
-            android:layout_width="190dp"
-            android:layout_height="25dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
             android:layout_marginTop="50dp"
             android:autoSizeTextType="uniform"
-            android:text="Snow depth &lt;= 2000 mm"
-            android:layout_toEndOf="@+id/dc_pres">
+            android:text="Snow &lt;= 2000 mm"
+            android:layout_toRightOf="@id/dc_temp">
         </TextView>
+
         <TextView
             android:id="@+id/dc_clouds"
             android:layout_width="190dp"
             android:layout_height="25dp"
+            android:layout_below="@+id/dc_snow"
             android:layout_marginLeft="210dp"
             android:layout_marginRight="20dp"
             android:autoSizeTextType="uniform"
-            android:text="Clouds &lt;= 100.0%"
-            android:layout_below="@+id/dc_snow_depth">
-        </TextView>
+            android:text="Clouds &lt;= 100.0%"></TextView>
         <TextView
             android:id="@+id/dc_wspeed"
             android:layout_width="190dp"
@@ -120,6 +110,16 @@
             android:text="Chance of rain &lt;= 100.0%"
             android:layout_below="@+id/dc_precip">
         </TextView>
+        <TextView
+            android:id="@+id/fc_separator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/dc_pop"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="25dp"
+            android:text="_______________________________________________________"
+            android:textColor="#cdc7c7"></TextView>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,7 +43,6 @@ public class DayCondAdapter extends RecyclerView.Adapter<DayCondAdapter.DayCondV
             dc_minTemp = view.findViewById(R.id.dc_min_temp);
             dc_maxTemp = view.findViewById(R.id.dc_max_temp);
             dc_snow = view.findViewById(R.id.dc_snow);
-            dc_snowDepth = view.findViewById(R.id.dc_snow_depth);
             dc_clouds = view.findViewById(R.id.dc_clouds);
             dc_wSpeed = view.findViewById(R.id.dc_wspeed);
             dc_precip = view.findViewById(R.id.dc_precip);
@@ -59,7 +58,6 @@ public class DayCondAdapter extends RecyclerView.Adapter<DayCondAdapter.DayCondV
             dc_minTemp.setText(dc.getDcMinTemp());
             dc_maxTemp.setText(dc.getDcMaxTemp());
             dc_snow.setText(dc.getDcSnow());
-            dc_snowDepth.setText(dc.getDcSnowDepth());
             dc_clouds.setText(dc.getDcClouds());
             dc_wSpeed.setText(dc.getDcWSpeed());
             dc_precip.setText(dc.getDcPrecip());

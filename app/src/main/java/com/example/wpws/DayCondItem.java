@@ -58,8 +58,10 @@ public class DayCondItem {
                 case HIGHER_EQ:
                     message = " >= " + cond.getValue();
                     break;
+                case DONT_CARE:
+                    message = " aici era problema";
                 default:
-                    message = " doesn't matter";
+                    message = " doesn't matter.";
             }
             switch(cond.getTip())
             {

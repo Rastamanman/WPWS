@@ -58,7 +58,9 @@ com/example/wpws/AddDayAdapter.java
  com.example.wpws.AddDayAdapter$AddDayViewHolder$16
  com.example.wpws.AddDayAdapter$AddDayViewHolder$17
  com.example.wpws.AddDayAdapter$AddDayViewHolder$18
+ com.example.wpws.AddDayAdapter$AddDayViewHolder$19
  com.example.wpws.AddDayAdapter$AddDayViewHolder$2
+ com.example.wpws.AddDayAdapter$AddDayViewHolder$20
  com.example.wpws.AddDayAdapter$AddDayViewHolder$3
  com.example.wpws.AddDayAdapter$AddDayViewHolder$4
  com.example.wpws.AddDayAdapter$AddDayViewHolder$5

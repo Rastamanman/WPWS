@@ -24,12 +24,12 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\delete_button.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_round.png"
-    },
-    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_round.png"
     },
     {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_foreground.png.flat",

@@ -1,5 +1,6 @@
 package com.example.wpws;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -13,6 +14,8 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -47,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     //request data
     private static final String FORECAST_URL ="https://api.weatherbit.io/v2.0/forecast/daily?lat=%s&lon=%s&key=%s";
     private static final String CURRENT_URL ="https://api.weatherbit.io/v2.0/current?lat=%s&lon=%s&key=%s";
-    private static final String API_KEY ="6c5da0a9e9694b94aa82f50bfd5e39d5";
+    private static String API_KEY;
 
     //data objects
     private static List<Forecast> forecasts = new ArrayList<>();
@@ -99,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
+
+        //get api key
+        API_KEY = BuildConfig.API_KEY;
+
 
         //set swipeContainer(update on scroll up)
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);

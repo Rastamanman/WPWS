@@ -52,6 +52,10 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
         private Spinner day_snow_mode;
         private EditText day_snow_val;
         private TextView day_snow_symb;
+        private TextView day_pres_text;
+        private Spinner day_pres_mode;
+        private EditText day_pres_val;
+        private TextView day_pres_symb;
         private TextView day_clouds_text;
         private Spinner day_clouds_mode;
         private EditText day_clouds_val;
@@ -100,6 +104,11 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
             day_snow_mode = view.findViewById(R.id.snow_spinner);
             day_snow_val = view.findViewById(R.id.snow_edit);
             day_snow_symb = view.findViewById(R.id.snow_symbol);
+            //pres
+            day_pres_text = view.findViewById(R.id.pres_text);
+            day_pres_mode = view.findViewById(R.id.pres_spinner);
+            day_pres_val = view.findViewById(R.id.pres_edit);
+            day_pres_symb = view.findViewById(R.id.pres_symbol);
             //clouds
             day_clouds_text = view.findViewById(R.id.clouds_text);
             day_clouds_mode = view.findViewById(R.id.clouds_spinner);
@@ -269,6 +278,28 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 }
             });
             day_snow_symb.setText(day.getSnowSymb());
+            //pres
+            day_pres_text.setText(day.getPresText());
+            day_pres_mode.setAdapter(day.getAdapter());
+            day_pres_mode.setSelection(day.getPresMode());
+            day_pres_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    day.setPresMode(position);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+                }
+            });
+            day_pres_val.setText("" + day.getPresVal());
+            day_pres_val.addTextChangedListener(new MyTextWatcher<EditText>(day_pres_val) {
+                @Override
+                public void onTextChanged(EditText target, Editable s){
+                    if(target.getText().toString().isEmpty() == false)
+                        day.setPresVal(Float.parseFloat(target.getText().toString()));
+                }
+            });
             //clouds coverage
             day_clouds_text.setText(day.getCloudsText());
             day_clouds_mode.setAdapter(day.getAdapter());

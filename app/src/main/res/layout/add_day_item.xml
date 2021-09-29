@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/relativ_lay"
         android:layout_width="match_parent"
-        android:layout_height="455dp"
+        android:layout_height="475dp"
         android:background="#ffffff">
 
         <TextView
@@ -328,10 +328,53 @@
             android:textSize="15dp"></TextView>
 
         <TextView
-            android:id="@+id/clouds_text"
+            android:id="@+id/pres_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Pressure"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/pres_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/pres_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/pres_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/pres_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/pres_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/pres_edit"
+            android:text="mb"
+            android:textSize="20dp"></TextView>
+        <TextView
+            android:id="@+id/clouds_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pres_edit"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="11dp"
             android:text="Clouds"
@@ -342,7 +385,7 @@
             android:id="@+id/clouds_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_below="@+id/snow_edit"
+            android:layout_below="@+id/pres_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
             android:layout_toRightOf="@+id/clouds_text"
@@ -352,7 +395,7 @@
             android:id="@+id/clouds_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_below="@+id/snow_edit"
+            android:layout_below="@+id/pres_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
             android:layout_toRightOf="@id/clouds_spinner"
@@ -364,7 +407,7 @@
             android:id="@+id/clouds_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/snow_edit"
+            android:layout_below="@+id/pres_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/clouds_edit"
