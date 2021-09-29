@@ -9,6 +9,8 @@ public class ForecastItem {
     private String fcRh;
     private String fcWspeed;
     private String fcPop;
+    private String fcRealFeel;
+    private String fcUv;
 
     ForecastItem(String fcName, String fcLocation, String fcDesc, String fcTemp, String fcRh, String fcWspeed, String fcPop)
     {
@@ -19,19 +21,23 @@ public class ForecastItem {
         this.fcRh = "RH: " + fcRh + "%";
         this.fcWspeed = "Wind speed: " + fcWspeed + " m/s";
         this.fcPop = "Chance of Rain: " + fcPop + "%";
+        this.fcRealFeel = "Real feel: " + fcRealFeel + " C";
+        this.fcUv = "UV index: " + fcUv;
     }
 
     ForecastItem(Forecast fc)
     {
-        Day azi = fc.getDays().get(1);
+        CurrentWeather cw = fc.getCurrentWeather();
 
-        fcName = fc.getLocation().getName();
+        fcName = fc.getName();
         fcLocation = "(" + fc.getCityName() + ", " + fc.getCountryName() + ")";
-        fcDesc = azi.getWeather_desc();
-        fcTemp = "Temperature: " + azi.getTemp() + " C";
-        fcRh = "RH: " + azi.getRh() + "%";
-        fcWspeed = "Wind sppeed: " + azi.getWind_spd() + " m/s";
-        fcPop = "Chance of Rain: " + azi.getPop() + "%";
+        fcDesc = cw.getDesc();
+        fcTemp = "Temperature: " + cw.getTemp() + " C";
+        fcRh = "RH: " + cw.getRh() + "%";
+        fcWspeed = "Wind sppeed: " + cw.getWspeed() + " m/s";
+        fcPop = "Chance of Rain: " + fc.getDays().get(0).getPop() + "%";
+        fcRealFeel = "Real feel: " + cw.getRealFeel() + " C";
+        fcUv = "UV index: " + cw.getUv();
     }
 
     public String getFcName() {
@@ -60,5 +66,13 @@ public class ForecastItem {
 
     public String getFcPop() {
         return fcPop;
+    }
+
+    public String getFcRealFeel() {
+        return fcRealFeel;
+    }
+
+    public String getFcUv() {
+        return fcUv;
     }
 }

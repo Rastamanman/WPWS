@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+        <TextView
+            android:id="@+id/dc_day_nr"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:text="Day #"
+            android:textSize="30sp">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_temp"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:autoSizeTextType="uniform"
+            android:text="Temp &lt;= 999 C"
+            android:layout_below="@+id/dc_day_nr">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_rh"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="RH &lt;= 100%"
+            android:layout_below="@+id/dc_temp">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_pres"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Pressure &lt;= 1083.5 mb"
+            android:layout_below="@+id/dc_rh">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_min_temp"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Min temp &lt;= 999.9 C"
+            android:layout_below="@+id/dc_pres">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_max_temp"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Max temp &lt;= 999.9 C"
+            android:layout_below="@+id/dc_min_temp">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_snow"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Snow &lt;= 2000 mm"
+            android:layout_below="@+id/dc_max_temp">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_snow_depth"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:autoSizeTextType="uniform"
+            android:text="Snow depth &lt;= 2000 mm"
+            android:layout_toEndOf="@+id/dc_pres">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_clouds"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Clouds &lt;= 100.0%"
+            android:layout_below="@+id/dc_snow_depth">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_wspeed"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Wind speed &lt;= 500000 m/s"
+            android:layout_below="@+id/dc_clouds">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_precip"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Precip &lt;= 999.9 mm"
+            android:layout_below="@+id/dc_wspeed">
+        </TextView>
+        <TextView
+            android:id="@+id/dc_pop"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Chance of rain &lt;= 100.0%"
+            android:layout_below="@+id/dc_precip">
+        </TextView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

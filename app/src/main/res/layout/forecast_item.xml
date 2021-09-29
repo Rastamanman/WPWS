@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="185dp"
+        android:layout_height="225dp"
         android:background="#ffffff">
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="20dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="10dp"
-            android:layout_below="@+id/fc_temp"
+            android:layout_below="@+id/fc_rf"
             android:textColor="#000000"
             android:autoSizeTextType="uniform"
             android:text="Relative Humidity: 99.9%">
@@ -86,6 +86,39 @@
             android:textColor="#000000"
             android:autoSizeTextType="uniform"
             android:text="Chance of Rain: 99.9%">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_rf"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fc_temp"
+            android:textColor="#000000"
+            android:autoSizeTextType="uniform"
+            android:text="Real Feel: 100.9 C">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_uv"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/fc_pop"
+            android:textColor="#000000"
+            android:autoSizeTextType="uniform"
+            android:text="UV index: 11+">
+        </TextView>
+        <TextView
+            android:id="@+id/fc_separator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/fc_uv"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="25dp"
+            android:text="_______________________________________________________"
+            android:textColor="#cdc7c7">
         </TextView>
     </RelativeLayout>
 

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativ_lay"
+        android:layout_width="match_parent"
+        android:layout_height="455dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/day_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Day #"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="35dp"></TextView>
+
+        <TextView
+            android:id="@+id/temp_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/day_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="Temp"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/temp_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/day_text"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/temp_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/temp_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/day_text"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/temp_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/temp_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/day_text"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/temp_edit"
+            android:text="C"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/min_temp_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temp_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Min Temp"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/min_temp_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/temp_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/min_temp_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/min_temp_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/temp_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/min_temp_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/min_temp_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temp_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/min_temp_edit"
+            android:text="C"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/max_temp_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/min_temp_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Max Temp"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/max_temp_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/min_temp_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/max_temp_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/max_temp_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/min_temp_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/max_temp_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/max_temp_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/min_temp_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/max_temp_edit"
+            android:text="C"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/rh_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/max_temp_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="RH"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/rh_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/max_temp_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/rh_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/rh_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/max_temp_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/rh_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/rh_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/max_temp_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/rh_edit"
+            android:text="%"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/precip_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rh_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Precipitation"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/precip_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/rh_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/precip_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/precip_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rh_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/precip_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/precip_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rh_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/precip_edit"
+            android:text="mm"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/cor_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/precip_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Chance of Rain"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/cor_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/precip_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/cor_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/cor_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/precip_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/cor_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/cor_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/precip_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/cor_edit"
+            android:text="%"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/snow_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cor_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Snow"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/snow_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/cor_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/snow_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/snow_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/cor_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/snow_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/snow_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cor_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/snow_edit"
+            android:text="mm"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/clouds_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Clouds"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/clouds_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/clouds_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/clouds_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/clouds_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/clouds_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snow_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/clouds_edit"
+            android:text="%"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/wsp_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/clouds_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="Wind speed"
+            android:textColor="#000000"
+            android:textSize="15dp"></TextView>
+
+        <Spinner
+            android:id="@+id/wsp_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/clouds_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/wsp_text"
+            android:tooltipText="don't care"></Spinner>
+
+        <EditText
+            android:id="@+id/wsp_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/clouds_edit"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/wsp_spinner"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:maxLength="6"></EditText>
+
+        <TextView
+            android:id="@+id/wsp_symbol"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/clouds_edit"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/wsp_edit"
+            android:text="m/s"
+            android:textSize="15dp"></TextView>
+
+        <TextView
+            android:id="@+id/fc_separator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/wsp_text"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="25dp"
+            android:text="_______________________________________________________"
+            android:textColor="#cdc7c7"></TextView>
+    </RelativeLayout>
+</RelativeLayout>

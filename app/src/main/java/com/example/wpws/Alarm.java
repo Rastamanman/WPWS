@@ -2,6 +2,8 @@ package com.example.wpws;
 
 import android.util.Log;
 
+import androidx.core.app.NotificationCompat;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,16 +44,5 @@ public class Alarm {
     public void addCondition(int dayIndex, Condition condToAdd) { dayConds.get(dayIndex).addCondition(condToAdd); }
 
     //public Condition getCondition(int index) { return dayConds.get(index); }
-
-    public void notifyAlarm(List<String> daysFound)
-    {
-        String textToNotify = "Conditions found for " + name + " alarm at " + location.getName() +
-                " for the following days: ";
-        for(String day : daysFound)
-        {
-            textToNotify += day + ", ";
-        }
-        Log.println(Log.INFO,"NOTIFICATION", textToNotify);
-    }
 
 }

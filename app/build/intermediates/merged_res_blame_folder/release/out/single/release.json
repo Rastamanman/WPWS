@@ -1,0 +1,214 @@
+[
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_app_icon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_delete_button.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\delete_button.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_add_forecast_dialog.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_forecast_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_background.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_alarm_item.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\alarm_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_background.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_background.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_background.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_activity_alarm.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_alarm.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_add_day_item.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_day_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\app_icon_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_fc_button_clicked.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\fc_button_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_al_button_clicked.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\al_button_clicked.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\app_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_notification_icon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable-v24\\notification_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_background.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\background.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_fc_button_idle.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\fc_button_idle.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_day_cond_item.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\day_cond_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_al_button_idle.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\al_button_idle.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_app_icon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_activity_forecast.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_forecast.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_background.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\drawable_add_button.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\add_button.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_forecast_item.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\forecast_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\layout_add_alarm_dialog.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_alarm_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_foreground.png"
+    }
+]

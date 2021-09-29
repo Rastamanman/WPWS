@@ -1,25 +1,32 @@
 package com.example.wpws;
 
+import android.util.Log;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Forecast {
+public class Forecast  implements Runnable{
 
     private List<Day> zile;
     private Location location;
+    private CurrentWeather currentWeather;
 
     public Forecast()
     {
         location = new Location();
         zile = new ArrayList<>();
+        currentWeather = new CurrentWeather();
     }
 
     public Forecast(Location loc)
     {
         location = loc;
         zile= new ArrayList<>();
+        currentWeather = new CurrentWeather();
     }
 
     public void addDay(JSONObject obj)
@@ -82,8 +89,93 @@ public class Forecast {
         zile.clear();
     }
 
+    public void clearCurrent() { currentWeather = new CurrentWeather(); }
+
     public List<Day> getDays() { return zile; }
 
     public void setDays(List<Day> zileToSet) { zile = zileToSet; }
+
+    public void setCurrentWeather(JSONObject obj) throws JSONException {
+        currentWeather = new CurrentWeather(obj);
+    }
+
+    public CurrentWeather getCurrentWeather()
+    {
+        return currentWeather;
+    }
+
+    public void updateForecastWeather()
+    {
+        JSONObject jsonWeather = null;
+        try{
+            jsonWeather = MainActivity.getWeatherJSON("" + getLatitude(), "" + getLongitude(), "FORECAST");
+        } catch (Exception e)
+        {
+            Log.d("Error", "Cannot process JSON results", e);
+        }
+        try{
+            if(jsonWeather != null)
+            {
+                clearForecast();
+                for(int i = 0; i < jsonWeather.getJSONArray("data").length(); i++)
+                {
+                    addDay(jsonWeather.getJSONArray("data").getJSONObject(i));
+                }
+                setCityName(jsonWeather.getString("city_name"));
+                setCountryName(jsonWeather.getString("country_code"));
+                setLatitude(Float.parseFloat(jsonWeather.getString("lat")));
+                setLongitude(Float.parseFloat(jsonWeather.getString("lon")));
+            }
+        } catch (Exception e){
+            Log.d("Error", "Something went wrong", e);
+        }
+        if(zile.isEmpty())
+            updateForecastWeather();
+    }
+
+    public void updateCurrentWeather()
+    {
+        JSONObject jsonWeather = null;
+        try{
+            jsonWeather = MainActivity.getWeatherJSON("" + getLatitude(), "" + getLongitude(), "CURRENT");
+        } catch (Exception e)
+        {
+            Log.d("Error", "Cannot process JSON results", e);
+        }
+        try{
+            if(jsonWeather != null)
+            {
+                clearCurrent();
+                setCurrentWeather(jsonWeather.getJSONArray("data").getJSONObject(0));
+            }
+        } catch (Exception e){
+            Log.d("Error", "Something went wrong", e);
+        }
+    }
+
+    public void updateForecast()
+    {
+        Thread thread = new Thread(this);
+        thread.start();
+    }
+
+    public void updateForecastLinear()
+    {
+        updateForecastWeather();
+        updateCurrentWeather();
+    }
+
+    //update Forecasts with threading
+    @Override
+    public void run()
+    {
+        updateForecastWeather();
+        updateCurrentWeather();
+    }
+
+    public String getName()
+    {
+        return location.getName();
+    }
 
 }

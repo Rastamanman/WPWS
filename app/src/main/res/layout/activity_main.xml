@@ -10,31 +10,59 @@
     <ImageButton
         android:id="@+id/forecasts_button"
         android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginRight="1dp">
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/fc_button_idle"
+        android:contentDescription="Forecasts"
+        android:tooltipText="Forecasts">
     </ImageButton>
 
     <ImageButton
         android:id="@+id/alarms_button"
-        android:layout_alignParentRight="true"
         android:layout_width="180dp"
-        android:layout_height="60dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:layout_marginBottom="1dp">
-
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/forecasts_button"
+        android:background="@drawable/al_button_idle"
+        android:contentDescription="Alarms"
+        android:tooltipText="Alarms">
     </ImageButton>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/forecasts_button"
-        android:id="@+id/forecasts_recycler">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="648dp">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="50dp"></androidx.recyclerview.widget.RecyclerView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
+    <ImageButton
+        android:id="@+id/add_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/alarms_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/add_button">
+    </ImageButton>
 </RelativeLayout>

@@ -8,17 +8,34 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastViewHolder> {
 
-    private ArrayList<ForecastItem> fcList;
+    private List<ForecastItem> fcList;
+    private static ClickListener clickListener;
 
-    public ForecastAdapter(ArrayList<ForecastItem> fcList)
+    public interface ClickListener {
+        void onItemClick(int position, View v);
+    }
+
+    public void setOnItemClickListener(ClickListener clickListener)
+    {
+        ForecastAdapter.clickListener = clickListener;
+    }
+
+    public void clear()
+    {
+        fcList.clear();
+        notifyDataSetChanged();
+    }
+
+    public ForecastAdapter(List<ForecastItem> fcList)
     {
         this.fcList = fcList;
     }
 
-    public static class ForecastViewHolder extends RecyclerView.ViewHolder {
+    public static class ForecastViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView fc_name;
         private TextView fc_loc;
         private TextView fc_desc;
@@ -26,6 +43,8 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
         private TextView fc_rh;
         private TextView fc_wspeed;
         private TextView fc_pop;
+        private TextView fc_rf;
+        private TextView fc_uv;
 
         public ForecastViewHolder(View view)
         {
@@ -37,6 +56,9 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
             fc_rh = view.findViewById(R.id.fc_rh);
             fc_wspeed = view.findViewById(R.id.fc_wspeed);
             fc_pop = view.findViewById(R.id.fc_pop);
+            fc_rf = view.findViewById(R.id.fc_rf);
+            fc_uv = view.findViewById(R.id.fc_uv);
+            itemView.setOnClickListener(this);
         }
 
         public void setData(ForecastItem fc)
@@ -48,6 +70,14 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
             fc_rh.setText(fc.getFcRh());
             fc_wspeed.setText(fc.getFcWspeed());
             fc_pop.setText(fc.getFcPop());
+            fc_rf.setText(fc.getFcRealFeel());
+            fc_uv.setText(fc.getFcUv());
+        }
+
+        @Override
+        public void onClick(View v)
+        {
+            clickListener.onItemClick(getAdapterPosition(), v);
         }
     }
 
