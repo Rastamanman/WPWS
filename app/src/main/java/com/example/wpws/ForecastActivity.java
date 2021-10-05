@@ -273,11 +273,11 @@ public class ForecastActivity extends AppCompatActivity {
         for(int index = 1; index <= days.size(); index++)
         {
             //set image and valid date text
-            ImageView image = findViewById(getResources().getIdentifier("grid_item_image_"
-                            + index, "id", getPackageName()));
+            ImageView image = findViewById(getResources().getIdentifier("day_" + index + "_image",
+                    "id", getPackageName()));
             setIcon(image, days.get(index - 1).getWeatherIcon());
-            TextView text = findViewById(getResources().getIdentifier("grid_item_date_"
-                            + index, "id", getPackageName()));
+            TextView text = findViewById(getResources().getIdentifier("day_" + index + "_text",
+                    "id", getPackageName()));
             String date = days.get(index - 1).getValidDate();
             String day = date.substring(8);
             String month = date.substring(5,7);
