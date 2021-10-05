@@ -11,7 +11,7 @@
         android:layout_height="650dp"
         android:background="#ffffff">
         <TextView
-            android:id="@+id/al_name"
+            android:id="@+id/alarm_item_name"
             android:layout_width="320dp"
             android:layout_height="35dp"
             android:layout_marginLeft="10dp"
@@ -22,31 +22,32 @@
             android:text="Nume Alarma">
         </TextView>
         <TextView
-            android:id="@+id/al_location"
+            android:id="@+id/alarm_item_location"
             android:layout_width="320dp"
             android:layout_height="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="70dp"
             android:textColor="#c8c8c8"
-            android:layout_below="@+id/al_name"
+            android:layout_below="@+id/alarm_item_name"
             android:text="\@ Nume Locatie(Oras,TRA)"
             android:textSize="15sp">
         </TextView>
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dc_recycler"
+            android:id="@+id/days_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/al_location">
+            android:layout_below="@+id/alarm_item_location">
         </androidx.recyclerview.widget.RecyclerView>
+
         <ImageButton
-            android:id="@+id/al_delete_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/alarm_options_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/delete_button">
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/options_icon">
         </ImageButton>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

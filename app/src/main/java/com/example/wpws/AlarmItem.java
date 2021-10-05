@@ -2,29 +2,29 @@ package com.example.wpws;
 
 public class AlarmItem {
 
-    private String alName;
-    private String alLocation;
+    private String alarmName;
+    private String alarmLocation;
 
-    public AlarmItem(String alName, String alLocation)
+    public AlarmItem(String alarmName, String alLocation)
     {
-        this.alName = alName;
-        this.alLocation = "@" + alLocation;
+        this.alarmName = alarmName;
+        this.alarmLocation = "@" + alLocation;
     }
 
-    public AlarmItem(Alarm al)
+    public AlarmItem(Alarm alarm)
     {
-        alName = al.getName();
-        alLocation = "@" + al.getLocation().getName() + "(" + al.getLocation().getCity_name() +
-                ", " + al.getLocation().getCountry_name() + ")";
+        alarmName = alarm.getName();
+        alarmLocation = "@" + alarm.getLocation().getName() + "(" + alarm.getLocation().getCityName() +
+                ", " + alarm.getLocation().getCountryName() + ")";
     }
 
-    public String getAlName()
+    public String getAlarmName()
     {
-        return alName;
+        return alarmName;
     }
 
-    public String getAlLocation()
+    public String getAlarmLocation()
     {
-        return alLocation;
+        return alarmLocation;
     }
 }

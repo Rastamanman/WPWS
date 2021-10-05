@@ -12,15 +12,15 @@ public class DayConditions {
         conditions = new ArrayList<>();
     }
 
-    public DayConditions(AddDayItem toAdd)
+    public DayConditions(AddDayItem dayItem)
     {
         conditions = new ArrayList<>();
-        this.buildConditions(toAdd);
+        this.buildConditionsFrom(dayItem);
     }
 
-    public DayConditions(List<Condition> condsToAdd)
+    public DayConditions(List<Condition> conditions)
     {
-        conditions = condsToAdd;
+        this.conditions = conditions;
     }
 
     public List<Condition> getConditions() { return conditions; }
@@ -28,51 +28,51 @@ public class DayConditions {
     public boolean checkThisDay(Day dayToCheck)
     {
         boolean result = true;
-        for(Condition cond : conditions)
+        for(Condition condition : conditions)
         {
-            result &= cond.checkCond(dayToCheck);
+            result &= condition.checkConditionFor(dayToCheck);
         }
         return result;
     }
 
-    public void addCondition(Condition condToAdd)
+    public void addCondition(Condition condition)
     {
-        conditions.add(condToAdd);
+        conditions.add(condition);
     }
 
-    public void buildConditions(AddDayItem toBuild)
+    public void buildConditionsFrom(AddDayItem dayItem)
     {
         // 0 = don't care(d.c.)
         //temp
-        if(toBuild.getTempMode() != 0)
-            addCondition(new Condition(toBuild.getTempText(), toBuild.getTempMode(), toBuild.getTempVal()));
+        if(dayItem.getTempMode() != 0)
+            addCondition(new Condition(dayItem.getTempText(), dayItem.getTempMode(), dayItem.getTempValue()));
         //min temp
-        if(toBuild.getMinTempMode() != 0)
-            addCondition(new Condition(toBuild.getMinTempText(), toBuild.getMinTempMode(), toBuild.getMinTempVal()));
+        if(dayItem.getMinTempMode() != 0)
+            addCondition(new Condition(dayItem.getMinTempText(), dayItem.getMinTempMode(), dayItem.getMinTempValue()));
         //max temp
-        if(toBuild.getMaxTempMode() != 0)
-            addCondition(new Condition(toBuild.getMaxTempText(), toBuild.getMaxTempMode(), toBuild.getMaxTempVal()));
+        if(dayItem.getMaxTempMode() != 0)
+            addCondition(new Condition(dayItem.getMaxTempText(), dayItem.getMaxTempMode(), dayItem.getMaxTempValue()));
         //rh
-        if(toBuild.getRhMode() != 0)
-            addCondition(new Condition(toBuild.getRhText(), toBuild.getRhMode(), toBuild.getRhVal()));
+        if(dayItem.getRhMode() != 0)
+            addCondition(new Condition(dayItem.getRhText(), dayItem.getRhMode(), dayItem.getRhValue()));
         //precip
-        if(toBuild.getPrecipMode() != 0)
-            addCondition(new Condition(toBuild.getPrecipText(), toBuild.getPrecipMode(), toBuild.getPrecipVal()));
+        if(dayItem.getPrecipitationMode() != 0)
+            addCondition(new Condition(dayItem.getPrecipitationText(), dayItem.getPrecipitationMode(), dayItem.getPrecipitationValue()));
         //cor(pop)
-        if(toBuild.getCorMode() != 0)
-            addCondition(new Condition(toBuild.getCorText(), toBuild.getCorMode(), toBuild.getCorVal()));
+        if(dayItem.getRainMode() != 0)
+            addCondition(new Condition(dayItem.getRainText(), dayItem.getRainMode(), dayItem.getRainValue()));
         //snow
-        if(toBuild.getSnowMode() != 0)
-            addCondition(new Condition(toBuild.getSnowText(), toBuild.getSnowMode(), toBuild.getSnowVal()));
+        if(dayItem.getSnowMode() != 0)
+            addCondition(new Condition(dayItem.getSnowText(), dayItem.getSnowMode(), dayItem.getSnowValue()));
         //pressure
-        if(toBuild.getPresMode() != 0)
-            addCondition(new Condition(toBuild.getPresText(), toBuild.getPresMode(), toBuild.getPresVal()));
+        if(dayItem.getPressureMode() != 0)
+            addCondition(new Condition(dayItem.getPressureText(), dayItem.getPressureMode(), dayItem.getPressureValue()));
         //clouds
-        if(toBuild.getCloudsMode() != 0)
-            addCondition(new Condition(toBuild.getCloudsText(), toBuild.getCloudsMode(), toBuild.getCloudsVal()));
+        if(dayItem.getCloudsMode() != 0)
+            addCondition(new Condition(dayItem.getCloudsText(), dayItem.getCloudsMode(), dayItem.getCloudsValue()));
         //wind speed
-        if(toBuild.getWspMode() != 0)
-            addCondition(new Condition(toBuild.getWspText(), toBuild.getWspMode(), toBuild.getWspVal()));
+        if(dayItem.getWindSpeedMode() != 0)
+            addCondition(new Condition(dayItem.getWindSpeedText(), dayItem.getWindSpeedMode(), dayItem.getWindSpeedValue()));
     }
 
 }

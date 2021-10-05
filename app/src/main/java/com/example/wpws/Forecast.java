@@ -2,7 +2,6 @@ package com.example.wpws;
 
 import android.util.Log;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,27 +10,27 @@ import java.util.List;
 
 public class Forecast  implements Runnable{
 
-    private List<Day> zile;
+    private List<Day> days;
     private Location location;
     private CurrentWeather currentWeather;
 
     public Forecast()
     {
         location = new Location();
-        zile = new ArrayList<>();
+        days = new ArrayList<>();
         currentWeather = new CurrentWeather();
     }
 
-    public Forecast(Location loc)
+    public Forecast(Location location)
     {
-        location = loc;
-        zile= new ArrayList<>();
+        this.location = location;
+        days = new ArrayList<>();
         currentWeather = new CurrentWeather();
     }
 
     public void addDay(JSONObject obj)
     {
-        zile.add(new Day(obj));
+        days.add(new Day(obj));
     }
 
     public float getLatitude()
@@ -39,9 +38,9 @@ public class Forecast  implements Runnable{
         return location.getLatitude();
     }
 
-    public void setLatitude(float latToSet)
+    public void setLatitude(float latitude)
     {
-        location.setLatitude(latToSet);
+        location.setLatitude(latitude);
     }
 
     public float getLongitude()
@@ -49,29 +48,29 @@ public class Forecast  implements Runnable{
         return location.getLongitude();
     }
 
-    public void setLongitude(float longToSet)
+    public void setLongitude(float longitude)
     {
-        location.setLongitude(longToSet);
+        location.setLongitude(longitude);
     }
 
     public String getCityName()
     {
-        return location.getCity_name();
+        return location.getCityName();
     }
 
-    public void setCityName(String nameToSet)
+    public void setCityName(String name)
     {
-        location.setCity_name(nameToSet);
+        location.setCityName(name);
     }
 
     public String getCountryName()
     {
-        return location.getCountry_name();
+        return location.getCountryName();
     }
 
-    public void setCountryName(String nameToSet)
+    public void setCountryName(String name)
     {
-        location.setCountry_name(nameToSet);
+        location.setCountryName(name);
     }
 
     public Location getLocation()
@@ -79,21 +78,21 @@ public class Forecast  implements Runnable{
         return location;
     }
 
-    public void setLocation(Location locToSet)
+    public void setLocation(Location locationToSet)
     {
-        location = locToSet;
+        location = locationToSet;
     }
 
     public void clearForecast()
     {
-        zile.clear();
+        days.clear();
     }
 
     public void clearCurrent() { currentWeather = new CurrentWeather(); }
 
-    public List<Day> getDays() { return zile; }
+    public List<Day> getDays() { return days; }
 
-    public void setDays(List<Day> zileToSet) { zile = zileToSet; }
+    public void setDays(List<Day> daysToSet) { days = daysToSet; }
 
     public void setCurrentWeather(JSONObject obj) throws JSONException {
         currentWeather = new CurrentWeather(obj);
@@ -129,7 +128,7 @@ public class Forecast  implements Runnable{
         } catch (Exception e){
             Log.d("Error", "Something went wrong", e);
         }
-        if(zile.isEmpty())
+        if(days.isEmpty())
             updateForecastWeather();
     }
 

@@ -1,6 +1,5 @@
 package com.example.wpws;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -14,8 +13,6 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -40,7 +37,6 @@ import java.lang.reflect.Type;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 
@@ -54,16 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
     //data objects
     private static List<Forecast> forecasts = new ArrayList<>();
-    private static List<Location> locatii = new ArrayList<>();
-    private static List<Alarm> alarme = new ArrayList<>();
+    private static List<Location> locations = new ArrayList<>();
+    private static List<Alarm> alarms = new ArrayList<>();
+    private String currentView = ""; //FORECAST or ALARM
 
     //recycler view objects
     private RecyclerView mainRecycler;
     private RecyclerView.LayoutManager layoutManager;
-    private static ArrayList<ForecastItem> fcItems = new ArrayList<>();
-    private static ArrayList<AlarmItem> alItems = new ArrayList<>();
-    private ForecastAdapter fcAdapter;
-    private AlarmAdapter alAdapter;
+    private static ArrayList<ForecastItem> forecastItems = new ArrayList<>();
+    private static ArrayList<AlarmItem> alarmItems = new ArrayList<>();
+    private ForecastAdapter forecastAdapter;
+    private AlarmAdapter alarmAdapter;
     private SwipeRefreshLayout swipeContainer;
 
     //dialog objects
@@ -74,14 +71,6 @@ public class MainActivity extends AppCompatActivity {
         return spinnerValAdapter;
     }
     public static String[] spinnerValues = {"d.c.", "<", "<=", "=", "=>", ">"};
-
-    //add button variables
-    private String whatToAdd = ""; //FORECAST or ALARM
-    private EditText newFc_name, newFc_long, newFc_lat;
-    private EditText newAlName;
-    private Button newFc_add, newAl_add;
-    private Spinner add_al_loc_list;
-    private TextView newFc_error, newAl_error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -106,25 +95,24 @@ public class MainActivity extends AppCompatActivity {
         //get api key
         API_KEY = BuildConfig.API_KEY;
 
-
         //set swipeContainer(update on scroll up)
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                if(whatToAdd == "FORECAST")
+                if(currentView == "FORECAST")
                 {
                     getAllForecasts();
-                    updateFcItems();
-                    fcAdapter.notifyDataSetChanged();
+                    updateForecastItems();
+                    forecastAdapter.notifyDataSetChanged();
                     loadForecastRecycler();
                     swipeContainer.setRefreshing(false);
                 }
-                else if(whatToAdd == "ALARM")
+                else if(currentView == "ALARM")
                 {
                     //getAllForecasts();
-                    updateAlItems();
-                    alAdapter.notifyDataSetChanged();
+                    updateAlarmItems();
+                    alarmAdapter.notifyDataSetChanged();
                     loadAlarmRecycler();
                     swipeContainer.setRefreshing(false);
                 }
@@ -162,24 +150,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //on click on Forecast item in recycleView
-        fcAdapter.setOnItemClickListener(new ForecastAdapter.ClickListener() {
+        forecastAdapter.setOnItemClickListener(new ForecastAdapter.ClickListener() {
             @Override
             public void onItemClick(int position, View v) {
-                String fcName = fcItems.get(position).getFcName();
+                String forecastName = forecastItems.get(position).getForecastName();
                 Intent intent = new Intent(MainActivity.this, ForecastActivity.class);
-                intent.putExtra("ForecastName", fcName);
+                intent.putExtra("ForecastName", forecastName);
                 startActivityForResult(intent, 2);
             }
         });
 
         //on click on Alarm item in recyclerView
-        alAdapter.setOnItemClickListener(new AlarmAdapter.ClickListener() {
+        alarmAdapter.setOnItemClickListener(new AlarmAdapter.ClickListener() {
             @Override
             public void onItemClick(int position, View v)
             {
-                String alName = alItems.get(position).getAlName();
+                String alarmName = alarmItems.get(position).getAlarmName();
                 Intent intent = new Intent(MainActivity.this, AlarmActivity.class);
-                intent.putExtra("AlarmName", alName);
+                intent.putExtra("AlarmName", alarmName);
                 startActivityForResult(intent, 2);
             }
         });
@@ -189,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (whatToAdd)
+                switch (currentView)
                 {
                     case "ALARM":
                         //call AddAlarm dialog
@@ -213,11 +201,34 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, spinnerValues);
         spinnerValAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        //clearUselessLocations();
         saveData();
 
         doNothing();
     }
 
+    private void clearUselessLocations()
+    {
+        Location loc = new Location();
+        for(int index = 0; index < locations.size(); index++)
+        {
+            loc = locations.get(index);
+            boolean found = false;
+            for(Forecast fc : forecasts)
+            {
+                if(fc.getName().equals(loc.getName()) == true)
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if(found == false)
+                locations.remove(index);
+            index--;
+        }
+    }
+
+    //done
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent)
     {
@@ -228,41 +239,43 @@ public class MainActivity extends AppCompatActivity {
             {
                 case 2:
                     //alarm delete
-                    String alarmToDel = intent.getStringExtra("AlarmName");
-                    deleteAlarm(alarmToDel);
+                    String alarmToDelete = intent.getStringExtra("AlarmName");
+                    deleteAlarm(alarmToDelete);
                     break;
                 case 3:
                     //forecast delete
-                    String forecastToDel = intent.getStringExtra("ForecastName");
-                    deleteForecast(forecastToDel);
+                    String forecastToDelete = intent.getStringExtra("ForecastName");
+                    deleteForecast(forecastToDelete);
                     break;
                 default:
                     break;
             }
         }
+        saveData();
+        reloadRecycler();
     }
 
     //done
-    private void updateFcItems()
+    private void updateForecastItems()
     {
-        fcItems.clear();
+        forecastItems.clear();
         if(forecasts.isEmpty())
             return;
-        for(Forecast fc : forecasts)
+        for(Forecast forecast : forecasts)
         {
-            fcItems.add(new ForecastItem(fc));
+            forecastItems.add(new ForecastItem(forecast));
         }
     }
 
     //done
-    private void updateAlItems()
+    private void updateAlarmItems()
     {
-        alItems.clear();
-        if(alarme.isEmpty())
+        alarmItems.clear();
+        if(alarms.isEmpty())
             return;
-        for(Alarm al : alarme)
+        for(Alarm alarm : alarms)
         {
-            alItems.add(new AlarmItem(al));
+            alarmItems.add(new AlarmItem(alarm));
         }
     }
 
@@ -273,8 +286,8 @@ public class MainActivity extends AppCompatActivity {
         mainRecycler.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         mainRecycler.setLayoutManager(layoutManager);
-        alAdapter = new AlarmAdapter(alItems);
-        fcAdapter = new ForecastAdapter(fcItems);
+        alarmAdapter = new AlarmAdapter(alarmItems);
+        forecastAdapter = new ForecastAdapter(forecastItems);
     }
 
     //done
@@ -290,12 +303,12 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("forecasts", json);
         editor.apply();
         //save locations:
-        json = gson.toJson(locatii);
-        editor.putString("locatii", json);
+        json = gson.toJson(locations);
+        editor.putString("locations", json);
         editor.apply();
         //save alarms:
-        json = gson.toJson(alarme);
-        editor.putString("alarme", json);
+        json = gson.toJson(alarms);
+        editor.putString("alarms", json);
         editor.apply();
     }
 
@@ -316,57 +329,57 @@ public class MainActivity extends AppCompatActivity {
             forecasts = new ArrayList<>();
         }
         //load locations:
-        json = sharedPreferences.getString("locatii", null);
+        json = sharedPreferences.getString("locations", null);
         type = new TypeToken<ArrayList<Location>>() {}.getType();
-        locatii = gson.fromJson(json, type);
-        if(locatii == null)
+        locations = gson.fromJson(json, type);
+        if(locations == null)
         {
-            locatii = new ArrayList<>();
+            locations = new ArrayList<>();
         }
         //load alarms:
-        json = sharedPreferences.getString("alarme", null);
+        json = sharedPreferences.getString("alarms", null);
         type = new TypeToken<ArrayList<Alarm>>() {}.getType();
-        alarme = gson.fromJson(json, type);
-        if(alarme == null)
+        alarms = gson.fromJson(json, type);
+        if(alarms == null)
         {
-            alarme = new ArrayList<>();
+            alarms = new ArrayList<>();
         }
     }
 
     //done
     private void getAllForecasts()
     {
-        for(Forecast fc : forecasts)
+        for(Forecast forecast : forecasts)
         {
-            fc.updateForecast();
+            forecast.updateForecast();
         }
     }
 
     //done
     private void checkAlarms()
     {
-        if(alarme.size() == 0 || forecasts.size() == 0)
+        if(alarms.size() == 0 || forecasts.size() == 0)
             return;
 
-        Location tempAlarmLoc;
-        Location tempForecastLoc;
+        Location tempAlarmLocation;
+        Location tempForecastLocation;
         int dayIndex;
         List<String> daysFound = new ArrayList<>();
 
-        for(Alarm alarm : alarme)
+        for(Alarm alarm : alarms)
         {
             if(alarm.getDays().isEmpty())
                 continue;
 
-            tempAlarmLoc = alarm.getLocation();
+            tempAlarmLocation = alarm.getLocation();
 
             outer:
             for(Forecast fc : forecasts)
             {
-                tempForecastLoc = fc.getLocation();
+                tempForecastLocation = fc.getLocation();
                 //alarm loc = forecast loc:
-                if(tempAlarmLoc.getLatitude() == tempForecastLoc.getLatitude()
-                    && tempAlarmLoc.getLongitude() == tempForecastLoc.getLongitude())
+                if(tempAlarmLocation.getLatitude() == tempForecastLocation.getLatitude()
+                    && tempAlarmLocation.getLongitude() == tempForecastLocation.getLongitude())
                 {
                     dayIndex = 0;
                     daysFound.clear();
@@ -375,7 +388,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         if(alarm.getDays().get(dayIndex).checkThisDay(zi))
                         {
-                            daysFound.add(zi.getValid_date());
+                            daysFound.add(zi.getValidDate());
                             dayIndex++;
                             //all conditions met:
                             if(dayIndex == alarm.getDays().size())
@@ -395,12 +408,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void notifyAlarm(Alarm al, List<String> daysFound)
+    private void notifyAlarm(Alarm alarm, List<String> daysFound)
     {
         //set texts
         String title = "Weather Found!";
-        String firstRow = "Conditions found for " + al.getName() + " alarm at " + al.getLocation().getName() +
-                " for the following days:";
+        String firstRow = "Conditions found for " + alarm.getName() + " alarm at "
+                + alarm.getLocation().getName() + " for the following days:";
         String secondRow = "";
         for(String day : daysFound)
         {
@@ -409,7 +422,8 @@ public class MainActivity extends AppCompatActivity {
         secondRow = secondRow.substring(0, secondRow.length() - 2);
 
         //create builder
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "MyNot");
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this,
+                "MyNot");
         builder.setContentTitle(title);
         builder.setSmallIcon(R.drawable.notification_icon);
         builder.setContentText(firstRow);
@@ -421,47 +435,7 @@ public class MainActivity extends AppCompatActivity {
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
         managerCompat.notify(1,builder.build());
 
-        //Log.println(Log.INFO,"NOTIFICATION", textToNotify);
-    }
-
-    //done
-    private static String setWeatherIcon(int actualId, long sunrise, long sunset)
-    {
-        String icon = "";
-        if(actualId == 800)
-        {
-            long currentTime = new Date().getTime();
-            if(currentTime >= sunrise && currentTime <= sunset)
-            {
-                icon = "&#xf00d;";
-            }
-            else
-                icon = "&#xf02e;";
-        }
-        else
-        {
-            switch(actualId){
-                case 2:
-                    icon = "&#xf01e;";
-                    break;
-                case 3:
-                    icon= "&#xf01c;";
-                    break;
-                case 7:
-                    icon = "&#xf014;";
-                    break;
-                case 8:
-                    icon = "&#xf013;";
-                    break;
-                case 6:
-                    icon = "&#xf01b;";
-                    break;
-                case 5:
-                    icon = "&#xf019;";
-                    break;
-            }
-        }
-        return icon;
+        Log.println(Log.INFO,"NOTIFICATION", firstRow + secondRow);
     }
 
     //done
@@ -474,7 +448,8 @@ public class MainActivity extends AppCompatActivity {
             else
                 url = new URL(String.format(CURRENT_URL, lat, lon, API_KEY));
             URLConnection connection = url.openConnection();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection
+                    .getInputStream()));
             StringBuffer json = new StringBuffer(1024);
             String tmp;
             while((tmp = reader.readLine()) != null)
@@ -501,29 +476,29 @@ public class MainActivity extends AppCompatActivity {
     //done
     private void loadForecastRecycler()
     {
-        updateFcItems();
-        fcAdapter = new ForecastAdapter(fcItems);
-        mainRecycler.setAdapter(fcAdapter);
+        updateForecastItems();
+        forecastAdapter = new ForecastAdapter(forecastItems);
+        mainRecycler.setAdapter(forecastAdapter);
         findViewById(R.id.forecasts_button).setBackgroundResource(R.drawable.fc_button_clicked);
         findViewById(R.id.alarms_button).setBackgroundResource(R.drawable.al_button_idle);
-        whatToAdd = "FORECAST";
+        currentView = "FORECAST";
     }
 
     //done
     private void loadAlarmRecycler()
     {
-        updateAlItems();
-        alAdapter = new AlarmAdapter(alItems);
-        mainRecycler.setAdapter(alAdapter);
+        updateAlarmItems();
+        alarmAdapter = new AlarmAdapter(alarmItems);
+        mainRecycler.setAdapter(alarmAdapter);
         findViewById(R.id.forecasts_button).setBackgroundResource(R.drawable.fc_button_idle);
         findViewById(R.id.alarms_button).setBackgroundResource(R.drawable.al_button_clicked);
-        whatToAdd = "ALARM";
+        currentView = "ALARM";
     }
 
     //done
     private void reloadRecycler()
     {
-        switch (whatToAdd){
+        switch (currentView){
             case "FORECAST":
                 loadForecastRecycler();
                 break;
@@ -546,11 +521,11 @@ public class MainActivity extends AppCompatActivity {
         //set dialog and views
         dialogBuilder = new AlertDialog.Builder(MainActivity.this);
         final View newForecastView = getLayoutInflater().inflate(R.layout.add_forecast_dialog, null);
-        newFc_name = (EditText) newForecastView.findViewById(R.id.add_fc_name);
-        newFc_lat = (EditText) newForecastView.findViewById(R.id.add_fc_lat);
-        newFc_long = (EditText) newForecastView.findViewById(R.id.add_fc_long);
-        newFc_add = (Button) newForecastView.findViewById(R.id.add_fc_button);
-        newFc_error = (TextView) newForecastView.findViewById(R.id.add_fc_error);
+        EditText newForecastName = (EditText) newForecastView.findViewById(R.id.add_forecast_name);
+        EditText newForecastLatitude = (EditText) newForecastView.findViewById(R.id.add_forecast_latitude);
+        EditText newForecastLongitude = (EditText) newForecastView.findViewById(R.id.add_forecast_longitude);
+        Button newForecastButton = (Button) newForecastView.findViewById(R.id.add_forecast_button);
+        TextView newForecastError = (TextView) newForecastView.findViewById(R.id.add_forecast_error);
 
         //build dialog
         dialogBuilder.setView(newForecastView);
@@ -558,75 +533,75 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
 
         //click on add button
-        newFc_add.setOnClickListener(new View.OnClickListener() {
+        newForecastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //check name validity
-                String name_value;
-                if(newFc_name.getText().toString().isEmpty())
+                String newName;
+                if(newForecastName.getText().toString().isEmpty())
                 {
-                    newFc_error.setText("No name given!");
+                    newForecastError.setText("No name given!");
                     return;
                 }
                 else
-                    name_value = newFc_name.getText().toString();
-                for(Location loc : locatii)
+                    newName = newForecastName.getText().toString();
+                for(Location location : locations)
                 {
-                    if(loc.getName().equals(name_value))
+                    if(location.getName().equals(newName))
                     {
-                        newFc_error.setText("Location name already exists!");
+                        newForecastError.setText("Location name already exists!");
                         return;
                     }
                 }
 
                 //check longitude validity
-                float long_value = 999;
-                if(newFc_long.getText().toString().isEmpty())
+                float longitude = 999;
+                if(newForecastLongitude.getText().toString().isEmpty())
                 {
-                    newFc_error.setText("No Longitude input!");
+                    newForecastError.setText("No Longitude input!");
                     return;
                 }
                 else
                     try {
-                        long_value = Float.valueOf(newFc_long.getText().toString());
+                        longitude = Float.valueOf(newForecastLongitude.getText().toString());
                     }
                     catch(Exception e)
                     {
-                        newFc_error.setText("Longitude is not a number");
+                        newForecastError.setText("Longitude is not a number");
                     }
-                if(long_value < -180 || long_value > 180)
+                if(longitude < -180 || longitude > 180)
                 {
-                    newFc_error.setText("Longitude out of bounds!");
+                    newForecastError.setText("Longitude out of bounds!");
                     return;
                 }
 
                 //check latitude validity
-                float lat_value = 999;
-                if(newFc_lat.getText().toString().isEmpty())
+                float latitude = 999;
+                if(newForecastLatitude.getText().toString().isEmpty())
                 {
-                    newFc_error.setText("No Latitude input!");
+                    newForecastError.setText("No Latitude input!");
                     return;
                 }
                 else
                     try{
-                        lat_value = Float.valueOf(newFc_lat.getText().toString());
+                        latitude = Float.valueOf(newForecastLatitude.getText().toString());
                     }
                     catch(Exception e)
                     {
-                        newFc_error.setText("Latitude is not a number");
+                        newForecastError.setText("Latitude is not a number");
                     }
-                if(lat_value < -90 || lat_value > 90)
+                if(latitude < -90 || latitude > 90)
                 {
-                    newFc_error.setText("Latitude out of bounds!");
+                    newForecastError.setText("Latitude out of bounds!");
                     return;
                 }
 
                 //if everything good
-                Location newLoc = new Location(lat_value, long_value, "", "", name_value);
-                locatii.add(newLoc);
-                Forecast fcToAdd = new Forecast(newLoc);
-                fcToAdd.updateForecastLinear();
-                forecasts.add(fcToAdd);
+                Location newLocation = new Location(latitude, longitude, newName);
+                locations.add(newLocation);
+                Forecast newForecast = new Forecast(newLocation);
+                newForecast.updateForecastLinear();
+                forecasts.add(newForecast);
                 saveData();
                 reloadRecycler();
                 dialog.dismiss();
@@ -634,116 +609,124 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //done
     private void createNewAlarmDialog()
     {
         //set dialog and views
         dialogBuilder = new AlertDialog.Builder(MainActivity.this);
         final View newAlarmView = getLayoutInflater().inflate(R.layout.add_alarm_dialog, null);
-        newAlName = (EditText) newAlarmView.findViewById(R.id.add_al_name);
-        add_al_loc_list = (Spinner) newAlarmView.findViewById(R.id.add_al_loc_list);
-        TextView newAl_error = (TextView) newAlarmView.findViewById(R.id.new_al_error);
+        EditText newAlarmName = (EditText) newAlarmView.findViewById(R.id.alarm_dialog_name);
+        Spinner newAlarmLocation = (Spinner) newAlarmView.findViewById(R.id.alarm_dialog_locations);
+        TextView newAlarmError = (TextView) newAlarmView.findViewById(R.id.alarm_dialog_error);
 
-        //set and build things(spinner, recycler, buttons)
-        {
-            //set spinner
-            String[] spinner_locations = new String[forecasts.size()];
-            int index = 0;
-            for (Forecast fc : forecasts) {
-                spinner_locations[index] = fc.getName();
-                index++;
-            }
-            ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
-                    android.R.layout.simple_list_item_1, spinner_locations);
-            myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            add_al_loc_list.setAdapter(myAdapter);
-
-            //recyclerview
-            List<AddDayItem> daysList = new ArrayList<>();
-            daysList.add(new AddDayItem(1));
-            final AddDayAdapter[] daysAdapter = {new AddDayAdapter(daysList)};
-            RecyclerView addRecycler;
-            addRecycler = newAlarmView.findViewById(R.id.alarm_dialog_recycler);
-            addRecycler.setHasFixedSize(true);
-            RecyclerView.LayoutManager layoutManager;
-            layoutManager = new LinearLayoutManager(this);
-            addRecycler.setAdapter(daysAdapter[0]);
-            addRecycler.setLayoutManager(layoutManager);
-
-            //buttons
-            //add new day button
-            Button addDayB = (Button) newAlarmView.findViewById(R.id.al_dialog_add_day);
-            addDayB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //add new day in recyclerview
-                    daysList.add(new AddDayItem(daysList.size() + 1));
-                    daysAdapter[0] = new AddDayAdapter(daysList);
-                    addRecycler.setAdapter(daysAdapter[0]);
-                }
-            });
-            //delete last day button
-            Button delDayB = (Button) newAlarmView.findViewById(R.id.al_dialog_del_day);
-            delDayB.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //delete last day in recyclerview
-                    if (daysList.size() > 1) {
-                        daysList.remove(daysList.size() - 1);
-                        daysAdapter[0] = new AddDayAdapter(daysList);
-                        addRecycler.setAdapter(daysAdapter[0]);
-                    }
-                }
-            });
-            //add alarm button
-            Button add_al_button = (Button) newAlarmView.findViewById(R.id.add_al_button);
-            add_al_button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //check if all good
-                    String name_value;
-                    if(newAlName.getText().toString().isEmpty())
-                    {
-                        newAl_error.setText("No name given!");
-                        return;
-                    }
-                    else
-                        name_value = newAlName.getText().toString();
-                    Location locToAdd = getLocationByName(add_al_loc_list.getSelectedItem().toString());
-                    if(locToAdd == null)
-                    {
-                        newAl_error.setText("Location not found");
-                        return;
-                    }
-                    //if all good then add to alarms
-                    Alarm alToAdd = new Alarm();
-                    alToAdd.setName(name_value);
-                    alToAdd.setLocation(locToAdd);
-                    for (AddDayItem d : daysList) {
-                        DayConditions day = new DayConditions(d);
-                        alToAdd.addDay(day);
-                    }
-                    alarme.add(alToAdd);
-                    saveData();
-                    reloadRecycler();
-                    dialog.dismiss();
-                }
-            });
+        //set location spinner
+        String[] spinnerLocations = new String[forecasts.size()];
+        int index = 0;
+        for (Forecast forecast : forecasts) {
+            spinnerLocations[index] = forecast.getName();
+            index++;
         }
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(MainActivity.this,
+                android.R.layout.simple_list_item_1, spinnerLocations);
+        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        newAlarmLocation.setAdapter(spinnerAdapter);
 
+        //recyclerview
+        List<AddDayItem> daysList = new ArrayList<>();
+        daysList.add(new AddDayItem(1));
+        final AddDayAdapter[] daysAdapter = {new AddDayAdapter(daysList)};
+        RecyclerView addRecycler;
+        addRecycler = newAlarmView.findViewById(R.id.alarm_dialog_recycler);
+        addRecycler.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager;
+        layoutManager = new LinearLayoutManager(this);
+        addRecycler.setAdapter(daysAdapter[0]);
+        addRecycler.setLayoutManager(layoutManager);
+
+        //show dialog
         dialogBuilder.setView(newAlarmView);
         dialog = dialogBuilder.create();
         dialog.show();
+
+        //buttons
+        //add new day button
+        Button addDayButton = (Button) newAlarmView.findViewById(R.id.alarm_dialog_add_day);
+        addDayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //add new day in recyclerview
+                daysList.add(new AddDayItem(daysList.size() + 1));
+                daysAdapter[0] = new AddDayAdapter(daysList);
+                addRecycler.setAdapter(daysAdapter[0]);
+            }
+        });
+        //delete last day button
+        Button delDayButton = (Button) newAlarmView.findViewById(R.id.alarm_dialog_delete_day);
+        delDayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //delete last day in recyclerview
+                if (daysList.size() > 1) {
+                    daysList.remove(daysList.size() - 1);
+                    daysAdapter[0] = new AddDayAdapter(daysList);
+                    addRecycler.setAdapter(daysAdapter[0]);
+                }
+            }
+        });
+        //add alarm button
+        Button addAlarmButton = (Button) newAlarmView.findViewById(R.id.alarm_dialog_button);
+        addAlarmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //check if all good
+                String newName;
+                if(newAlarmName.getText().toString().isEmpty())
+                {
+                    newAlarmError.setText("No name given!");
+                    return;
+                }
+                else
+                    newName = newAlarmName.getText().toString();
+                for(Alarm alarm : alarms)
+                {
+                    if(alarm.getName() == newName)
+                    {
+                        newAlarmError.setText("Name already exists!");
+                        return;
+                    }
+                }
+
+                Location newLocation = getLocation(newAlarmLocation.getSelectedItem().toString());
+                if(newLocation == null)
+                {
+                    newAlarmError.setText("Location not found");
+                    return;
+                }
+                //if all good then add to alarms
+                Alarm newAlarm = new Alarm();
+                newAlarm.setName(newName);
+                newAlarm.setLocation(newLocation);
+                for (AddDayItem day : daysList) {
+                    DayConditions newDay = new DayConditions(day);
+                    newAlarm.addDay(newDay);
+                }
+                alarms.add(newAlarm);
+                saveData();
+                reloadRecycler();
+                dialog.dismiss();
+            }
+        });
     }
 
     //done
-    public void deleteForecast(String fcName)
+    public void deleteForecast(String forecastName)
     {
-        for(Forecast fc : forecasts)
+        for(Forecast forecast : forecasts)
         {
-            if(fc.getName().equals(fcName))
+            if(forecast.getName().equals(forecastName))
             {
-                locatii.remove(fc.getLocation());
-                forecasts.remove(fc);
+                locations.remove(forecast.getLocation());
+                forecasts.remove(forecast);
                 saveData();
                 reloadRecycler();
                 return;
@@ -752,24 +735,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //done
-    public static Forecast getForecastByName(String fcName)
+    public static Forecast getForecast(String forecastName)
     {
-        for(Forecast fc : forecasts)
+        for(Forecast forecast : forecasts)
         {
-            if(fc.getName().equals(fcName))
-                return fc;
+            if(forecast.getName().equals(forecastName))
+                return forecast;
         }
         return null;
     }
 
     //done
-    public void deleteAlarm(String alName)
+    public void deleteAlarm(String alarmName)
     {
-        for(Alarm al : alarme)
+        for(Alarm alarm : alarms)
         {
-            if(al.getName().equals(alName))
+            if(alarm.getName().equals(alarmName))
             {
-                alarme.remove(al);
+                alarms.remove(alarm);
                 saveData();
                 reloadRecycler();
                 return;
@@ -778,24 +761,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //done
-    public static Alarm getAlarmByName(String name)
+    public static Alarm getAlarm(String alarmName)
     {
-        for(Alarm al : alarme)
+        for(Alarm alarm : alarms)
         {
-            if(al.getName().equals(name))
-                return al;
+            if(alarm.getName().equals(alarmName))
+                return alarm;
         }
         return null;
     }
 
     //done
-    public void deleteLocation(String locName)
+    public void deleteLocation(String locationName)
     {
-        for(Location loc : locatii)
+        for(Location location : locations)
         {
-            if(loc.getName().equals(locName))
+            if(location.getName().equals(locationName))
             {
-                locatii.remove(loc);
+                locations.remove(location);
                 saveData();
                 reloadRecycler();
                 return;
@@ -804,14 +787,77 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //done
-    public static Location getLocationByName(String name)
+    public static Location getLocation(String locationName)
     {
-        for(Location loc : locatii)
+        for(Location location : locations)
         {
-            if(loc.getName().equals(name))
-                return loc;
+            if(location.getName().equals(locationName))
+                return location;
         }
         return null;
+    }
+
+    //done
+    public static List<Forecast> getForecasts() {
+        return forecasts;
+    }
+
+    //done
+    public static List<Location> getLocations() {
+        return locations;
+    }
+
+    //done
+    public static List<Alarm> getAlarms() {
+        return alarms;
+    }
+
+    //done
+    public static void UpdateLocation(Location oldLocation, Location newLocation)
+    {
+        int index = 0;
+        for(Location location : locations)
+        {
+            if(location.getName().equals(oldLocation.getName()) == true)
+            {
+                locations.remove(location);
+                locations.add(index, newLocation);
+                return;
+            }
+            index++;
+        }
+    }
+
+    //done
+    public static void UpdateForecast(Forecast oldForecast, Forecast newForecast)
+    {
+        int index = 0;
+        for(Forecast forecast : forecasts)
+        {
+            if(forecast.getName().equals(oldForecast.getName()) == true)
+            {
+                forecasts.remove(forecast);
+                forecasts.add(index, newForecast);
+                return;
+            }
+            index++;
+        }
+    }
+
+    //done
+    public static void UpdateAlarm(Alarm oldAlarm, Alarm newAlarm)
+    {
+        int index = 0;
+        for(Alarm alarm : alarms)
+        {
+            if(alarm.getName().equals(oldAlarm.getName()) == true)
+            {
+                alarms.remove(alarm);
+                alarms.add(index, newAlarm);
+                return;
+            }
+            index++;
+        }
     }
 
 }

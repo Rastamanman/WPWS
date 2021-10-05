@@ -1,17 +1,14 @@
 package com.example.wpws;
 
 import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -23,112 +20,113 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
     public AddDayAdapter(List<AddDayItem> dayslist) { this.daysList = dayslist; }
 
     public static class AddDayViewHolder extends RecyclerView.ViewHolder {
-        private TextView day_nr;
-        private TextView day_temp_text;
-        private Spinner day_temp_mode;
-        private EditText day_temp_val;
-        private TextView day_temp_symb;
-        private TextView day_minTemp_text;
-        private Spinner day_minTemp_mode;
-        private EditText day_minTemp_val;
-        private TextView day_minTemp_symb;
-        private TextView day_maxTemp_text;
-        private Spinner day_maxTemp_mode;
-        private EditText day_maxTemp_val;
-        private TextView day_maxTemp_symb;
-        private TextView day_rh_text;
-        private Spinner day_rh_mode;
-        private EditText day_rh_val;
-        private TextView day_rh_symb;
-        private TextView day_precip_text;
-        private Spinner day_precip_mode;
-        private EditText day_precip_val;
-        private TextView day_precip_symb;
-        private TextView day_cor_text;
-        private Spinner day_cor_mode;
-        private EditText day_cor_val;
-        private TextView day_cor_symb;
-        private TextView day_snow_text;
-        private Spinner day_snow_mode;
-        private EditText day_snow_val;
-        private TextView day_snow_symb;
-        private TextView day_pres_text;
-        private Spinner day_pres_mode;
-        private EditText day_pres_val;
-        private TextView day_pres_symb;
-        private TextView day_clouds_text;
-        private Spinner day_clouds_mode;
-        private EditText day_clouds_val;
-        private TextView day_clouds_symb;
-        private TextView day_wsp_text;
-        private Spinner day_wsp_mode;
-        private EditText day_wsp_val;
-        private TextView day_wsp_symb;
+        private TextView dayNumber;
+        private TextView tempText;
+        private Spinner tempMode;
+        private EditText tempValue;
+        private TextView tempSymbol;
+        private TextView minTempText;
+        private Spinner minTempMode;
+        private EditText minTempValue;
+        private TextView minTempSymbol;
+        private TextView maxTempText;
+        private Spinner maxTempMode;
+        private EditText maxTempValue;
+        private TextView maxTempSymbol;
+        private TextView rhText;
+        private Spinner rhMode;
+        private EditText rhValue;
+        private TextView rhSymbol;
+        private TextView precipitationText;
+        private Spinner precipitationMode;
+        private EditText precipitationValue;
+        private TextView precipitationSymbol;
+        private TextView rainText;
+        private Spinner rainMode;
+        private EditText rainValue;
+        private TextView rainSymbol;
+        private TextView snowText;
+        private Spinner snowMode;
+        private EditText snowValue;
+        private TextView snowSymbol;
+        private TextView pressureText;
+        private Spinner pressureMode;
+        private EditText pressureValue;
+        private TextView pressureSymbol;
+        private TextView cloudsText;
+        private Spinner cloudsMode;
+        private EditText cloudsValue;
+        private TextView cloudsSymbol;
+        private TextView windSpeedText;
+        private Spinner windSpeddMode;
+        private EditText windSpeedValue;
+        private TextView windSpeedSymbol;
 
         public AddDayViewHolder(View view)
         {
             super(view);
-            day_nr = view.findViewById(R.id.day_text);
+            dayNumber = view.findViewById(R.id.day_text);
             //temp
-            day_temp_text = view.findViewById(R.id.temp_text);
-            day_temp_mode = view.findViewById(R.id.temp_spinner);
-            day_temp_val = view.findViewById(R.id.temp_edit);
-            day_temp_symb = view.findViewById(R.id.temp_symbol);
+            tempText = view.findViewById(R.id.temp_text);
+            tempMode = view.findViewById(R.id.temp_spinner);
+            tempValue = view.findViewById(R.id.temp_edit);
+            tempSymbol = view.findViewById(R.id.temp_symbol);
             //min temp
-            day_minTemp_text = view.findViewById(R.id.min_temp_text);
-            day_minTemp_mode = view.findViewById(R.id.min_temp_spinner);
-            day_minTemp_val = view.findViewById(R.id.min_temp_edit);
-            day_minTemp_symb = view.findViewById(R.id.min_temp_symbol);
+            minTempText = view.findViewById(R.id.min_temp_text);
+            minTempMode = view.findViewById(R.id.min_temp_spinner);
+            minTempValue = view.findViewById(R.id.min_temp_edit);
+            minTempSymbol = view.findViewById(R.id.min_temp_symbol);
             //max temp
-            day_maxTemp_text = view.findViewById(R.id.max_temp_text);
-            day_maxTemp_mode = view.findViewById(R.id.max_temp_spinner);
-            day_maxTemp_val = view.findViewById(R.id.max_temp_edit);
-            day_maxTemp_symb = view.findViewById(R.id.max_temp_symbol);
+            maxTempText = view.findViewById(R.id.max_temp_text);
+            maxTempMode = view.findViewById(R.id.max_temp_spinner);
+            maxTempValue = view.findViewById(R.id.max_temp_edit);
+            maxTempSymbol = view.findViewById(R.id.max_temp_symbol);
             //rh
-            day_rh_text = view.findViewById(R.id.rh_text);
-            day_rh_mode = view.findViewById(R.id.rh_spinner);
-            day_rh_val = view.findViewById(R.id.rh_edit);
-            day_rh_symb = view.findViewById(R.id.rh_symbol);
+            rhText = view.findViewById(R.id.rh_text);
+            rhMode = view.findViewById(R.id.rh_spinner);
+            rhValue = view.findViewById(R.id.rh_edit);
+            rhSymbol = view.findViewById(R.id.rh_symbol);
             //precip
-            day_precip_text = view.findViewById(R.id.precip_text);
-            day_precip_mode = view.findViewById(R.id.precip_spinner);
-            day_precip_val = view.findViewById(R.id.precip_edit);
-            day_precip_symb = view.findViewById(R.id.precip_symbol);
+            precipitationText = view.findViewById(R.id.precipitation_text);
+            precipitationMode = view.findViewById(R.id.precipitation_spinner);
+            precipitationValue = view.findViewById(R.id.precipitation_edit);
+            precipitationSymbol = view.findViewById(R.id.precipitation_symbol);
             //chance of rain
-            day_cor_text = view.findViewById(R.id.cor_text);
-            day_cor_mode = view.findViewById(R.id.cor_spinner);
-            day_cor_val = view.findViewById(R.id.cor_edit);
-            day_cor_symb = view.findViewById(R.id.cor_symbol);
+            rainText = view.findViewById(R.id.rain_text);
+            rainMode = view.findViewById(R.id.rain_spinner);
+            rainValue = view.findViewById(R.id.rain_edit);
+            rainSymbol = view.findViewById(R.id.rain_symbol);
             //snow
-            day_snow_text = view.findViewById(R.id.snow_text);
-            day_snow_mode = view.findViewById(R.id.snow_spinner);
-            day_snow_val = view.findViewById(R.id.snow_edit);
-            day_snow_symb = view.findViewById(R.id.snow_symbol);
+            snowText = view.findViewById(R.id.snow_text);
+            snowMode = view.findViewById(R.id.snow_spinner);
+            snowValue = view.findViewById(R.id.snow_edit);
+            snowSymbol = view.findViewById(R.id.snow_symbol);
             //pres
-            day_pres_text = view.findViewById(R.id.pres_text);
-            day_pres_mode = view.findViewById(R.id.pres_spinner);
-            day_pres_val = view.findViewById(R.id.pres_edit);
-            day_pres_symb = view.findViewById(R.id.pres_symbol);
+            pressureText = view.findViewById(R.id.pressure_text);
+            pressureMode = view.findViewById(R.id.pressure_spinner);
+            pressureValue = view.findViewById(R.id.pressure_edit);
+            pressureSymbol = view.findViewById(R.id.pressure_symbol);
             //clouds
-            day_clouds_text = view.findViewById(R.id.clouds_text);
-            day_clouds_mode = view.findViewById(R.id.clouds_spinner);
-            day_clouds_val = view.findViewById(R.id.clouds_edit);
-            day_clouds_symb = view.findViewById(R.id.clouds_symbol);
+            cloudsText = view.findViewById(R.id.clouds_text);
+            cloudsMode = view.findViewById(R.id.clouds_spinner);
+            cloudsValue = view.findViewById(R.id.clouds_edit);
+            cloudsSymbol = view.findViewById(R.id.clouds_symbol);
             //wind speed
-            day_wsp_text = view.findViewById(R.id.wsp_text);
-            day_wsp_mode = view.findViewById(R.id.wsp_spinner);
-            day_wsp_val = view.findViewById(R.id.wsp_edit);
-            day_wsp_symb = view.findViewById(R.id.wsp_symbol);
+            windSpeedText = view.findViewById(R.id.wind_speed_text);
+            windSpeddMode = view.findViewById(R.id.wind_speed_spinner);
+            windSpeedValue = view.findViewById(R.id.wind_speed_edit);
+            windSpeedSymbol = view.findViewById(R.id.wind_speed_symbol);
         }
 
         public void setData(AddDayItem day)
         {
-            day_nr.setText(day.getDayNr());
+            //day nr
+            dayNumber.setText(day.getDayNumber());
             //temp
-            day_temp_text.setText(day.getTempText());
-            day_temp_mode.setAdapter(day.getAdapter());
-            day_temp_mode.setSelection(day.getTempMode());
-            day_temp_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            tempText.setText(day.getTempText());
+            tempMode.setAdapter(day.getAdapter());
+            tempMode.setSelection(day.getTempMode());
+            tempMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     day.setTempMode(position);
@@ -137,20 +135,22 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_temp_val.setText("" + day.getTempVal());
-            day_temp_val.addTextChangedListener(new MyTextWatcher<EditText>(day_temp_val) {
+            if(day.getTempValue() != 0)
+                tempValue.setText("" + day.getTempValue());
+            tempValue.addTextChangedListener(new MyTextWatcher<EditText>(tempValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setTempVal(Float.parseFloat(target.getText().toString()));
+                        day.setTempValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_temp_symb.setText(day.getTempSymb());
+            tempSymbol.setText(day.getTempSymbol());
             //min temp
-            day_minTemp_text.setText(day.getMinTempText());
-            day_minTemp_mode.setAdapter(day.getAdapter());
-            day_minTemp_mode.setSelection(day.getMaxTempMode());
-            day_minTemp_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            minTempText.setText(day.getMinTempText());
+            minTempMode.setAdapter(day.getAdapter());
+            minTempMode.setSelection(day.getMaxTempMode());
+            minTempMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     day.setMinTempMode(position);
@@ -159,20 +159,22 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_minTemp_val.setText("" + day.getMinTempVal());
-            day_minTemp_val.addTextChangedListener(new MyTextWatcher<EditText>(day_minTemp_val) {
+            if(day.getMinTempValue() != 0)
+                minTempValue.setText("" + day.getMinTempValue());
+            minTempValue.addTextChangedListener(new MyTextWatcher<EditText>(minTempValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setMinTempVal(Float.parseFloat(target.getText().toString()));
+                        day.setMinTempValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_minTemp_symb.setText(day.getMinTempSymb());
+            minTempSymbol.setText(day.getMinTempSymbol());
             //max temp
-            day_maxTemp_text.setText(day.getMaxTempText());
-            day_maxTemp_mode.setAdapter(day.getAdapter());
-            day_maxTemp_mode.setSelection(day.getMaxTempMode());
-            day_maxTemp_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            maxTempText.setText(day.getMaxTempText());
+            maxTempMode.setAdapter(day.getAdapter());
+            maxTempMode.setSelection(day.getMaxTempMode());
+            maxTempMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     day.setMaxTempMode(position);
@@ -181,20 +183,22 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_maxTemp_val.setText("" + day.getMaxTempVal());
-            day_maxTemp_val.addTextChangedListener(new MyTextWatcher<EditText>(day_maxTemp_val) {
+            if(day.getMaxTempValue() != 0)
+                maxTempValue.setText("" + day.getMaxTempValue());
+            maxTempValue.addTextChangedListener(new MyTextWatcher<EditText>(maxTempValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setMaxTempVal(Float.parseFloat(target.getText().toString()));
+                        day.setMaxTempValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_maxTemp_symb.setText(day.getMaxTempSymb());
+            maxTempSymbol.setText(day.getMaxTempSymbol());
             //rh
-            day_rh_text.setText(day.getRhText());
-            day_rh_mode.setAdapter(day.getAdapter());
-            day_rh_mode.setSelection(day.getRhMode());
-            day_rh_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            rhText.setText(day.getRhText());
+            rhMode.setAdapter(day.getAdapter());
+            rhMode.setSelection(day.getRhMode());
+            rhMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     day.setRhMode(position);
@@ -203,64 +207,70 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_rh_val.setText("" + day.getRhVal());
-            day_rh_val.addTextChangedListener(new MyTextWatcher<EditText>(day_rh_val) {
+            if(day.getRhValue() != 0)
+                rhValue.setText("" + day.getRhValue());
+            rhValue.addTextChangedListener(new MyTextWatcher<EditText>(rhValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setRhVal(Float.parseFloat(target.getText().toString()));
+                        day.setRhValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_rh_symb.setText(day.getRhSymb());
+            rhSymbol.setText(day.getRhSymbol());
             //precip
-            day_precip_text.setText(day.getPrecipText());
-            day_precip_mode.setAdapter(day.getAdapter());
-            day_precip_mode.setSelection(day.getPrecipMode());
-            day_precip_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            precipitationText.setText(day.getPrecipitationText());
+            precipitationMode.setAdapter(day.getAdapter());
+            precipitationMode.setSelection(day.getPrecipitationMode());
+            precipitationMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    day.setPrecipMode(position);
+                    day.setPrecipitationMode(position);
                 }
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_precip_val.setText("" + day.getPrecipVal());
-            day_precip_val.addTextChangedListener(new MyTextWatcher<EditText>(day_precip_val) {
+            if(day.getPrecipitationValue() != 0)
+                precipitationValue.setText("" + day.getPrecipitationValue());
+            precipitationValue.addTextChangedListener(new MyTextWatcher<EditText>(precipitationValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setPrecipVal(Float.parseFloat(target.getText().toString()));
+                        day.setPrecipitationValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_precip_symb.setText(day.getPrecipSymb());
+            precipitationSymbol.setText(day.getPrecipitationSymbol());
             //chance of rain
-            day_cor_text.setText(day.getCorText());
-            day_cor_mode.setAdapter(day.getAdapter());
-            day_cor_mode.setSelection(day.getCorMode());
-            day_cor_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            rainText.setText(day.getRainText());
+            rainMode.setAdapter(day.getAdapter());
+            rainMode.setSelection(day.getRainMode());
+            rainMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    day.setCorMode(position);
+                    day.setRainMode(position);
                 }
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_cor_val.setText("" + day.getCorVal());
-            day_cor_val.addTextChangedListener(new MyTextWatcher<EditText>(day_cor_val) {
+            if(day.getRainValue() != 0)
+                rainValue.setText("" + day.getRainValue());
+            rainValue.addTextChangedListener(new MyTextWatcher<EditText>(rainValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setCorVal(Float.parseFloat(target.getText().toString()));
+                        day.setRainValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_cor_symb.setText(day.getCorSymb());
+            rainSymbol.setText(day.getRainSymbol());
             //snow
-            day_snow_text.setText(day.getSnowText());
-            day_snow_mode.setAdapter(day.getAdapter());
-            day_snow_mode.setSelection(day.getSnowMode());
-            day_snow_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            snowText.setText(day.getSnowText());
+            snowMode.setAdapter(day.getAdapter());
+            snowMode.setSelection(day.getSnowMode());
+            snowMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     day.setSnowMode(position);
@@ -269,42 +279,46 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_snow_val.setText("" + day.getSnowVal());
-            day_snow_val.addTextChangedListener(new MyTextWatcher<EditText>(day_snow_val) {
+            if(day.getSnowValue() != 0)
+                snowValue.setText("" + day.getSnowValue());
+            snowValue.addTextChangedListener(new MyTextWatcher<EditText>(snowValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setSnowVal(Float.parseFloat(target.getText().toString()));
+                        day.setSnowValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_snow_symb.setText(day.getSnowSymb());
+            snowSymbol.setText(day.getSnowSymbol());
             //pres
-            day_pres_text.setText(day.getPresText());
-            day_pres_mode.setAdapter(day.getAdapter());
-            day_pres_mode.setSelection(day.getPresMode());
-            day_pres_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            pressureText.setText(day.getPressureText());
+            pressureMode.setAdapter(day.getAdapter());
+            pressureMode.setSelection(day.getPressureMode());
+            pressureMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    day.setPresMode(position);
+                    day.setPressureMode(position);
                 }
 
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_pres_val.setText("" + day.getPresVal());
-            day_pres_val.addTextChangedListener(new MyTextWatcher<EditText>(day_pres_val) {
+            if(day.getPressureValue() != 0)
+                pressureValue.setText("" + day.getPressureValue());
+            pressureValue.addTextChangedListener(new MyTextWatcher<EditText>(pressureValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setPresVal(Float.parseFloat(target.getText().toString()));
+                        day.setPressureValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
             //clouds coverage
-            day_clouds_text.setText(day.getCloudsText());
-            day_clouds_mode.setAdapter(day.getAdapter());
-            day_clouds_mode.setSelection(day.getCloudsMode());
-            day_clouds_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            cloudsText.setText(day.getCloudsText());
+            cloudsMode.setAdapter(day.getAdapter());
+            cloudsMode.setSelection(day.getCloudsMode());
+            cloudsMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     day.setCloudsMode(position);
@@ -313,37 +327,41 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_clouds_val.setText("" + day.getCloudsVal());
-            day_clouds_val.addTextChangedListener(new MyTextWatcher<EditText>(day_clouds_val) {
+            if(day.getCloudsValue() != 0)
+                cloudsValue.setText("" + day.getCloudsValue());
+            cloudsValue.addTextChangedListener(new MyTextWatcher<EditText>(cloudsValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setCloudsVal(Float.parseFloat(target.getText().toString()));
+                        day.setCloudsValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                                * 100.0) / 100.0));
                 }
             });
-            day_clouds_symb.setText(day.getCloudsSymb());
+            cloudsSymbol.setText(day.getCloudsSymbol());
             //wind speed
-            day_wsp_text.setText(day.getWspText());
-            day_wsp_mode.setAdapter(day.getAdapter());
-            day_wsp_mode.setSelection(day.getWspMode());
-            day_wsp_mode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            windSpeedText.setText(day.getWindSpeedText());
+            windSpeddMode.setAdapter(day.getAdapter());
+            windSpeddMode.setSelection(day.getWindSpeedMode());
+            windSpeddMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    day.setWspMode(position);
+                    day.setWindSpeedMode(position);
                 }
                 @Override
                 public void onNothingSelected(AdapterView<?> parent) {
                 }
             });
-            day_wsp_val.setText("" + day.getWspVal());
-            day_wsp_val.addTextChangedListener(new MyTextWatcher<EditText>(day_wsp_val) {
+            if(day.getWindSpeedValue() != 0)
+                windSpeedValue.setText("" + day.getWindSpeedValue());
+            windSpeedValue.addTextChangedListener(new MyTextWatcher<EditText>(windSpeedValue) {
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setWspVal(Float.parseFloat(target.getText().toString()));
+                        day.setWindSpeedValue((float)(Math.round(Double.parseDouble(target.getText().toString())
+                        * 100.0) / 100.0));
                 }
             });
-            day_wsp_symb.setText(day.getWspSymb());
+            windSpeedSymbol.setText(day.getWindSpeedSymbol());
         }
     }
 

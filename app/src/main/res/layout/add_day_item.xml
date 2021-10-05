@@ -4,7 +4,7 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:id="@+id/relativ_lay"
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:background="#ffffff">
@@ -196,7 +196,7 @@
             android:textSize="15dp"></TextView>
 
         <TextView
-            android:id="@+id/precip_text"
+            android:id="@+id/precipitation_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rh_edit"
@@ -207,43 +207,43 @@
             android:textSize="15dp"></TextView>
 
         <Spinner
-            android:id="@+id/precip_spinner"
+            android:id="@+id/precipitation_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_below="@+id/rh_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
-            android:layout_toRightOf="@+id/precip_text"
+            android:layout_toRightOf="@+id/precipitation_text"
             android:tooltipText="don't care"></Spinner>
 
         <EditText
-            android:id="@+id/precip_edit"
+            android:id="@+id/precipitation_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_below="@+id/rh_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/precip_spinner"
+            android:layout_toRightOf="@id/precipitation_spinner"
             android:hint="0"
             android:inputType="numberDecimal"
             android:maxLength="6"></EditText>
 
         <TextView
-            android:id="@+id/precip_symbol"
+            android:id="@+id/precipitation_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rh_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/precip_edit"
+            android:layout_toRightOf="@+id/precipitation_edit"
             android:text="mm"
             android:textSize="15dp"></TextView>
 
         <TextView
-            android:id="@+id/cor_text"
+            android:id="@+id/rain_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/precip_edit"
+            android:layout_below="@+id/precipitation_edit"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="11dp"
             android:text="Chance of Rain"
@@ -251,35 +251,35 @@
             android:textSize="15dp"></TextView>
 
         <Spinner
-            android:id="@+id/cor_spinner"
+            android:id="@+id/rain_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_below="@+id/precip_edit"
+            android:layout_below="@+id/precipitation_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
-            android:layout_toRightOf="@+id/cor_text"
+            android:layout_toRightOf="@+id/rain_text"
             android:tooltipText="don't care"></Spinner>
 
         <EditText
-            android:id="@+id/cor_edit"
+            android:id="@+id/rain_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_below="@+id/precip_edit"
+            android:layout_below="@+id/precipitation_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/cor_spinner"
+            android:layout_toRightOf="@id/rain_spinner"
             android:hint="0"
             android:inputType="numberDecimal"
             android:maxLength="6"></EditText>
 
         <TextView
-            android:id="@+id/cor_symbol"
+            android:id="@+id/rain_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/precip_edit"
+            android:layout_below="@+id/precipitation_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/cor_edit"
+            android:layout_toRightOf="@+id/rain_edit"
             android:text="%"
             android:textSize="15dp"></TextView>
 
@@ -287,7 +287,7 @@
             android:id="@+id/snow_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cor_edit"
+            android:layout_below="@+id/rain_edit"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="11dp"
             android:text="Snow"
@@ -298,7 +298,7 @@
             android:id="@+id/snow_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_below="@+id/cor_edit"
+            android:layout_below="@+id/rain_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
             android:layout_toRightOf="@+id/snow_text"
@@ -308,7 +308,7 @@
             android:id="@+id/snow_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_below="@+id/cor_edit"
+            android:layout_below="@+id/rain_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
             android:layout_toRightOf="@id/snow_spinner"
@@ -320,7 +320,7 @@
             android:id="@+id/snow_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/cor_edit"
+            android:layout_below="@+id/rain_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/snow_edit"
@@ -328,7 +328,7 @@
             android:textSize="15dp"></TextView>
 
         <TextView
-            android:id="@+id/pres_text"
+            android:id="@+id/pressure_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/snow_edit"
@@ -339,42 +339,43 @@
             android:textSize="15dp"></TextView>
 
         <Spinner
-            android:id="@+id/pres_spinner"
+            android:id="@+id/pressure_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_below="@+id/snow_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
-            android:layout_toRightOf="@+id/pres_text"
+            android:layout_toRightOf="@+id/pressure_text"
             android:tooltipText="don't care"></Spinner>
 
         <EditText
-            android:id="@+id/pres_edit"
+            android:id="@+id/pressure_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_below="@+id/snow_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/pres_spinner"
+            android:layout_toRightOf="@id/pressure_spinner"
             android:hint="0"
             android:inputType="numberDecimal"
             android:maxLength="6"></EditText>
 
         <TextView
-            android:id="@+id/pres_symbol"
+            android:id="@+id/pressure_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/snow_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/pres_edit"
+            android:layout_toRightOf="@+id/pressure_edit"
             android:text="mb"
-            android:textSize="20dp"></TextView>
+            android:textSize="15dp"></TextView>
+
         <TextView
             android:id="@+id/clouds_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pres_edit"
+            android:layout_below="@+id/pressure_edit"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="11dp"
             android:text="Clouds"
@@ -385,7 +386,7 @@
             android:id="@+id/clouds_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_below="@+id/pres_edit"
+            android:layout_below="@+id/pressure_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
             android:layout_toRightOf="@+id/clouds_text"
@@ -395,7 +396,7 @@
             android:id="@+id/clouds_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_below="@+id/pres_edit"
+            android:layout_below="@+id/pressure_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
             android:layout_toRightOf="@id/clouds_spinner"
@@ -407,7 +408,7 @@
             android:id="@+id/clouds_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/pres_edit"
+            android:layout_below="@+id/pressure_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/clouds_edit"
@@ -415,7 +416,7 @@
             android:textSize="20dp"></TextView>
 
         <TextView
-            android:id="@+id/wsp_text"
+            android:id="@+id/wind_speed_text"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/clouds_edit"
@@ -426,43 +427,43 @@
             android:textSize="15dp"></TextView>
 
         <Spinner
-            android:id="@+id/wsp_spinner"
+            android:id="@+id/wind_speed_spinner"
             android:layout_width="wrap_content"
             android:layout_height="25dp"
             android:layout_below="@+id/clouds_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="9dp"
-            android:layout_toRightOf="@+id/wsp_text"
+            android:layout_toRightOf="@+id/wind_speed_text"
             android:tooltipText="don't care"></Spinner>
 
         <EditText
-            android:id="@+id/wsp_edit"
+            android:id="@+id/wind_speed_edit"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_below="@+id/clouds_edit"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="2dp"
-            android:layout_toRightOf="@id/wsp_spinner"
+            android:layout_toRightOf="@id/wind_speed_spinner"
             android:hint="0"
             android:inputType="numberDecimal"
             android:maxLength="6"></EditText>
 
         <TextView
-            android:id="@+id/wsp_symbol"
+            android:id="@+id/wind_speed_symbol"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/clouds_edit"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/wsp_edit"
+            android:layout_toRightOf="@+id/wind_speed_edit"
             android:text="m/s"
             android:textSize="15dp"></TextView>
 
         <TextView
-            android:id="@+id/fc_separator"
+            android:id="@+id/day_condition_separator"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_below="@+id/wsp_text"
+            android:layout_below="@+id/wind_speed_text"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="-10dp"
             android:layout_marginRight="25dp"

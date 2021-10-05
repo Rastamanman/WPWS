@@ -1,113 +1,111 @@
 package com.example.wpws;
 
-import java.util.Locale;
-
 public class Condition {
 
 
-    private CondType tip;
-    private CondMode mod;
+    private ConditionType conditionType;
+    private ConditionMode conditionMode;
     private float value;
 
     public Condition() {
-        tip = CondType.NONE;
-        mod = CondMode.EQUAL;
+        conditionType = ConditionType.NONE;
+        conditionMode = ConditionMode.EQUAL;
         value = 0;
     }
 
-    public Condition(CondType type, CondMode mode, float val) {
-        tip = type;
-        mod = mode;
-        value = val;
+    public Condition(ConditionType type, ConditionMode mode, float value) {
+        conditionType = type;
+        conditionMode = mode;
+        value = value;
     }
 
-    public Condition(String whatCond, int whatMode, float val)
+    public Condition(String whatCondition, int whatMode, float value)
     {
-        switch(whatCond.toUpperCase()){
+        switch(whatCondition.toUpperCase()){
             case "TEMPERATURE":
-                tip = CondType.TEMP;
+                conditionType = ConditionType.TEMP;
                 break;
             case "MIN TEMP":
-                tip = CondType.MIN_TEMP;
+                conditionType = ConditionType.MIN_TEMP;
                 break;
             case "MAX TEMP":
-                tip = CondType.MAX_TEMP;
+                conditionType = ConditionType.MAX_TEMP;
                 break;
             case "RH":
-                tip = CondType.RH;
+                conditionType = ConditionType.RH;
                 break;
             case "PRECIPITATION":
-                tip = CondType.PRECIP;
+                conditionType = ConditionType.PRECIP;
                 break;
             case "CHANCE OF RAIN":
-                tip = CondType.POP;
+                conditionType = ConditionType.POP;
                 break;
             case "SNOW":
-                tip = CondType.SNOW;
+                conditionType = ConditionType.SNOW;
                 break;
             case "CLOUDS":
-                tip = CondType.CLOUDS;
+                conditionType = ConditionType.CLOUDS;
                 break;
             case "WIND SPEED":
-                tip = CondType.WND_SPEED;
+                conditionType = ConditionType.WND_SPEED;
                 break;
             case "PRESSURE":
-                tip = CondType.PRES;
+                conditionType = ConditionType.PRES;
                 break;
             default:
-                tip = CondType.NONE;
+                conditionType = ConditionType.NONE;
                 break;
         }
         switch(whatMode){
             case 0:
-                mod = CondMode.DONT_CARE;
+                conditionMode = ConditionMode.DONT_CARE;
                 break;
             case 1:
-                mod = CondMode.LOWER;
+                conditionMode = ConditionMode.LOWER;
                 break;
             case 2:
-                mod = CondMode.LOWER_EQ;
+                conditionMode = ConditionMode.LOWER_EQ;
                 break;
             case 3:
-                mod = CondMode.EQUAL;
+                conditionMode = ConditionMode.EQUAL;
                 break;
             case 4:
-                mod = CondMode.HIGHER_EQ;
+                conditionMode = ConditionMode.HIGHER_EQ;
                 break;
             case 5:
-                mod = CondMode.HIGHER;
+                conditionMode = ConditionMode.HIGHER;
                 break;
             default:
-                mod = CondMode.DONT_CARE;
+                conditionMode = ConditionMode.DONT_CARE;
                 break;
         }
-        value = val;
+        value = value;
     }
 
-    public boolean checkCond(Day zi) {
-        switch (tip) {
+    public boolean checkConditionFor(Day zi) {
+        switch (conditionType) {
             case TEMP:
-                return compareTo(zi.getTemp());
+                return compareTo(zi.getTemperature());
             case RH:
                 return compareTo(zi.getRh());
             case PRES:
-                return compareTo(zi.getPres());
+                return compareTo(zi.getPressure());
             case MIN_TEMP:
-                return compareTo(zi.getMin_temp());
+                return compareTo(zi.getMinTemp());
             case MAX_TEMP:
-                return compareTo(zi.getMax_temp());
+                return compareTo(zi.getMaxTemp());
             case SNOW:
                 return compareTo(zi.getSnow());
             case SNOW_DEPTH:
-                return compareTo(zi.getSnow_depth());
+                return compareTo(zi.getSnowDepth());
             case CLOUDS:
                 return compareTo(zi.getClouds());
             case WND_SPEED:
-                return compareTo(zi.getWind_spd());
+                return compareTo(zi.getWindSpeed());
             case PRECIP:
-                return compareTo(zi.getPrecip());
+                return compareTo(zi.getPrecipitation());
             case POP:
-                return compareTo(zi.getPop());
+                return compareTo(zi.getRain());
             case SKIP:
                 return true;
             default:
@@ -116,7 +114,7 @@ public class Condition {
     }
 
     public boolean compareTo(int toCompare) {
-        switch (mod) {
+        switch (conditionMode) {
             case DONT_CARE:
                 return true;
             case LOWER:
@@ -135,38 +133,38 @@ public class Condition {
     }
 
     public boolean compareTo(float toCompare) {
-        switch (mod) {
+        switch (conditionMode) {
             case DONT_CARE:
                 return true;
             case LOWER:
-                return (value < toCompare);
+                return (value > toCompare);
             case LOWER_EQ:
-                return (value <= toCompare);
+                return (value >= toCompare);
             case EQUAL:
                 return (value == toCompare);
             case HIGHER_EQ:
-                return (value >= toCompare);
+                return (value <= toCompare);
             case HIGHER:
-                return (value > toCompare);
+                return (value < toCompare);
             default:
                 return false;
         }
     }
 
-    public CondType getTip() {
-        return tip;
+    public ConditionType getConditionType() {
+        return conditionType;
     }
 
-    public void setTip(CondType condType) {
-        this.tip = condType;
+    public void setConditionType(ConditionType conditionType) {
+        this.conditionType = conditionType;
     }
 
-    public CondMode getMod() {
-        return mod;
+    public ConditionMode getConditionMode() {
+        return conditionMode;
     }
 
-    public void setMod(CondMode mod) {
-        this.mod = mod;
+    public void setConditionMode(ConditionMode conditionMode) {
+        this.conditionMode = conditionMode;
     }
 
     public float getValue() {

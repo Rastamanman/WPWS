@@ -1,9 +1,5 @@
 package com.example.wpws;
 
-import android.util.Log;
-
-import androidx.core.app.NotificationCompat;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,23 +7,23 @@ public class Alarm {
 
     private Location location;
     private String name;
-    private List<DayConditions> dayConds;
+    private List<DayConditions> dayConditions;
 
     public Alarm()
     {
         location = new Location();
         name = "";
-        dayConds = new ArrayList<>();
+        dayConditions = new ArrayList<>();
     }
 
-    public Alarm(Location loc, String name)
+    public Alarm(Location location, String name)
     {
-        location = loc;
+        this.location = location;
         this.name = name;
-        dayConds = new ArrayList<>();
+        dayConditions = new ArrayList<>();
     }
 
-    public void setLocation(Location locToSet) { location = locToSet; }
+    public void setLocation(Location locationToSet) { location = locationToSet; }
 
     public Location getLocation() { return location; }
 
@@ -35,14 +31,12 @@ public class Alarm {
 
     public String getName() { return name; }
 
-    public List<DayConditions> getDays() { return dayConds; }
+    public List<DayConditions> getDays() { return dayConditions; }
 
-    public void setConditions(List<DayConditions> condToSet) { dayConds = condToSet; }
+    public void setConditions(List<DayConditions> conditionsToSet) { dayConditions = conditionsToSet; }
 
-    public void addDay(DayConditions dayToAdd) { dayConds.add(dayToAdd); }
+    public void addDay(DayConditions day) { dayConditions.add(day); }
 
-    public void addCondition(int dayIndex, Condition condToAdd) { dayConds.get(dayIndex).addCondition(condToAdd); }
-
-    //public Condition getCondition(int index) { return dayConds.get(index); }
+    public void addCondition(int dayIndex, Condition condition) { dayConditions.get(dayIndex).addCondition(condition); }
 
 }

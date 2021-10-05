@@ -10,7 +10,7 @@
         android:background="#ffffff"
         tools:ignore="MissingConstraints">
         <TextView
-            android:id="@+id/al_name"
+            android:id="@+id/alarm_item_name"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginLeft="10dp"
@@ -22,13 +22,13 @@
             android:text="Nume Alarma">
         </TextView>
         <TextView
-            android:id="@+id/al_location"
+            android:id="@+id/alarm_item_location"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:textColor="#c8c8c8"
-            android:layout_below="@+id/al_name"
+            android:layout_below="@+id/alarm_item_name"
             android:text="\@ Nume Locatie(Oras,TRA)"
             android:textSize="15sp">
         </TextView>

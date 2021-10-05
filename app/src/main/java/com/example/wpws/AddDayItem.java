@@ -1,10 +1,6 @@
 package com.example.wpws;
 
 import android.widget.ArrayAdapter;
-import android.widget.SpinnerAdapter;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 public class AddDayItem {
 
@@ -94,7 +90,300 @@ public class AddDayItem {
         this.wspSymb = "m/s";
     }
 
-    public String getDayNr() {
+    public AddDayItem(int dayNr, DayConditions day)
+    {
+        for(Condition cond : day.getConditions())
+        {
+            switch (cond.getConditionType()){
+                case TEMP:
+                    this.tempVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.tempMode = 0;
+                            break;
+                        case LOWER:
+                            this.tempMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.tempMode = 2;
+                            break;
+                        case EQUAL:
+                            this.tempMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.tempMode = 4;
+                            break;
+                        case HIGHER:
+                            this.tempMode = 5;
+                            break;
+                        default:
+                            this.tempMode = 0;
+                            break;
+                    }
+                    break;
+                case MIN_TEMP:
+                    this.minTempVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.minTempMode = 0;
+                            break;
+                        case LOWER:
+                            this.minTempMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.minTempMode = 2;
+                            break;
+                        case EQUAL:
+                            this.minTempMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.minTempMode = 4;
+                            break;
+                        case HIGHER:
+                            this.minTempMode = 5;
+                            break;
+                        default:
+                            this.minTempMode = 0;
+                            break;
+                    }
+                    break;
+                case MAX_TEMP:
+                    this.maxTempVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.maxTempMode = 0;
+                            break;
+                        case LOWER:
+                            this.maxTempMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.maxTempMode = 2;
+                            break;
+                        case EQUAL:
+                            this.maxTempMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.maxTempMode = 4;
+                            break;
+                        case HIGHER:
+                            this.maxTempMode = 5;
+                            break;
+                        default:
+                            this.maxTempMode = 0;
+                            break;
+                    }
+                    break;
+                case RH:
+                    this.rhVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.rhMode = 0;
+                            break;
+                        case LOWER:
+                            this.rhMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.rhMode = 2;
+                            break;
+                        case EQUAL:
+                            this.rhMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.rhMode = 4;
+                            break;
+                        case HIGHER:
+                            this.rhMode = 5;
+                            break;
+                        default:
+                            this.rhMode = 0;
+                            break;
+                    }
+                    break;
+                case PRECIP:
+                    this.precipVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.precipMode = 0;
+                            break;
+                        case LOWER:
+                            this.precipMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.precipMode = 2;
+                            break;
+                        case EQUAL:
+                            this.precipMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.precipMode = 4;
+                            break;
+                        case HIGHER:
+                            this.precipMode = 5;
+                            break;
+                        default:
+                            this.precipMode = 0;
+                            break;
+                    }
+                    break;
+                case POP:
+                    this.corVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.corMode = 0;
+                            break;
+                        case LOWER:
+                            this.corMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.corMode = 2;
+                            break;
+                        case EQUAL:
+                            this.corMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.corMode = 4;
+                            break;
+                        case HIGHER:
+                            this.corMode = 5;
+                            break;
+                        default:
+                            this.corMode = 0;
+                            break;
+                    }
+                    break;
+                case SNOW:
+                    this.snowVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.snowMode = 0;
+                            break;
+                        case LOWER:
+                            this.snowMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.snowMode = 2;
+                            break;
+                        case EQUAL:
+                            this.snowMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.snowMode = 4;
+                            break;
+                        case HIGHER:
+                            this.snowMode = 5;
+                            break;
+                        default:
+                            this.snowMode = 0;
+                            break;
+                    }
+                    break;
+                case PRES:
+                    this.presVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.presMode = 0;
+                            break;
+                        case LOWER:
+                            this.presMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.presMode = 2;
+                            break;
+                        case EQUAL:
+                            this.presMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.presMode = 4;
+                            break;
+                        case HIGHER:
+                            this.presMode = 5;
+                            break;
+                        default:
+                            this.presMode = 0;
+                            break;
+                    }
+                    break;
+                case CLOUDS:
+                    this.cloudsVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.cloudsMode = 0;
+                            break;
+                        case LOWER:
+                            this.cloudsMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.cloudsMode = 2;
+                            break;
+                        case EQUAL:
+                            this.cloudsMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.cloudsMode = 4;
+                            break;
+                        case HIGHER:
+                            this.cloudsMode = 5;
+                            break;
+                        default:
+                            this.cloudsMode = 0;
+                            break;
+                    }
+                    break;
+                case WND_SPEED:
+                    this.wspVal = cond.getValue();
+                    switch (cond.getConditionMode()){
+                        case DONT_CARE:
+                            this.wspMode = 0;
+                            break;
+                        case LOWER:
+                            this.wspMode = 1;
+                            break;
+                        case LOWER_EQ:
+                            this.wspMode = 2;
+                            break;
+                        case EQUAL:
+                            this.wspMode = 3;
+                            break;
+                        case HIGHER_EQ:
+                            this.wspMode = 4;
+                            break;
+                        case HIGHER:
+                            this.wspMode = 5;
+                            break;
+                        default:
+                            this.wspMode = 0;
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        this.dayNr= "Day " + dayNr;
+        this.tempText = "Temperature";
+        this.tempSymb = "C";
+        this.minTempText = "Min Temp";
+        this.minTempSymb = "C";
+        this.maxTempText = "Max Temp";
+        this.maxTempSymb = "C";
+        this.rhText = "RH";
+        this.rhSymb = "%";
+        this.precipText = "Precipitation";
+        this.precipSymb = "mm";
+        this.corText = "Chance of Rain";
+        this.corSymb = "%";
+        this.snowText = "Snow";
+        this.snowSymb = "mm";
+        this.presText = "Pressure";
+        this.presSymb = "mb";
+        this.cloudsText = "Clouds";
+        this.cloudsSymb = "%";
+        this.wspText = "Wind Speed";
+        this.wspSymb = "m/s";
+    }
+
+    public String getDayNumber() {
         return dayNr;
     }
 
@@ -106,7 +395,7 @@ public class AddDayItem {
         return tempMode;
     }
 
-    public float getTempVal() {
+    public float getTempValue() {
         return tempVal;
     }
 
@@ -118,7 +407,7 @@ public class AddDayItem {
         return minTempMode;
     }
 
-    public float getMinTempVal() {
+    public float getMinTempValue() {
         return minTempVal;
     }
 
@@ -130,7 +419,7 @@ public class AddDayItem {
         return maxTempMode;
     }
 
-    public float getMaxTempVal() {
+    public float getMaxTempValue() {
         return maxTempVal;
     }
 
@@ -142,31 +431,31 @@ public class AddDayItem {
         return rhMode;
     }
 
-    public float getRhVal() {
+    public float getRhValue() {
         return rhVal;
     }
 
-    public String getPrecipText() {
+    public String getPrecipitationText() {
         return precipText;
     }
 
-    public int getPrecipMode() {
+    public int getPrecipitationMode() {
         return precipMode;
     }
 
-    public float getPrecipVal() {
+    public float getPrecipitationValue() {
         return precipVal;
     }
 
-    public String getCorText() {
+    public String getRainText() {
         return corText;
     }
 
-    public int getCorMode() {
+    public int getRainMode() {
         return corMode;
     }
 
-    public float getCorVal() {
+    public float getRainValue() {
         return corVal;
     }
 
@@ -178,7 +467,7 @@ public class AddDayItem {
         return snowMode;
     }
 
-    public float getSnowVal() {
+    public float getSnowValue() {
         return snowVal;
     }
 
@@ -190,55 +479,55 @@ public class AddDayItem {
         return cloudsMode;
     }
 
-    public float getCloudsVal() {
+    public float getCloudsValue() {
         return cloudsVal;
     }
 
-    public String getWspText() {
+    public String getWindSpeedText() {
         return wspText;
     }
 
-    public int getWspMode() {
+    public int getWindSpeedMode() {
         return wspMode;
     }
 
-    public float getWspVal() {
+    public float getWindSpeedValue() {
         return wspVal;
     }
 
-    public String getTempSymb() {
+    public String getTempSymbol() {
         return tempSymb;
     }
 
-    public String getMinTempSymb() {
+    public String getMinTempSymbol() {
         return minTempSymb;
     }
 
-    public String getMaxTempSymb() {
+    public String getMaxTempSymbol() {
         return maxTempSymb;
     }
 
-    public String getRhSymb() {
+    public String getRhSymbol() {
         return rhSymb;
     }
 
-    public String getPrecipSymb() {
+    public String getPrecipitationSymbol() {
         return precipSymb;
     }
 
-    public String getCorSymb() {
+    public String getRainSymbol() {
         return corSymb;
     }
 
-    public String getSnowSymb() {
+    public String getSnowSymbol() {
         return snowSymb;
     }
 
-    public String getCloudsSymb() {
+    public String getCloudsSymbol() {
         return cloudsSymb;
     }
 
-    public String getWspSymb() {
+    public String getWindSpeedSymbol() {
         return wspSymb;
     }
 
@@ -246,8 +535,8 @@ public class AddDayItem {
         return MainActivity.getSpinnerValAdapter();
     }
 
-    public void setDayNr(String dayNr) {
-        this.dayNr = dayNr;
+    public void setDayNumber(int dayNumber) {
+        this.dayNr = "Day " + dayNumber;
     }
 
     public void setTempText(String tempText) {
@@ -258,11 +547,11 @@ public class AddDayItem {
         this.tempMode = tempMode;
     }
 
-    public void setTempVal(float tempVal) {
+    public void setTempValue(float tempVal) {
         this.tempVal = tempVal;
     }
 
-    public void setTempSymb(String tempSymb) {
+    public void setTempSymbol(String tempSymb) {
         this.tempSymb = tempSymb;
     }
 
@@ -274,11 +563,11 @@ public class AddDayItem {
         this.minTempMode = minTempMode;
     }
 
-    public void setMinTempVal(float minTempVal) {
+    public void setMinTempValue(float minTempVal) {
         this.minTempVal = minTempVal;
     }
 
-    public void setMinTempSymb(String minTempSymb) {
+    public void setMinTempSymbol(String minTempSymb) {
         this.minTempSymb = minTempSymb;
     }
 
@@ -290,11 +579,11 @@ public class AddDayItem {
         this.maxTempMode = maxTempMode;
     }
 
-    public void setMaxTempVal(float maxTempVal) {
+    public void setMaxTempValue(float maxTempVal) {
         this.maxTempVal = maxTempVal;
     }
 
-    public void setMaxTempSymb(String maxTempSymb) {
+    public void setMaxTempSymbol(String maxTempSymb) {
         this.maxTempSymb = maxTempSymb;
     }
 
@@ -306,43 +595,43 @@ public class AddDayItem {
         this.rhMode = rhMode;
     }
 
-    public void setRhVal(float rhVal) {
+    public void setRhValue(float rhVal) {
         this.rhVal = rhVal;
     }
 
-    public void setRhSymb(String rhSymb) {
+    public void setRhSymbol(String rhSymb) {
         this.rhSymb = rhSymb;
     }
 
-    public void setPrecipText(String precipText) {
+    public void setPrecipitationText(String precipText) {
         this.precipText = precipText;
     }
 
-    public void setPrecipMode(int precipMode) {
+    public void setPrecipitationMode(int precipMode) {
         this.precipMode = precipMode;
     }
 
-    public void setPrecipVal(float precipVal) {
+    public void setPrecipitationValue(float precipVal) {
         this.precipVal = precipVal;
     }
 
-    public void setPrecipSymb(String precipSymb) {
+    public void setPrecipitationSymbol(String precipSymb) {
         this.precipSymb = precipSymb;
     }
 
-    public void setCorText(String corText) {
+    public void setRainText(String corText) {
         this.corText = corText;
     }
 
-    public void setCorMode(int corMode) {
+    public void setRainMode(int corMode) {
         this.corMode = corMode;
     }
 
-    public void setCorVal(float corVal) {
+    public void setRainValue(float corVal) {
         this.corVal = corVal;
     }
 
-    public void setCorSymb(String corSymb) {
+    public void setRainSymbol(String corSymb) {
         this.corSymb = corSymb;
     }
 
@@ -354,11 +643,11 @@ public class AddDayItem {
         this.snowMode = snowMode;
     }
 
-    public void setSnowVal(float snowVal) {
+    public void setSnowValue(float snowVal) {
         this.snowVal = snowVal;
     }
 
-    public void setSnowSymb(String snowSymb) {
+    public void setSnowSymbol(String snowSymb) {
         this.snowSymb = snowSymb;
     }
 
@@ -370,31 +659,31 @@ public class AddDayItem {
         this.cloudsMode = cloudsMode;
     }
 
-    public void setCloudsVal(float cloudsVal) {
+    public void setCloudsValue(float cloudsVal) {
         this.cloudsVal = cloudsVal;
     }
 
-    public void setCloudsSymb(String cloudsSymb) {
+    public void setCloudsSymbol(String cloudsSymb) {
         this.cloudsSymb = cloudsSymb;
     }
 
-    public void setWspText(String wspText) {
+    public void setWindSpeedText(String wspText) {
         this.wspText = wspText;
     }
 
-    public void setWspMode(int wspMode) {
+    public void setWindSpeedMode(int wspMode) {
         this.wspMode = wspMode;
     }
 
-    public void setWspVal(float wspVal) {
+    public void setWindSpeedValue(float wspVal) {
         this.wspVal = wspVal;
     }
 
-    public void setWspSymb(String wspSymb) {
+    public void setWindSpeedSymbol(String wspSymb) {
         this.wspSymb = wspSymb;
     }
 
-    public String getPresText() {
+    public String getPressureText() {
         return presText;
     }
 
@@ -402,27 +691,27 @@ public class AddDayItem {
         this.presText = presText;
     }
 
-    public int getPresMode() {
+    public int getPressureMode() {
         return presMode;
     }
 
-    public void setPresMode(int presMode) {
+    public void setPressureMode(int presMode) {
         this.presMode = presMode;
     }
 
-    public float getPresVal() {
+    public float getPressureValue() {
         return presVal;
     }
 
-    public void setPresVal(float presVal) {
+    public void setPressureValue(float presVal) {
         this.presVal = presVal;
     }
 
-    public String getPresSymb() {
+    public String getPressureSymbol() {
         return presSymb;
     }
 
-    public void setPresSymb(String presSymb) {
+    public void setPressureSymbol(String presSymb) {
         this.presSymb = presSymb;
     }
 }

@@ -1,49 +1,48 @@
 package com.example.wpws;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CurrentWeather {
 
-    private float temp; //temperature (C)
+    private float temperature; //temperature (C)
     private float realFeel; //real feel temp (C)
     private float rh; //relative humidity (%)
-    private String desc; //current weather description
-    private float wspeed; //wind speed(m/s)
-    private float precip; //precipitation rate(mm/hr)
-    private float pres; //pressure (mb)
+    private String description; //current weather description
+    private float windSpeed; //wind speed(m/s)
+    private float precipitation; //precipitation rate(mm/hr)
+    private float pressure; //pressure (mb)
     private float uv; //uv index (0-11+)
 
-    CurrentWeather()
+    public CurrentWeather()
     {
-        temp = 0;
+        temperature = 0;
         realFeel = 0;
         rh = 0;
-        desc = "";
-        wspeed = 0;
-        precip = 0;
-        pres = 0;
+        description = "";
+        windSpeed = 0;
+        precipitation = 0;
+        pressure = 0;
         uv = 0;
     }
 
-    CurrentWeather(JSONObject obj) throws JSONException {
-        temp = Float.parseFloat(obj.getString("temp"));
+    public CurrentWeather(JSONObject obj) throws JSONException {
+        temperature = Float.parseFloat(obj.getString("temp"));
         realFeel = Float.parseFloat(obj.getString("app_temp"));
         rh = Float.parseFloat(obj.getString("rh"));
-        wspeed = Float.parseFloat(obj.getString("wind_spd"));
-        precip = Float.parseFloat(obj.getString("precip"));
-        pres = Float.parseFloat(obj.getString("pres"));
+        windSpeed = Float.parseFloat(obj.getString("wind_spd"));
+        precipitation = Float.parseFloat(obj.getString("precip"));
+        pressure = Float.parseFloat(obj.getString("pres"));
         uv = Float.parseFloat(obj.getString("uv"));
-        desc = obj.getJSONObject("weather").getString("description");
+        description = obj.getJSONObject("weather").getString("description");
     }
 
-    public float getTemp() {
-        return temp;
+    public float getTemperature() {
+        return temperature;
     }
 
-    public void setTemp(float temp) {
-        this.temp = temp;
+    public void setTemperature(float temperature) {
+        this.temperature = temperature;
     }
 
     public float getRealFeel() {
@@ -62,36 +61,36 @@ public class CurrentWeather {
         this.rh = rh;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public float getWspeed() {
-        return wspeed;
+    public float getWindSpeed() {
+        return windSpeed;
     }
 
-    public void setWspeed(float wspeed) {
-        this.wspeed = wspeed;
+    public void setWindSpeed(float windSpeed) {
+        this.windSpeed = windSpeed;
     }
 
-    public float getPrecip() {
-        return precip;
+    public float getPrecipitation() {
+        return precipitation;
     }
 
-    public void setPrecip(float precip) {
-        this.precip = precip;
+    public void setPrecipitation(float precipitation) {
+        this.precipitation = precipitation;
     }
 
-    public float getPres() {
-        return pres;
+    public float getPressure() {
+        return pressure;
     }
 
-    public void setPres(float pres) {
-        this.pres = pres;
+    public void setPressure(float pressure) {
+        this.pressure = pressure;
     }
 
     public float getUv() {

@@ -2,77 +2,79 @@ package com.example.wpws;
 
 public class ForecastItem {
 
-    private String fcName;
-    private String fcLocation;
-    private String fcDesc;
-    private String fcTemp;
-    private String fcRh;
-    private String fcWspeed;
-    private String fcPop;
-    private String fcRealFeel;
-    private String fcUv;
+    private String forecastName;
+    private String forecastLocation;
+    private String forecastDescription;
+    private String forecastTemperature;
+    private String forecastRh;
+    private String forecastWindSpeed;
+    private String forecastRain;
+    private String forecastRealFeel;
+    private String forecastUv;
 
-    ForecastItem(String fcName, String fcLocation, String fcDesc, String fcTemp, String fcRh, String fcWspeed, String fcPop)
+    ForecastItem(String forecastName, String forecastLocation, String forecastDescription,
+                 String forecastTemperature, String forecastRh, String forecastWindSpeed,
+                 String forecastRain, String forecastRealFeel, String forecastUv)
     {
-        this.fcName = fcName;
-        this.fcLocation = fcLocation;
-        this.fcDesc = fcDesc;
-        this.fcTemp = "Temperature: " + fcTemp + " C";
-        this.fcRh = "RH: " + fcRh + "%";
-        this.fcWspeed = "Wind speed: " + fcWspeed + " m/s";
-        this.fcPop = "Chance of Rain: " + fcPop + "%";
-        this.fcRealFeel = "Real feel: " + fcRealFeel + " C";
-        this.fcUv = "UV index: " + fcUv;
+        this.forecastName = forecastName;
+        this.forecastLocation = forecastLocation;
+        this.forecastDescription = forecastDescription;
+        this.forecastTemperature = "Temperature: " + forecastTemperature + " C";
+        this.forecastRh = "RH: " + forecastRh + "%";
+        this.forecastWindSpeed = "Wind speed: " + forecastWindSpeed + " m/s";
+        this.forecastRain = "Chance of Rain: " + forecastRain + "%";
+        this.forecastRealFeel = "Real feel: " + forecastRealFeel + " C";
+        this.forecastUv = "UV index: " + forecastUv;
     }
 
-    ForecastItem(Forecast fc)
+    ForecastItem(Forecast forecast)
     {
-        CurrentWeather cw = fc.getCurrentWeather();
+        CurrentWeather currentWeather = forecast.getCurrentWeather();
 
-        fcName = fc.getName();
-        fcLocation = "(" + fc.getCityName() + ", " + fc.getCountryName() + ")";
-        fcDesc = cw.getDesc();
-        fcTemp = "Temperature: " + cw.getTemp() + " C";
-        fcRh = "RH: " + cw.getRh() + "%";
-        fcWspeed = "Wind sppeed: " + cw.getWspeed() + " m/s";
-        fcPop = "Chance of Rain: " + fc.getDays().get(0).getPop() + "%";
-        fcRealFeel = "Real feel: " + cw.getRealFeel() + " C";
-        fcUv = "UV index: " + cw.getUv();
+        forecastName = forecast.getName();
+        forecastLocation = "(" + forecast.getCityName() + ", " + forecast.getCountryName() + ")";
+        forecastDescription = currentWeather.getDescription();
+        forecastTemperature = "Temperature: " + currentWeather.getTemperature() + " C";
+        forecastRh = "RH: " + currentWeather.getRh() + "%";
+        forecastWindSpeed = "Wind sppeed: " + currentWeather.getWindSpeed() + " m/s";
+        forecastRain = "Chance of Rain: " + forecast.getDays().get(0).getRain() + "%";
+        forecastRealFeel = "Real feel: " + currentWeather.getRealFeel() + " C";
+        forecastUv = "UV index: " + currentWeather.getUv();
     }
 
-    public String getFcName() {
-        return fcName;
+    public String getForecastName() {
+        return forecastName;
     }
 
-    public String getFcLocation() {
-        return fcLocation;
+    public String getForecastLocation() {
+        return forecastLocation;
     }
 
-    public String getFcDesc() {
-        return fcDesc;
+    public String getForecastDescription() {
+        return forecastDescription;
     }
 
-    public String getFcTemp() {
-        return fcTemp;
+    public String getForecastTemperature() {
+        return forecastTemperature;
     }
 
-    public String getFcRh() {
-        return fcRh;
+    public String getForecastRh() {
+        return forecastRh;
     }
 
-    public String getFcWspeed() {
-        return fcWspeed;
+    public String getForecastWindSpeed() {
+        return forecastWindSpeed;
     }
 
-    public String getFcPop() {
-        return fcPop;
+    public String getForecastRain() {
+        return forecastRain;
     }
 
-    public String getFcRealFeel() {
-        return fcRealFeel;
+    public String getForecastRealFeel() {
+        return forecastRealFeel;
     }
 
-    public String getFcUv() {
-        return fcUv;
+    public String getForecastUv() {
+        return forecastUv;
     }
 }

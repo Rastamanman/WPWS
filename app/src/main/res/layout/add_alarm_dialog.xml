@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/al_dialog_text"
+        android:id="@+id/alarm_dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"></TextView>
 
     <EditText
-        android:id="@+id/add_al_name"
+        android:id="@+id/alarm_dialog_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -30,10 +30,10 @@
         android:layout_marginRight="20dp"
         android:hint="Alarm Name"
         android:maxLength="20"
-        app:layout_constraintTop_toBottomOf="@+id/al_dialog_text"></EditText>
+        app:layout_constraintTop_toBottomOf="@+id/alarm_dialog_title"></EditText>
 
     <TextView
-        android:id="@+id/add_al_loc_text"
+        android:id="@+id/alarm_dialog_location_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -43,20 +43,20 @@
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_al_name"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/alarm_dialog_name"></TextView>
 
     <Spinner
-        android:id="@+id/add_al_loc_list"
+        android:id="@+id/alarm_dialog_locations"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        app:layout_constraintLeft_toRightOf="@+id/add_al_loc_text"
-        app:layout_constraintTop_toBottomOf="@id/add_al_name"></Spinner>
+        app:layout_constraintLeft_toRightOf="@+id/alarm_dialog_location_text"
+        app:layout_constraintTop_toBottomOf="@id/alarm_dialog_name"></Spinner>
 
     <TextView
-        android:id="@+id/add_al_cond_text"
+        android:id="@+id/alarm_dialog_conditions_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -67,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_al_loc_text"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/alarm_dialog_location_text"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/alarm_dialog_recycler"
@@ -77,43 +77,47 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/add_al_cond_text"></androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/alarm_dialog_conditions_text"></androidx.recyclerview.widget.RecyclerView>
 
-    <LinearLayout
-        android:id="@+id/new_days_layout"
-        android:layout_width="match_parent"
+    <GridLayout
+        android:id="@+id/alarm_dialog_new_days"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:columnCount="3"
         app:layout_constraintTop_toBottomOf="@id/alarm_dialog_recycler">
         <Button
-            android:id="@+id/al_dialog_add_day"
+            android:id="@+id/alarm_dialog_add_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add new Day"
-            android:textSize="13dp"></Button>
+            android:textSize="13dp"
+            android:layout_rowWeight="1"></Button>
 
         <Button
-            android:id="@+id/al_dialog_del_day"
+            android:id="@+id/alarm_dialog_delete_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete last Day"
-            android:textSize="13dp"></Button>
+            android:textSize="13dp"
+            android:layout_rowWeight="1"></Button>
         <Button
-            android:id="@+id/add_al_button"
+            android:id="@+id/alarm_dialog_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Alarm"
             android:textSize="13dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/new_days_layout"></Button>
-    </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/alarm_dialog_new_days"
+            android:layout_rowWeight="1"></Button>
+    </GridLayout>
     <TextView
-        android:id="@+id/new_al_error"
+        android:id="@+id/alarm_dialog_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ff0000"
-        app:layout_constraintTop_toBottomOf="@id/new_days_layout"
+        app:layout_constraintTop_toBottomOf="@id/alarm_dialog_new_days"
         android:textAlignment="center"></TextView>
 
 

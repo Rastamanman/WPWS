@@ -6,67 +6,67 @@ import org.json.JSONObject;
 public class Day {
 
     private float rh; //average relative humidity (%)
-    private float pres; //average pressure (mb)
-    private float min_temp; // minimum temperature (C)
-    private float max_temp; //maximum temperature (C)
-    private float low_temp; //low temperature (C)
-    private float high_temp; //high temperature (C)
-    private float temp; //average temp (C)
+    private float pressure; //average pressure (mb)
+    private float minTemp; // minimum temperature (C)
+    private float maxTemp; //maximum temperature (C)
+    private float lowTemp; //low temperature (C)
+    private float highTemp; //high temperature (C)
+    private float temperature; //average temp (C)
     private float snow; //acumulated snowfall(mm)
-    private float snow_depth; //(mm)
+    private float snowDepth; //(mm)
     private float clouds; //average total cloud coverage (%)
-    private float wind_spd; //wind speed (m/s)
-    private String wind_cdir; //wind direction abreviated
-    private String valid_date; //date the forecast is valid
-    private String weather_icon; //icon code
-    private String weather_desc; //desctiption
-    private int weather_code; //code
-    private float precip; //acumulated liqud equivalent precipitation(mm)
-    private float pop; //probability of precipitation(%)
+    private float windSpeed; //wind speed (m/s)
+    private String windCardinalDirection; //wind direction abreviated
+    private String validDate; //date the forecast is valid
+    private String weatherIcon; //icon code
+    private String weatherDescription; //desctiption
+    private int weatherCode; //code
+    private float precipitation; //acumulated liqud equivalent precipitation(mm)
+    private float rain; //probability of precipitation(%)
 
     public Day()
     {
         rh = 0;
-        pres = 0;
-        min_temp = 0;
-        max_temp = 0;
-        low_temp = 0;
-        high_temp = 0;
-        temp = 0;
+        pressure = 0;
+        minTemp = 0;
+        maxTemp = 0;
+        lowTemp = 0;
+        highTemp = 0;
+        temperature = 0;
         snow = 0;
-        snow_depth = 0;
+        snowDepth = 0;
         clouds = 0;
-        wind_spd = 0;
-        wind_cdir = "";
-        valid_date = "";
-        weather_icon = "";
-        weather_desc = "";
-        weather_code = 0;
-        precip = 0;
-        pop = 0;
+        windSpeed = 0;
+        windCardinalDirection = "";
+        validDate = "";
+        weatherIcon = "";
+        weatherDescription = "";
+        weatherCode = 0;
+        precipitation = 0;
+        rain = 0;
     }
 
     public Day(JSONObject obj)
     {
         try {
             rh = Float.parseFloat(obj.getString("rh"));
-            pres = Float.parseFloat(obj.getString("pres"));
-            min_temp = Float.parseFloat(obj.getString("min_temp"));
-            max_temp = Float.parseFloat(obj.getString("max_temp"));
-            low_temp = Float.parseFloat(obj.getString("low_temp"));
-            high_temp = Float.parseFloat(obj.getString("high_temp"));
-            temp = Float.parseFloat(obj.getString("temp"));
+            pressure = Float.parseFloat(obj.getString("pres"));
+            minTemp = Float.parseFloat(obj.getString("min_temp"));
+            maxTemp = Float.parseFloat(obj.getString("max_temp"));
+            lowTemp = Float.parseFloat(obj.getString("low_temp"));
+            highTemp = Float.parseFloat(obj.getString("high_temp"));
+            temperature = Float.parseFloat(obj.getString("temp"));
             snow = Float.parseFloat(obj.getString("snow"));
-            snow_depth = Float.parseFloat(obj.getString("snow_depth"));
+            snowDepth = Float.parseFloat(obj.getString("snow_depth"));
             clouds = Float.parseFloat(obj.getString("clouds"));
-            wind_spd = Float.parseFloat(obj.getString("wind_spd"));
-            wind_cdir = obj.getString("wind_cdir");
-            valid_date = obj.getString("valid_date");
-            weather_icon = obj.getJSONObject("weather").getString("icon");
-            weather_code = Integer.parseInt(obj.getJSONObject("weather").getString("code"));
-            weather_desc = obj.getJSONObject("weather").getString("description");
-            precip = Float.parseFloat(obj.getString("precip"));
-            pop = Float.parseFloat(obj.getString("pop"));
+            windSpeed = Float.parseFloat(obj.getString("wind_spd"));
+            windCardinalDirection = obj.getString("wind_cdir");
+            validDate = obj.getString("valid_date");
+            weatherIcon = obj.getJSONObject("weather").getString("icon");
+            weatherCode = Integer.parseInt(obj.getJSONObject("weather").getString("code"));
+            weatherDescription = obj.getJSONObject("weather").getString("description");
+            precipitation = Float.parseFloat(obj.getString("precip"));
+            rain = Float.parseFloat(obj.getString("pop"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -80,52 +80,52 @@ public class Day {
         this.rh = rh;
     }
 
-    public float getPres() {
-        return pres;
+    public float getPressure() {
+        return pressure;
     }
 
-    public void setPres(float pres) {
-        this.pres = pres;
+    public void setPressure(float pressure) {
+        this.pressure = pressure;
     }
 
-    public float getMin_temp() {
-        return min_temp;
+    public float getMinTemp() {
+        return minTemp;
     }
 
-    public void setMin_temp(float min_temp) {
-        this.min_temp = min_temp;
+    public void setMinTemp(float minTemp) {
+        this.minTemp = minTemp;
     }
 
-    public float getMax_temp() {
-        return max_temp;
+    public float getMaxTemp() {
+        return maxTemp;
     }
 
-    public void setMax_temp(float max_temp) {
-        this.max_temp = max_temp;
+    public void setMaxTemp(float maxTemp) {
+        this.maxTemp = maxTemp;
     }
 
-    public float getLow_temp() {
-        return low_temp;
+    public float getLowTemp() {
+        return lowTemp;
     }
 
-    public void setLow_temp(float low_temp) {
-        this.low_temp = low_temp;
+    public void setLowTemp(float lowTemp) {
+        this.lowTemp = lowTemp;
     }
 
-    public float getHigh_temp() {
-        return high_temp;
+    public float getHighTemp() {
+        return highTemp;
     }
 
-    public void setHigh_temp(float high_temp) {
-        this.high_temp = high_temp;
+    public void setHighTemp(float highTemp) {
+        this.highTemp = highTemp;
     }
 
-    public float getTemp() {
-        return temp;
+    public float getTemperature() {
+        return temperature;
     }
 
-    public void setTemp(float temp) {
-        this.temp = temp;
+    public void setTemperature(float temperature) {
+        this.temperature = temperature;
     }
 
     public float getSnow() {
@@ -136,12 +136,12 @@ public class Day {
         this.snow = snow;
     }
 
-    public float getSnow_depth() {
-        return snow_depth;
+    public float getSnowDepth() {
+        return snowDepth;
     }
 
-    public void setSnow_depth(float snow_depth) {
-        this.snow_depth = snow_depth;
+    public void setSnowDepth(float snowDepth) {
+        this.snowDepth = snowDepth;
     }
 
     public float getClouds() {
@@ -152,67 +152,67 @@ public class Day {
         this.clouds = clouds;
     }
 
-    public float getWind_spd() {
-        return wind_spd;
+    public float getWindSpeed() {
+        return windSpeed;
     }
 
-    public void setWind_spd(float wind_spd) {
-        this.wind_spd = wind_spd;
+    public void setWindSpeed(float windSpeed) {
+        this.windSpeed = windSpeed;
     }
 
-    public String getWind_cdir() {
-        return wind_cdir;
+    public String getWindCardinalDirection() {
+        return windCardinalDirection;
     }
 
-    public void setWind_cdir(String wind_cdir) {
-        this.wind_cdir = wind_cdir;
+    public void setWindCardinalDirection(String windCardinalDirection) {
+        this.windCardinalDirection = windCardinalDirection;
     }
 
-    public String getValid_date() {
-        return valid_date;
+    public String getValidDate() {
+        return validDate;
     }
 
-    public void setValid_date(String valid_date) {
-        this.valid_date = valid_date;
+    public void setValidDate(String validDate) {
+        this.validDate = validDate;
     }
 
-    public String getWeather_icon() {
-        return weather_icon;
+    public String getWeatherIcon() {
+        return weatherIcon;
     }
 
-    public void setWeather_icon(String weather_icon) {
-        this.weather_icon = weather_icon;
+    public void setWeatherIcon(String weatherIcon) {
+        this.weatherIcon = weatherIcon;
     }
 
-    public String getWeather_desc() {
-        return weather_desc;
+    public String getWeatherDescription() {
+        return weatherDescription;
     }
 
-    public void setWeather_desc(String weather_desc) {
-        this.weather_desc = weather_desc;
+    public void setWeatherDescription(String weatherDescription) {
+        this.weatherDescription = weatherDescription;
     }
 
-    public int getWeather_code() {
-        return weather_code;
+    public int getWeatherCode() {
+        return weatherCode;
     }
 
-    public void setWeather_code(int weather_code) {
-        this.weather_code = weather_code;
+    public void setWeatherCode(int weatherCode) {
+        this.weatherCode = weatherCode;
     }
 
-    public float getPrecip() {
-        return precip;
+    public float getPrecipitation() {
+        return precipitation;
     }
 
-    public void setPrecip(float precip) {
-        this.precip = precip;
+    public void setPrecipitation(float precipitation) {
+        this.precipitation = precipitation;
     }
 
-    public float getPop() {
-        return pop;
+    public float getRain() {
+        return rain;
     }
 
-    public void setPop(float pop) {
-        this.pop = pop;
+    public void setRain(float rain) {
+        this.rain = rain;
     }
 }

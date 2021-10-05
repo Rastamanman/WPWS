@@ -5,8 +5,8 @@ public class Location {
 
     private float latitude;
     private float longitude;
-    private String city_name;
-    private String country_name;
+    private String cityName;
+    private String countryName;
     private String name;
 
 
@@ -14,27 +14,36 @@ public class Location {
     {
         latitude = 0;
         longitude = 0;
-        city_name = "";
-        country_name = "";
+        cityName = "";
+        countryName = "";
         name = "";
     }
 
-    public Location(float lat, float lon, String cityName, String countryName, String name)
+    public Location(float latitude, float longitude, String cityName, String countryName, String name)
     {
-        latitude = lat;
-        longitude = lon;
-        city_name = cityName;
-        country_name = countryName;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.cityName = cityName;
+        this.countryName = countryName;
         this.name = name;
     }
 
-    public Location(float lat, float lon, String cityName, String countryName)
+    public Location(float latitude, float longitude, String cityName, String countryName)
     {
-        latitude = lat;
-        longitude = lon;
-        city_name = cityName;
-        country_name = countryName;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.cityName = cityName;
+        this.countryName = countryName;
         name = cityName + ", " + countryName;
+    }
+
+    public Location(float latitude, float longitude, String name)
+    {
+        this.latitude = latitude;
+        this.longitude = longitude;
+        cityName = "";
+        countryName = "";
+        this.name = name;
     }
 
     public float getLatitude() {
@@ -53,20 +62,20 @@ public class Location {
         this.longitude = longitude;
     }
 
-    public String getCity_name() {
-        return city_name;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
-    public String getCountry_name() {
-        return country_name;
+    public String getCountryName() {
+        return countryName;
     }
 
-    public void setCountry_name(String country_name) {
-        this.country_name = country_name;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
     public String getName() { return name; }

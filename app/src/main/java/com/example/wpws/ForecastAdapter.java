@@ -7,12 +7,11 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.ForecastViewHolder> {
 
-    private List<ForecastItem> fcList;
+    private List<ForecastItem> forecastItems;
     private static ClickListener clickListener;
 
     public interface ClickListener {
@@ -26,52 +25,52 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
 
     public void clear()
     {
-        fcList.clear();
+        forecastItems.clear();
         notifyDataSetChanged();
     }
 
-    public ForecastAdapter(List<ForecastItem> fcList)
+    public ForecastAdapter(List<ForecastItem> forecastItems)
     {
-        this.fcList = fcList;
+        this.forecastItems = forecastItems;
     }
 
     public static class ForecastViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView fc_name;
-        private TextView fc_loc;
-        private TextView fc_desc;
-        private TextView fc_temp;
-        private TextView fc_rh;
-        private TextView fc_wspeed;
-        private TextView fc_pop;
-        private TextView fc_rf;
-        private TextView fc_uv;
+        private TextView forecastName;
+        private TextView forecastLocation;
+        private TextView forecastDescription;
+        private TextView forecastTemperature;
+        private TextView forecastRh;
+        private TextView forecastWindSpeed;
+        private TextView forecastRain;
+        private TextView forecastRealFeel;
+        private TextView forecastUv;
 
         public ForecastViewHolder(View view)
         {
             super(view);
-            fc_name = view.findViewById(R.id.fc_name);
-            fc_loc = view.findViewById(R.id.fc_location);
-            fc_desc = view.findViewById(R.id.fc_description);
-            fc_temp = view.findViewById(R.id.fc_temp);
-            fc_rh = view.findViewById(R.id.fc_rh);
-            fc_wspeed = view.findViewById(R.id.fc_wspeed);
-            fc_pop = view.findViewById(R.id.fc_pop);
-            fc_rf = view.findViewById(R.id.fc_rf);
-            fc_uv = view.findViewById(R.id.fc_uv);
+            forecastName = view.findViewById(R.id.forecast_item_name);
+            forecastLocation = view.findViewById(R.id.forecast_item_location);
+            forecastDescription = view.findViewById(R.id.forecast_item_description);
+            forecastTemperature = view.findViewById(R.id.forecast_item_temperature);
+            forecastRh = view.findViewById(R.id.forecast_Item_rh);
+            forecastWindSpeed = view.findViewById(R.id.forecast_item_wind_speed);
+            forecastRain = view.findViewById(R.id.forecast_item_rain);
+            forecastRealFeel = view.findViewById(R.id.forecast_item_real_feel);
+            forecastUv = view.findViewById(R.id.forecast_item_uv);
             itemView.setOnClickListener(this);
         }
 
-        public void setData(ForecastItem fc)
+        public void setData(ForecastItem forecast)
         {
-            fc_name.setText(fc.getFcName());
-            fc_loc.setText(fc.getFcLocation());
-            fc_desc.setText(fc.getFcDesc());
-            fc_temp.setText(fc.getFcTemp());
-            fc_rh.setText(fc.getFcRh());
-            fc_wspeed.setText(fc.getFcWspeed());
-            fc_pop.setText(fc.getFcPop());
-            fc_rf.setText(fc.getFcRealFeel());
-            fc_uv.setText(fc.getFcUv());
+            forecastName.setText(forecast.getForecastName());
+            forecastLocation.setText(forecast.getForecastLocation());
+            forecastDescription.setText(forecast.getForecastDescription());
+            forecastTemperature.setText(forecast.getForecastTemperature());
+            forecastRh.setText(forecast.getForecastRh());
+            forecastWindSpeed.setText(forecast.getForecastWindSpeed());
+            forecastRain.setText(forecast.getForecastRain());
+            forecastRealFeel.setText(forecast.getForecastRealFeel());
+            forecastUv.setText(forecast.getForecastUv());
         }
 
         @Override
@@ -91,13 +90,13 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     @Override
     public void onBindViewHolder(ForecastAdapter.ForecastViewHolder holder, int position)
     {
-        ForecastItem fc = fcList.get(position);
-        holder.setData(fc);
+        ForecastItem forecast = forecastItems.get(position);
+        holder.setData(forecast);
     }
 
     @Override
     public int getItemCount()
     {
-        return fcList.size();
+        return forecastItems.size();
     }
 }
