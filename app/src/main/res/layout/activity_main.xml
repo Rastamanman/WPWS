@@ -18,8 +18,7 @@
         android:layout_marginRight="1dp"
         android:layout_marginBottom="1dp"
         android:background="@drawable/fc_button_idle"
-        android:contentDescription="Forecasts"
-        android:tooltipText="Forecasts"></ImageButton>
+        android:contentDescription="Forecasts"></ImageButton>
 
     <ImageButton
         android:id="@+id/alarms_button"
@@ -36,7 +35,7 @@
         android:layout_toEndOf="@+id/forecasts_button"
         android:background="@drawable/al_button_idle"
         android:contentDescription="Alarms"
-        android:tooltipText="Alarms"></ImageButton>
+        android:longClickable="true"></ImageButton>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/swipeContainer"

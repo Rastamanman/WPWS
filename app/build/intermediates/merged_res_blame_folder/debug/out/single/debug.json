@@ -1,482 +1,490 @@
 [
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_day_cond_item.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\day_cond_item.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t02n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t02n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r06d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r06d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_d03d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\d03d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c02d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c02d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_delete_button.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\delete_button.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a04n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a04n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_foreground.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t03d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t03d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_d01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\d01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s03n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s03n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c04n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c04n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a02d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a02d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_add_alarm_dialog.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\add_alarm_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s06n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s06n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r03d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r03d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_background.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s04n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s04n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r02d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r02d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t05d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t05d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_fc_button_idle.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\fc_button_idle.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-hdpi\\app_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a03d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a03d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_options_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\options_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r05n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r05n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c04d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c04d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a02n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a02n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r01n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s05d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s05d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a05d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a05d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_d03n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\d03n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_f01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\f01n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_options_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\options_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_d01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\d01n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a03n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a03n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a03d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a03d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\menu_popup_alarm.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\menu\\popup_alarm.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_foreground.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_background.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_foreground.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s03d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s03d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r04n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r04n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r06n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r06n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_foreground.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r03n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r03n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c03n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c03n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s06d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s06d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s03d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s03d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_notification_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable-v24\\notification_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_app_icon.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\app_icon.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_day_cond_item.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\day_cond_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t03n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t03n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_add_day_item.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\add_day_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c03d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c03d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_app_icon_round.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-anydpi-v26\\app_icon_round.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_d03n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\d03n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_background.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\background.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t04n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t04n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_f01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\f01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s05d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s05d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_alarm_item.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\alarm_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_alarm.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_alarm.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_fc_button_clicked.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\fc_button_clicked.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_d02n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\d02n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t04n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t04n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r04n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r04n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_u00d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\u00d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t05n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t05n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_d01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\d01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s04d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s04d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_al_button_clicked.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\al_button_clicked.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a05n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a05n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r02n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r02n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_background.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_background.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r05n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r05n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t03n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t03n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_al_button_idle.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\al_button_idle.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c04n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c04n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r03n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r03n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon_foreground.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_foreground.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c01n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s02d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s02d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r03d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r03d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_are_you_sure_dialog.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\are_you_sure_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r02n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r02n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c02d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c02d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a06n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a06n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r06d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r06d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t02n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t02n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_alarm_dialog.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_alarm_dialog.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s02d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s02d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_are_you_sure_dialog.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\are_you_sure_dialog.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t02d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t02d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a05d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a05d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a04d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a04d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t03d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t03d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a06n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a06n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_u00n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\u00n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\menu_popup_menu.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\menu\\popup_menu.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_add_forecast_dialog.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\add_forecast_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s01n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t05n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t05n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a05n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a05n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_alarm_item.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\alarm_item.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t01n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a04n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a04n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s04d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s04d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_forecast_item.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\forecast_item.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_forecast_item.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\forecast_item.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s02n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s02n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_f01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\f01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t04d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t04d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s06n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s06n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a06d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a06d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r06n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r06n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s05n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s05n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a01n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a01n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r04d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r04d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c03d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c03d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_u00d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\u00d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon_background.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_background.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_app_icon.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-anydpi-v26\\app_icon.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c02n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c02n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_fc_button_clicked.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\fc_button_clicked.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_button.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\add_button.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_d02n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\d02n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c03n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c03n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_day_item.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_day_item.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_al_button_idle.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\al_button_idle.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s05n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s05n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_fc_button_idle.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\fc_button_idle.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon_foreground.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_app_icon_background.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xhdpi\\app_icon_background.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a03n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a03n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon_background.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_background.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_button.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\add_button.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_alarms_settings.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\alarms_settings.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_d03d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\d03d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_d01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\d01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a02d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a02d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_f01d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\f01d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r05d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r05d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\menu_popup_menu.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\menu\\popup_menu.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_al_button_clicked.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\al_button_clicked.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s06d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s06d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_background.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_forecast.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_forecast.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_d02d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\d02d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_s04n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\s04n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_forecast.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_forecast.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a02n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a02n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_u00n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\u00n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t04d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t04d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_background.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_c04d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\c04d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r05d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r05d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_forecast_dialog.xml.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_forecast_dialog.xml"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_delete_button.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\delete_button.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon_round.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_round.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_app_icon_round.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-anydpi-v26\\app_icon_round.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a04d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a04d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-hdpi\\app_icon_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_alarm.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_alarm.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t01d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t01d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_d02d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\d02d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s03n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s03n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_background.xml.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\background.xml"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_t02d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\t02d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon_round.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-mdpi\\app_icon_round.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_a06d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\a06d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_app_icon.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-mdpi\\app_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon_background.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\mipmap-xxhdpi\\app_icon_background.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_t05d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\t05d.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_r02d.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\r02d.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_c02n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\c02n.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_notification_icon.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable-v24\\notification_icon.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\merged_res\\debug\\drawable_s02n.png.flat",
-        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\drawable\\s02n.png"
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_r04d.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\r04d.png"
+    },
+    {
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_app_icon_background.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\mipmap-xxxhdpi\\app_icon_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\merged_res\\debug\\drawable_a01n.png.flat",
+        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\drawable\\a01n.png"
     }
 ]

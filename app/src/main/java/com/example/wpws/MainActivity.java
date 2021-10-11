@@ -3,6 +3,7 @@ package com.example.wpws;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.JobIntentService;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,18 +12,24 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -38,6 +45,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -52,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private static List<Forecast> forecasts = new ArrayList<>();
     private static List<Location> locations = new ArrayList<>();
     private static List<Alarm> alarms = new ArrayList<>();
+    private static List<NotificationID> notificationsID = new ArrayList<>();
     private String currentView = ""; //FORECAST or ALARM
 
     //recycler view objects
@@ -71,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         return spinnerValAdapter;
     }
     public static String[] spinnerValues = {"d.c.", "<", "<=", "=", "=>", ">"};
+    public static String[] periodValues = {"1", "3", "12", "24", "never"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -84,10 +94,14 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy((policy));
 
+        //load app data
+        loadData();
+
         //create Notification Channel
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
         {
-            NotificationChannel channel = new NotificationChannel("MyNotif","AlarmNotif", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel("MyNotif","AlarmNotif",
+                    NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
@@ -119,9 +133,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //load app data
-        loadData();
-
         //get forecast for all  aka UPDATE
         getAllForecasts();
 
@@ -129,11 +140,12 @@ public class MainActivity extends AppCompatActivity {
         buildRecycler();
 
         //check alarms for every location
-        checkAlarms();
+        //checkAlarms();
+        scheduleJob(2);
 
         //button to load forecasts in recycler
-        ImageButton fcButton = findViewById(R.id.forecasts_button);
-        fcButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton forecastsButton = findViewById(R.id.forecasts_button);
+        forecastsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loadForecastRecycler();
@@ -141,11 +153,78 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //button to load alarms in recycler
-        ImageButton alButton = findViewById(R.id.alarms_button);
-        alButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton alarmsButton = findViewById(R.id.alarms_button);
+        alarmsButton.setLongClickable(true);
+        alarmsButton.setClickable(true);
+        alarmsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loadAlarmRecycler();
+            }
+        });
+        alarmsButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                PopupMenu popup = new PopupMenu(MainActivity.this, alarmsButton);
+                popup.getMenuInflater().inflate(R.menu.popup_alarm, popup.getMenu());
+
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        if(item.getTitle().equals("Alarms settings"))
+                        {
+                            //open alarm settings dialog
+                            View view = getLayoutInflater().inflate(R.layout.alarms_settings, null);
+                            dialogBuilder = new AlertDialog.Builder(MainActivity.this);
+                            dialogBuilder.setView(view);
+                            dialog = dialogBuilder.create();
+                            dialog.show();
+
+                            //dialog behaviour
+                            Spinner periodChoice = (Spinner) view.findViewById(R.id.notification_choice);
+                            ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<>(MainActivity.this,
+                                    android.R.layout.simple_list_item_1, periodValues);
+                            periodChoice.setAdapter(spinnerAdapter);
+
+                            Button saveButton = (Button) view.findViewById(R.id.save_button);
+                            saveButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    cancelJob();
+                                    int choicePosition = periodChoice.getSelectedItemPosition();
+                                    switch (choicePosition){
+                                        case 0:
+                                            //1
+                                            scheduleJob(1 * 60);
+                                            break;
+                                        case 1:
+                                            //3 hours
+                                            scheduleJob(3 * 60);
+                                            break;
+                                        case 2:
+                                            //12 hours
+                                            scheduleJob(12 * 60);
+                                            break;
+                                        case 3:
+                                            //24 hours
+                                            scheduleJob(24 * 60);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                    dialog.dismiss();
+                                }
+                            });
+                        }
+                        else
+                        {
+                            checkAlarms();
+                        }
+                        return false;
+                    }
+                });
+                popup.show();
+                return false;
             }
         });
 
@@ -154,9 +233,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position, View v) {
                 String forecastName = forecastItems.get(position).getForecastName();
-                Intent intent = new Intent(MainActivity.this, ForecastActivity.class);
-                intent.putExtra("ForecastName", forecastName);
-                startActivityForResult(intent, 2);
+                openForecastView(forecastName);
             }
         });
 
@@ -204,7 +281,49 @@ public class MainActivity extends AppCompatActivity {
         //clearUselessLocations();
         saveData();
 
+        //start from notification behaviour
+        if (getIntent().hasExtra("fromNotification")) {
+            openForecastView(getIntent().getStringExtra("ForecastName"));
+        }
+
         doNothing();
+    }
+
+    //done
+    private void cancelOldNotifications()
+    {
+        if(notificationsID.isEmpty() == false)
+        {
+            NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+            for(NotificationID notification : notificationsID)
+            {
+                managerCompat.cancel(notification.getId());
+            }
+            notificationsID.clear();
+        }
+    }
+
+    //done
+    private void scheduleJob(int minutesPeriod)
+    {
+        ComponentName componentName = new ComponentName(this, AlarmsJobService.class);
+        JobInfo info = new JobInfo.Builder(12, componentName)
+                .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+                .setPersisted(true)
+                .setPeriodic(minutesPeriod * (60 * 1000))
+                .build();
+
+        JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+        int resultCode = scheduler.schedule(info);
+        if(resultCode == JobScheduler.RESULT_SUCCESS)
+            Log.println(Log.INFO,"JOB", "Job scheduled!");
+    }
+
+    //done
+    private void cancelJob()
+    {
+        JobScheduler scheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+        scheduler.cancel(12);
     }
 
     private void clearUselessLocations()
@@ -310,6 +429,10 @@ public class MainActivity extends AppCompatActivity {
         json = gson.toJson(alarms);
         editor.putString("alarms", json);
         editor.apply();
+        //save notifications IDs:
+        json = gson.toJson(notificationsID);
+        editor.putString("notifications", json);
+        editor.apply();
     }
 
     //done
@@ -325,25 +448,25 @@ public class MainActivity extends AppCompatActivity {
         type = new TypeToken<ArrayList<Forecast>>() {}.getType();
         forecasts = gson.fromJson(json, type);
         if(forecasts == null)
-        {
             forecasts = new ArrayList<>();
-        }
         //load locations:
         json = sharedPreferences.getString("locations", null);
         type = new TypeToken<ArrayList<Location>>() {}.getType();
         locations = gson.fromJson(json, type);
         if(locations == null)
-        {
             locations = new ArrayList<>();
-        }
         //load alarms:
         json = sharedPreferences.getString("alarms", null);
         type = new TypeToken<ArrayList<Alarm>>() {}.getType();
         alarms = gson.fromJson(json, type);
         if(alarms == null)
-        {
             alarms = new ArrayList<>();
-        }
+        //load notifications
+        json = sharedPreferences.getString("notifications", null);
+        type = new TypeToken<ArrayList<NotificationID>>() {}.getType();
+        notificationsID = gson.fromJson(json, type);
+        if(notificationsID == null)
+            notificationsID = new ArrayList<>();
     }
 
     //done
@@ -408,6 +531,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //done
     private void notifyAlarm(Alarm alarm, List<String> daysFound)
     {
         //set texts
@@ -423,48 +547,31 @@ public class MainActivity extends AppCompatActivity {
 
         //create builder
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this,
-                "MyNot");
+                "MyNotif");
         builder.setContentTitle(title);
         builder.setSmallIcon(R.drawable.notification_icon);
         builder.setContentText(firstRow);
-        builder.setStyle(new NotificationCompat.BigTextStyle().bigText(secondRow));
+        builder.setStyle(new NotificationCompat.BigTextStyle().bigText(firstRow + "\n" + secondRow));
         builder.setAutoCancel(true);
         builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
+        Intent intent = new Intent(this, MainActivity.class);
+        String forecastName = getForecastByLocation(alarm.getLocation()).getName();
+        intent.putExtra("ForecastName", forecastName);
+        intent.putExtra("fromNotification", true);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 2,
+                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(pendingIntent);
+
         //notify
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
-        managerCompat.notify(1,builder.build());
+        Random rand = new Random();
+        int notificationID = rand.nextInt();
+        notificationsID.add(new NotificationID(notificationID));
+        managerCompat.notify(notificationID, builder.build());
 
         Log.println(Log.INFO,"NOTIFICATION", firstRow + secondRow);
-    }
-
-    //done
-    public static JSONObject getWeatherJSON(String lat, String lon, String mode)
-    {
-        try{
-            URL url;
-            if(mode == "FORECAST")
-                url = new URL(String.format(FORECAST_URL, lat, lon, API_KEY));
-            else
-                url = new URL(String.format(CURRENT_URL, lat, lon, API_KEY));
-            URLConnection connection = url.openConnection();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(connection
-                    .getInputStream()));
-            StringBuffer json = new StringBuffer(1024);
-            String tmp;
-            while((tmp = reader.readLine()) != null)
-            {
-                json.append(tmp).append("\n");
-            }
-            reader.close();
-            JSONObject data = new JSONObject(json.toString());
-            /*if(data.getInt("cod") != 200)
-                return null;*/
-            return data;
-        } catch (Exception e){
-            Log.d("Error", "Something went wrong", e);
-            return null;
-        }
     }
 
     //done
@@ -858,6 +965,24 @@ public class MainActivity extends AppCompatActivity {
             }
             index++;
         }
+    }
+
+    //done
+    private Forecast getForecastByLocation(Location location)
+    {
+        for(Forecast forecast : forecasts)
+        {
+            if(forecast.getLocation().getName().equals(location.getName()))
+                return forecast;
+        }
+        return null;
+    }
+
+    private void openForecastView(String forecastName)
+    {
+        Intent intent = new Intent(MainActivity.this, ForecastActivity.class);
+        intent.putExtra("ForecastName", forecastName);
+        startActivityForResult(intent, 2);
     }
 
 }

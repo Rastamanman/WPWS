@@ -64,7 +64,7 @@ public class AlarmActivity extends AppCompatActivity {
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if(item.getTitle().toString().toUpperCase(Locale.ROOT) == "DELETE")
+                        if(item.getTitle().equals("Delete"))
                         {
                             //open are you sure Dialog
                             View view = getLayoutInflater().inflate(R.layout.are_you_sure_dialog
@@ -82,7 +82,7 @@ public class AlarmActivity extends AppCompatActivity {
                                     Intent intent = new Intent();
                                     //intent.putExtra("WhatToDo", "DELETE_FORECAST");
                                     intent.putExtra("AlarmName", alarmName.getText().toString());
-                                    setResult(3, intent);
+                                    setResult(2, intent);
                                     finish();
                                 }
                             });

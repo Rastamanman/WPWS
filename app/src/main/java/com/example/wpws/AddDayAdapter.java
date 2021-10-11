@@ -149,7 +149,7 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
             //min temp
             minTempText.setText(day.getMinTempText());
             minTempMode.setAdapter(day.getAdapter());
-            minTempMode.setSelection(day.getMaxTempMode());
+            minTempMode.setSelection(day.getMinTempMode());
             minTempMode.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -189,8 +189,7 @@ public class AddDayAdapter extends RecyclerView.Adapter<AddDayAdapter.AddDayView
                 @Override
                 public void onTextChanged(EditText target, Editable s){
                     if(target.getText().toString().isEmpty() == false)
-                        day.setMaxTempValue((float)(Math.round(Double.parseDouble(target.getText().toString())
-                                * 100.0) / 100.0));
+                        day.setMaxTempValue(Float.parseFloat(maxTempValue.getText().toString()));
                 }
             });
             maxTempSymbol.setText(day.getMaxTempSymbol());

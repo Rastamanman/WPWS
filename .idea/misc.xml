@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/alarm_item.xml" value="0.22" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/alarms_settings.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/menu/popup_alarm.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/menu/popup_menu.xml" value="0.22604166666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WPWS/app/src/main/res/drawable/background.xml" value="0.3828125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WPWS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WPWS/app/src/main/res/layout/activity_alarm.xml" value="0.2803442028985507" />
@@ -22,7 +27,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

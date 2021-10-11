@@ -79,7 +79,7 @@ public class Condition {
                 conditionMode = ConditionMode.DONT_CARE;
                 break;
         }
-        value = value;
+        this.value = value;
     }
 
     public boolean checkConditionFor(Day zi) {

@@ -2017,6 +2017,7 @@ int id add_forecast_name 0x7f08004d
 int id add_forecast_title 0x7f08004e
 int id adjust_height 0x7f08004f
 int id adjust_width 0x7f080050
+int id alarams_settings 0x7f08027e
 int id alarm_dialog_add_day 0x7f080051
 int id alarm_dialog_button 0x7f080052
 int id alarm_dialog_conditions_text 0x7f080053
@@ -2072,6 +2073,7 @@ int id center_horizontal 0x7f080084
 int id center_vertical 0x7f080085
 int id chain 0x7f080086
 int id chains 0x7f080087
+int id check_alarms 0x7f08027f
 int id checkbox 0x7f080088
 int id checked 0x7f080089
 int id chip 0x7f08008a
@@ -2216,6 +2218,7 @@ int id fill 0x7f080114
 int id fill_horizontal 0x7f080115
 int id fill_vertical 0x7f080116
 int id filled 0x7f080117
+int id first_title 0x7f080280
 int id fitToContents 0x7f080118
 int id fixed 0x7f080119
 int id flip 0x7f08011a
@@ -2359,6 +2362,7 @@ int id none 0x7f0801a3
 int id normal 0x7f0801a4
 int id north 0x7f0801a5
 int id notification_background 0x7f0801a6
+int id notification_choice 0x7f080281
 int id notification_main_column 0x7f0801a7
 int id notification_main_column_container 0x7f0801a8
 int id off 0x7f0801a9
@@ -2411,6 +2415,7 @@ int id right_icon 0x7f0801d7
 int id right_side 0x7f0801d8
 int id rounded 0x7f0801d9
 int id row_index_key 0x7f0801da
+int id save_button 0x7f080282
 int id save_non_transition_alpha 0x7f0801db
 int id save_overlay_view 0x7f0801dc
 int id sawtooth 0x7f0801dd
@@ -2431,6 +2436,7 @@ int id search_mag_icon 0x7f0801eb
 int id search_plate 0x7f0801ec
 int id search_src_text 0x7f0801ed
 int id search_voice_btn 0x7f0801ee
+int id second_title 0x7f080283
 int id select_dialog_listview 0x7f0801ef
 int id selected 0x7f0801f0
 int id selected_average_temp 0x7f0801f1
@@ -2649,6 +2655,7 @@ int layout add_alarm_dialog 0x7f0b001f
 int layout add_day_item 0x7f0b0020
 int layout add_forecast_dialog 0x7f0b0021
 int layout alarm_item 0x7f0b0022
+int layout alarms_settings 0x7f0b0083
 int layout are_you_sure_dialog 0x7f0b0023
 int layout custom_dialog 0x7f0b0024
 int layout day_cond_item 0x7f0b0025
@@ -2745,6 +2752,7 @@ int layout text_view_with_line_height_from_layout 0x7f0b007f
 int layout text_view_with_line_height_from_style 0x7f0b0080
 int layout text_view_with_theme_line_height 0x7f0b0081
 int layout text_view_without_line_height 0x7f0b0082
+int menu popup_alarm 0x7f0c0001
 int menu popup_menu 0x7f0c0000
 int mipmap app_icon 0x7f0d0000
 int mipmap app_icon_background 0x7f0d0001
