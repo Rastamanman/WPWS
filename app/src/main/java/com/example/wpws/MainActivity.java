@@ -139,10 +139,6 @@ public class MainActivity extends AppCompatActivity {
         //build recycler view
         buildRecycler();
 
-        //check alarms for every location
-        //checkAlarms();
-        scheduleJob(2);
-
         //button to load forecasts in recycler
         ImageButton forecastsButton = findViewById(R.id.forecasts_button);
         forecastsButton.setOnClickListener(new View.OnClickListener() {
@@ -365,6 +361,15 @@ public class MainActivity extends AppCompatActivity {
                     //forecast delete
                     String forecastToDelete = intent.getStringExtra("ForecastName");
                     deleteForecast(forecastToDelete);
+                    break;
+                case 4:
+                    //set coordinates from dialog
+                    EditText name = (EditText) findViewById(R.id.add_forecast_name);
+                    EditText latitude = (EditText) findViewById(R.id.add_forecast_latitude);
+                    EditText longitude = (EditText) findViewById(R.id.add_forecast_longitude);
+                    name.setText(intent.getStringExtra("name"));
+                    latitude.setText(intent.getStringExtra("latitude"));
+                    longitude.setText(intent.getStringExtra("longitude"));
                     break;
                 default:
                     break;
@@ -638,6 +643,28 @@ public class MainActivity extends AppCompatActivity {
         dialogBuilder.setView(newForecastView);
         dialog = dialogBuilder.create();
         dialog.show();
+
+        //map button
+        Button mapButton = (Button) newForecastView.findViewById(R.id.map_button);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //open map activity to get coordinates
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                if((newForecastLatitude.getText().toString().isEmpty() == false ||
+                        newForecastLongitude.getText().toString().isEmpty() == false) &&
+                        newForecastName.getText().toString().isEmpty() == false)
+                {
+                    intent.putExtra("editMode", true);
+                    intent.putExtra("latitude", newForecastLatitude.getText().toString());
+                    intent.putExtra("longitude", newForecastLongitude.getText().toString());
+                }
+                startActivityForResult(intent, 4);
+
+                //get extras and set coordinates
+
+            }
+        });
 
         //click on add button
         newForecastButton.setOnClickListener(new View.OnClickListener() {

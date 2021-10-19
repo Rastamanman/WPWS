@@ -5,13 +5,28 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="23"
-        android:targetSdkVersion="30" />
+        android:minSdkVersion="28"
+        android:targetSdkVersion="29" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- Include required permissions for Google Maps API to run. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <queries>
+
+        <!-- Needs to be explicitly declared on Android R+ -->
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -26,6 +41,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity android:name="com.example.wpws.ForecastActivity" />
+        <activity android:name="com.example.wpws.MapsActivity" />
         <activity android:name="com.example.wpws.AlarmActivity" />
         <activity android:name="com.example.wpws.MainActivity" >
             <intent-filter>
@@ -42,7 +58,14 @@
 
         <meta-data
             android:name="weatherKey"
-            android:value="WW_API" />
+            android:value="&quot;6c5da0a9e9694b94aa82f50bfd5e39d5&quot;" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="&quot;AIzaSyAQeX8CBP2B1NnXPxptWMOG7y14tIt4KJk&quot;" />
+        <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"

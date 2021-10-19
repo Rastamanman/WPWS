@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/drawable/white_border.xml" value="0.25092592592592594" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/activity_forecast.xml" value="0.1" />
         <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/activity_main.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/activity_maps.xml" value="0.22" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/add_forecast_dialog.xml" value="0.1640625" />
         <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/alarm_item.xml" value="0.22" />
         <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/layout/alarms_settings.xml" value="0.21965579710144928" />
         <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/menu/popup_alarm.xml" value="0.22604166666666667" />
         <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/menu/popup_menu.xml" value="0.22604166666666667" />
+        <entry key="..\:/Users/Augu/Documents/WhenWeather/app/src/main/res/mipmap-anydpi-v26/app_icon.xml" value="0.25092592592592594" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WPWS/app/src/main/res/drawable/background.xml" value="0.3828125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WPWS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WPWS/app/src/main/res/layout/activity_alarm.xml" value="0.2803442028985507" />
