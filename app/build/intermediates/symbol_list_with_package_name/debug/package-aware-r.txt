@@ -2288,7 +2288,6 @@ id hybrid
 id icon
 id icon_group
 id icon_only
-id icon_search
 id ifRoom
 id ignore
 id ignoreRequest
@@ -2315,8 +2314,8 @@ id listMode
 id list_item
 id main_recycler
 id map
+id map_add_button
 id map_button
-id map_search_input
 id masked
 id match_constraint
 id match_parent
@@ -2438,7 +2437,6 @@ id rain_text
 id ratio
 id rectangles
 id relative_layout
-id relative_layout_search
 id reverseSawtooth
 id rh_edit
 id rh_spinner

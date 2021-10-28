@@ -4,11 +4,11 @@
     name=":app"
     type="APP"
     maven="WPWS:app:"
-    gradle="7.0.2"
+    gradle="7.0.3"
     buildFolder="build"
-    bootClassPath="C:\Users\user\AppData\Local\Android\Sdk\platforms\android-30\android.jar;C:\Users\user\AppData\Local\Android\Sdk\build-tools\30.0.2\core-lambda-stubs.jar"
+    bootClassPath="C:\Users\user\AppData\Local\Android\Sdk\platforms\android-29\android.jar;C:\Users\user\AppData\Local\Android\Sdk\build-tools\30.0.2\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
-    compileTarget="android-30"
+    compileTarget="android-29"
     neverShrinking="true">
   <lintOptions
       abortOnError="true"

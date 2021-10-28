@@ -1,6 +1,8 @@
 <dependencies>
   <compile
-      roots="androidx.legacy:legacy-support-v4:1.0.0@aar,androidx.legacy:legacy-support-core-ui:1.0.0@aar,androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar,com.google.android.material:material:1.4.0@aar,androidx.appcompat:appcompat:1.3.1@aar,androidx.constraintlayout:constraintlayout:2.1.0@aar,androidx.viewpager2:viewpager2:1.0.0@aar,androidx.recyclerview:recyclerview:1.2.1@aar,com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0@jar,com.google.code.gson:gson:2.8.7@jar,com.google.android.gms:play-services-location:18.0.0@aar,com.google.android.gms:play-services-base:17.5.0@aar,com.google.android.gms:play-services-places-placereport:17.0.0@aar,com.google.android.gms:play-services-tasks:17.2.0@aar,com.google.android.gms:play-services-basement:17.5.0@aar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.2.4@aar,androidx.appcompat:appcompat-resources:1.3.1@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.dynamicanimation:dynamicanimation:1.0.0@aar,androidx.transition:transition:1.2.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.media:media:1.0.0@aar,androidx.legacy:legacy-support-core-utils:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar,androidx.core:core:1.5.0@aar,androidx.interpolator:interpolator:1.0.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1@aar,androidx.savedstate:savedstate:1.1.0@aar,androidx.cardview:cardview:1.0.0@aar,androidx.lifecycle:lifecycle-runtime:2.3.1@aar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.3.1@aar,androidx.lifecycle:lifecycle-common:2.3.1@jar,androidx.arch.core:core-runtime:2.1.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.documentfile:documentfile:1.0.0@aar,androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar,androidx.print:print:1.0.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.annotation:annotation-experimental:1.0.0@aar">
+      roots="androidx.databinding:viewbinding:7.0.3@aar,androidx.legacy:legacy-support-v4:1.0.0@aar,androidx.legacy:legacy-support-core-ui:1.0.0@aar,androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar,com.google.android.gms:play-services-maps:17.0.1@aar,com.google.android.material:material:1.4.0@aar,androidx.appcompat:appcompat:1.3.1@aar,androidx.constraintlayout:constraintlayout:2.1.1@aar,androidx.viewpager2:viewpager2:1.0.0@aar,androidx.recyclerview:recyclerview:1.2.1@aar,com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0@jar,com.google.code.gson:gson:2.8.7@jar,com.google.android.gms:play-services-location:18.0.0@aar,com.google.android.gms:play-services-base:17.5.0@aar,com.google.android.gms:play-services-places-placereport:17.0.0@aar,com.google.android.gms:play-services-tasks:17.2.0@aar,com.google.android.gms:play-services-basement:17.5.0@aar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.2.4@aar,androidx.appcompat:appcompat-resources:1.3.1@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.dynamicanimation:dynamicanimation:1.0.0@aar,androidx.transition:transition:1.2.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.media:media:1.0.0@aar,androidx.legacy:legacy-support-core-utils:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar,androidx.core:core:1.5.0@aar,androidx.interpolator:interpolator:1.0.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1@aar,androidx.savedstate:savedstate:1.1.0@aar,androidx.cardview:cardview:1.0.0@aar,androidx.lifecycle:lifecycle-runtime:2.3.1@aar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.3.1@aar,androidx.lifecycle:lifecycle-common:2.3.1@jar,androidx.arch.core:core-runtime:2.1.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.documentfile:documentfile:1.0.0@aar,androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar,androidx.print:print:1.0.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.annotation:annotation-experimental:1.0.0@aar">
+    <dependency
+        name="androidx.databinding:viewbinding:7.0.3@aar"/>
     <dependency
         name="androidx.legacy:legacy-support-v4:1.0.0@aar"/>
     <dependency
@@ -8,11 +10,13 @@
     <dependency
         name="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar"/>
     <dependency
+        name="com.google.android.gms:play-services-maps:17.0.1@aar"/>
+    <dependency
         name="com.google.android.material:material:1.4.0@aar"/>
     <dependency
         name="androidx.appcompat:appcompat:1.3.1@aar"/>
     <dependency
-        name="androidx.constraintlayout:constraintlayout:2.1.0@aar"/>
+        name="androidx.constraintlayout:constraintlayout:2.1.1@aar"/>
     <dependency
         name="androidx.viewpager2:viewpager2:1.0.0@aar"/>
     <dependency
@@ -80,9 +84,9 @@
     <dependency
         name="androidx.versionedparcelable:versionedparcelable:1.1.1@aar"/>
     <dependency
-        name="androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar"/>
-    <dependency
         name="androidx.collection:collection:1.1.0@jar"/>
+    <dependency
+        name="androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar"/>
     <dependency
         name="androidx.lifecycle:lifecycle-livedata:2.0.0@aar"/>
     <dependency
@@ -105,7 +109,9 @@
         name="androidx.annotation:annotation-experimental:1.0.0@aar"/>
   </compile>
   <package
-      roots="androidx.legacy:legacy-support-v4:1.0.0@aar,androidx.legacy:legacy-support-core-ui:1.0.0@aar,androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar,com.google.android.material:material:1.4.0@aar,androidx.constraintlayout:constraintlayout:2.1.0@aar,androidx.appcompat:appcompat:1.3.1@aar,androidx.viewpager2:viewpager2:1.0.0@aar,androidx.recyclerview:recyclerview:1.2.1@aar,com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0@jar,com.google.code.gson:gson:2.8.7@jar,com.google.android.gms:play-services-location:18.0.0@aar,androidx.appcompat:appcompat-resources:1.3.1@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.interpolator:interpolator:1.0.0@aar,com.google.android.gms:play-services-base:17.5.0@aar,com.google.android.gms:play-services-places-placereport:17.0.0@aar,com.google.android.gms:play-services-tasks:17.2.0@aar,com.google.android.gms:play-services-basement:17.5.0@aar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.2.4@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.dynamicanimation:dynamicanimation:1.0.0@aar,androidx.transition:transition:1.2.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.media:media:1.0.0@aar,androidx.legacy:legacy-support-core-utils:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar,androidx.core:core:1.5.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1@aar,androidx.savedstate:savedstate:1.1.0@aar,androidx.lifecycle:lifecycle-runtime:2.3.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar,androidx.cardview:cardview:1.0.0@aar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.tracing:tracing:1.0.0@aar,androidx.collection:collection:1.1.0@jar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.3.1@aar,androidx.lifecycle:lifecycle-common:2.3.1@jar,androidx.arch.core:core-runtime:2.1.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.documentfile:documentfile:1.0.0@aar,androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar,androidx.print:print:1.0.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.constraintlayout:constraintlayout-core:1.0.0@jar,androidx.annotation:annotation-experimental:1.0.0@aar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10@jar,org.jetbrains.kotlin:kotlin-stdlib:1.4.10@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.4.10@jar,org.jetbrains:annotations:13.0@jar">
+      roots="androidx.databinding:viewbinding:7.0.3@aar,androidx.legacy:legacy-support-v4:1.0.0@aar,androidx.legacy:legacy-support-core-ui:1.0.0@aar,androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar,com.google.android.gms:play-services-maps:17.0.1@aar,com.google.android.material:material:1.4.0@aar,androidx.constraintlayout:constraintlayout:2.1.1@aar,androidx.appcompat:appcompat:1.3.1@aar,androidx.viewpager2:viewpager2:1.0.0@aar,androidx.recyclerview:recyclerview:1.2.1@aar,com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0@jar,com.google.code.gson:gson:2.8.7@jar,com.google.android.gms:play-services-location:18.0.0@aar,androidx.appcompat:appcompat-resources:1.3.1@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.interpolator:interpolator:1.0.0@aar,com.google.android.gms:play-services-base:17.5.0@aar,com.google.android.gms:play-services-places-placereport:17.0.0@aar,com.google.android.gms:play-services-tasks:17.2.0@aar,com.google.android.gms:play-services-basement:17.5.0@aar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.2.4@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.coordinatorlayout:coordinatorlayout:1.1.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar,androidx.customview:customview:1.0.0@aar,androidx.dynamicanimation:dynamicanimation:1.0.0@aar,androidx.transition:transition:1.2.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.media:media:1.0.0@aar,androidx.legacy:legacy-support-core-utils:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar,androidx.core:core:1.5.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1@aar,androidx.savedstate:savedstate:1.1.0@aar,androidx.lifecycle:lifecycle-runtime:2.3.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar,androidx.cardview:cardview:1.0.0@aar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.tracing:tracing:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.0.0@aar,androidx.lifecycle:lifecycle-livedata-core:2.3.1@aar,androidx.lifecycle:lifecycle-common:2.3.1@jar,androidx.arch.core:core-runtime:2.1.0@aar,androidx.arch.core:core-common:2.1.0@jar,androidx.documentfile:documentfile:1.0.0@aar,androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar,androidx.print:print:1.0.0@aar,androidx.annotation:annotation:1.2.0@jar,androidx.constraintlayout:constraintlayout-core:1.0.1@jar,androidx.annotation:annotation-experimental:1.0.0@aar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10@jar,org.jetbrains.kotlin:kotlin-stdlib:1.4.10@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.4.10@jar,org.jetbrains:annotations:13.0@jar">
+    <dependency
+        name="androidx.databinding:viewbinding:7.0.3@aar"/>
     <dependency
         name="androidx.legacy:legacy-support-v4:1.0.0@aar"/>
     <dependency
@@ -113,9 +119,11 @@
     <dependency
         name="androidx.swiperefreshlayout:swiperefreshlayout:1.1.0@aar"/>
     <dependency
+        name="com.google.android.gms:play-services-maps:17.0.1@aar"/>
+    <dependency
         name="com.google.android.material:material:1.4.0@aar"/>
     <dependency
-        name="androidx.constraintlayout:constraintlayout:2.1.0@aar"/>
+        name="androidx.constraintlayout:constraintlayout:2.1.1@aar"/>
     <dependency
         name="androidx.appcompat:appcompat:1.3.1@aar"/>
     <dependency
@@ -187,9 +195,9 @@
     <dependency
         name="androidx.versionedparcelable:versionedparcelable:1.1.1@aar"/>
     <dependency
-        name="androidx.tracing:tracing:1.0.0@aar"/>
-    <dependency
         name="androidx.collection:collection:1.1.0@jar"/>
+    <dependency
+        name="androidx.tracing:tracing:1.0.0@aar"/>
     <dependency
         name="androidx.lifecycle:lifecycle-livedata:2.0.0@aar"/>
     <dependency
@@ -209,7 +217,7 @@
     <dependency
         name="androidx.annotation:annotation:1.2.0@jar"/>
     <dependency
-        name="androidx.constraintlayout:constraintlayout-core:1.0.0@jar"/>
+        name="androidx.constraintlayout:constraintlayout-core:1.0.1@jar"/>
     <dependency
         name="androidx.annotation:annotation-experimental:1.0.0@aar"/>
     <dependency

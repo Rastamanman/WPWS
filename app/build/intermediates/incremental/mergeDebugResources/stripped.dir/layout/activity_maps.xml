@@ -12,7 +12,18 @@
         tools:context=".MapsActivity">
     </fragment>
 
-    <RelativeLayout
+    <Button
+        android:id="@+id/map_add_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="2dp"
+        android:layout_centerVertical="true"
+        android:text="Use this location."
+        android:textAlignment="center" />
+
+    <!-- <RelativeLayout
+
         android:id="@+id/relative_layout_search"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -40,4 +51,8 @@
             android:hint="Enter Adress, City Name or Zip Code"
             android:imeOptions="actionSearch"/>
     </RelativeLayout>
+    -->
+
 </RelativeLayout>
+
+

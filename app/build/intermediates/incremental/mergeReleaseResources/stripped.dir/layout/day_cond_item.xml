@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp">
+        <TextView
+            android:id="@+id/day_condition_number"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:text="Day #"
+            android:textSize="30sp">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_temp"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:autoSizeTextType="uniform"
+            android:text="Temp &lt;= 999 C"
+            android:layout_below="@+id/day_condition_number">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_rh"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="RH &lt;= 100%"
+            android:layout_below="@+id/day_condition_temp">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_pressure"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Pressure &lt;= 1083.5 mb"
+            android:layout_below="@+id/day_condition_rh">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_min_temp"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Min temp &lt;= 999.9 C"
+            android:layout_below="@+id/day_condition_pressure">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_max_temp"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Max temp &lt;= 999.9 C"
+            android:layout_below="@+id/day_condition_min_temp">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_snow"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:autoSizeTextType="uniform"
+            android:text="Snow &lt;= 2000 mm"
+            android:layout_toRightOf="@id/day_condition_temp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/day_condition_clouds"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/day_condition_snow"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Clouds &lt;= 100.0%"></TextView>
+        <TextView
+            android:id="@+id/day_condition_wind_speed"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Wind speed &lt;= 500000 m/s"
+            android:layout_below="@+id/day_condition_clouds">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_precipitation"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Precip &lt;= 999.9 mm"
+            android:layout_below="@+id/day_condition_wind_speed">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_rain"
+            android:layout_width="190dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:autoSizeTextType="uniform"
+            android:text="Chance of rain &lt;= 100.0%"
+            android:layout_below="@+id/day_condition_precipitation">
+        </TextView>
+        <TextView
+            android:id="@+id/day_condition_separator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/day_condition_rain"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="25dp"
+            android:text="_______________________________________________________"
+            android:textColor="#cdc7c7"></TextView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

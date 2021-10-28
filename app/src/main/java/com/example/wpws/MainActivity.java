@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case "FORECAST":
                         //call AddForecast dialog
-                        createNewForecastDialog();
+                        createNewForecastDialog("",0,0);
                         break;
                     default:
                         break;
@@ -364,12 +364,11 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 4:
                     //set coordinates from dialog
-                    EditText name = (EditText) findViewById(R.id.add_forecast_name);
-                    EditText latitude = (EditText) findViewById(R.id.add_forecast_latitude);
-                    EditText longitude = (EditText) findViewById(R.id.add_forecast_longitude);
-                    name.setText(intent.getStringExtra("name"));
-                    latitude.setText(intent.getStringExtra("latitude"));
-                    longitude.setText(intent.getStringExtra("longitude"));
+                    Bundle bundle = intent.getExtras();
+                    float latitude = (float) bundle.getDouble("latitude", 0.00);
+                    float longitude = (float) bundle.getDouble("longitude", 0.00);
+                    String name = bundle.getString("name");
+                    createNewForecastDialog(name, latitude, longitude);
                     break;
                 default:
                     break;
@@ -628,7 +627,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //done
-    public void createNewForecastDialog()
+    public void createNewForecastDialog(String name, float latitude, float longitude)
     {
         //set dialog and views
         dialogBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -644,6 +643,13 @@ public class MainActivity extends AppCompatActivity {
         dialog = dialogBuilder.create();
         dialog.show();
 
+        if(name.equals("") == false)
+            newForecastName.setText(name);
+        if(latitude != 0)
+            newForecastLatitude.setText("" + latitude);
+        if(longitude != 0)
+            newForecastLongitude.setText("" + longitude);
+
         //map button
         Button mapButton = (Button) newForecastView.findViewById(R.id.map_button);
         mapButton.setOnClickListener(new View.OnClickListener() {
@@ -651,18 +657,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //open map activity to get coordinates
                 Intent intent = new Intent(MainActivity.this, MapsActivity.class);
-                if((newForecastLatitude.getText().toString().isEmpty() == false ||
-                        newForecastLongitude.getText().toString().isEmpty() == false) &&
+                if(newForecastLatitude.getText().toString().isEmpty() == false ||
+                        newForecastLongitude.getText().toString().isEmpty() == false ||
                         newForecastName.getText().toString().isEmpty() == false)
                 {
                     intent.putExtra("editMode", true);
                     intent.putExtra("latitude", newForecastLatitude.getText().toString());
                     intent.putExtra("longitude", newForecastLongitude.getText().toString());
+                    intent.putExtra("name", newForecastName.getText().toString());
                 }
-                startActivityForResult(intent, 4);
-
-                //get extras and set coordinates
-
+                startActivityForResult(intent, 2);
+                dialog.dismiss();
             }
         });
 

@@ -71,6 +71,7 @@ com/example/wpws/ForecastActivity.java
  com.example.wpws.ForecastActivity$1$1$2
  com.example.wpws.ForecastActivity$2
  com.example.wpws.ForecastActivity$3
+ com.example.wpws.ForecastActivity$4
 com/example/wpws/AlarmsJobService.java
  com.example.wpws.AlarmsJobService
  com.example.wpws.AlarmsJobService$1
@@ -132,6 +133,7 @@ com/example/wpws/databinding/AlarmsSettingsBinding.java
 com/example/wpws/MapsActivity.java
  com.example.wpws.MapsActivity
  com.example.wpws.MapsActivity$1
+ com.example.wpws.MapsActivity$2
 com/example/wpws/ForecastAdapter.java
  com.example.wpws.ForecastAdapter
  com.example.wpws.ForecastAdapter$ClickListener

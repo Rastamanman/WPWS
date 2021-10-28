@@ -1,13 +1,14 @@
 <variant
     name="release"
     package="com.example.wpws"
-    minSdkVersion="23"
-    targetSdkVersion="30"
+    minSdkVersion="28"
+    targetSdkVersion="29"
     mergedManifest="build\intermediates\merged_manifest\release\AndroidManifest.xml"
     manifestMergeReport="build\outputs\logs\manifest-merger-release-report.txt"
-    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-7.0.2;proguard-rules.pro"
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-7.0.3;proguard-rules.pro"
     partialResultsDir="build\intermediates\lint_vital_partial_results\release\out">
   <buildFeatures
+      viewBinding="true"
       namespacing="REQUIRED"/>
   <sourceProviders>
     <sourceProvider
@@ -35,10 +36,18 @@
         assetsDirectories="src\testRelease\assets"
         unitTest="true"/>
   </testSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="MAPS_API_KEY"
+        value="&quot;AIzaSyAGZtj-C37fndLy2_NbK1o9RIqJkCaC6iQ&quot;" />
+    <placeholder
+        name="WW_API"
+        value="&quot;6c5da0a9e9694b94aa82f50bfd5e39d5&quot;" />
+  </manifestPlaceholders>
   <mainArtifact
       classOutputs="build\intermediates\javac\release\classes;build\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
       applicationId="com.example.wpws"
-      generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\aidl_source_output_dir\release\out;build\generated\source\buildConfig\release;build\generated\renderscript_source_output_dir\release\out"
+      generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\aidl_source_output_dir\release\out;build\generated\source\buildConfig\release;build\generated\renderscript_source_output_dir\release\out;build\generated\data_binding_base_class_source_out\release\out"
       generatedResourceFolders="build\generated\res\rs\release;build\generated\res\resValues\release">
   </mainArtifact>
   <testArtifact>

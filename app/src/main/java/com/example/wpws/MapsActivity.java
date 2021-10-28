@@ -1,21 +1,27 @@
 package com.example.wpws;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.Projection;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.wpws.databinding.ActivityMapsBinding;
 
@@ -30,6 +36,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private EditText searchInput;
 
+    private Button addButton;
+    private Marker marker;
 
     private float latitude,longitude;
     private String name;
@@ -48,8 +56,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         if(getIntent().hasExtra("editMode"))
         {
-            latitude = (float) Float.parseFloat(getIntent().getStringExtra("latitude"));
-            longitude = (float) Float.parseFloat(getIntent().getStringExtra("longitude"));
+            if(getIntent().getStringExtra("latitude").isEmpty() == false)
+                latitude = (float) Float.parseFloat(getIntent().getStringExtra("latitude"));
+            else
+                latitude = 0;
+            if(getIntent().getStringExtra("longitude").isEmpty() == false)
+                longitude = (float) Float.parseFloat(getIntent().getStringExtra("longitude"));
+            else
+                longitude = 0;
             name = getIntent().getStringExtra("name");
         }
         else
@@ -75,21 +89,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if(list.size() > 0)
         {
             Address address = list.get(0);
-            moveCamera(new LatLng(address.getLatitude(), address.getLongitude()), 10);
+            moveCamera(new LatLng(address.getLatitude(), address.getLongitude()), 15);
+            addMarker(new LatLng(address.getLatitude(), address.getLongitude())
+                    , address.getAddressLine(0));
         }
     }
 
-    private void setMarker(LatLng position, String title)
+    private void cleanMarkers()
     {
+        mMap.clear();
+    }
+
+    private void addMarker(LatLng position, String title)
+    {
+        cleanMarkers();
+
         MarkerOptions options = new MarkerOptions()
                 .position(position)
                 .title(title);
-        mMap.addMarker(options);
+        marker = mMap.addMarker(options);
     }
 
     private void moveCamera(LatLng position, float zoom)
     {
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(position, zoom));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, zoom));
     }
 
     /**
@@ -107,10 +130,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng myLocation = new LatLng(latitude, longitude);
-        mMap.addMarker(new MarkerOptions().position(myLocation).title(name));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
+        addMarker(myLocation, name);
+        moveCamera(myLocation, 3);
 
-        searchInput = (EditText) findViewById(R.id.map_search_input);
+        //search a place
+        /*searchInput = (EditText) findViewById(R.id.map_search_input);
         searchInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -118,10 +142,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         || actionId == EditorInfo.IME_ACTION_DONE
                         || actionId == KeyEvent.ACTION_DOWN
                         || actionId == KeyEvent.KEYCODE_ENTER)
-
                     //search location
                     geoLocate();
                 return false;
+            }
+        });*/
+
+        //add location
+        addButton = findViewById(R.id.map_add_button);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 Intent intent = new Intent();
+                 intent.putExtra("latitude", marker.getPosition().latitude);
+                 intent.putExtra("longitude", marker.getPosition().longitude);
+                 intent.putExtra("name", marker.getTitle());
+                 setResult(4, intent);
+                 finish();
+            }
+        });
+
+        //long tap to add a marker
+        mMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+            @Override
+            public void onMapLongClick(@NonNull LatLng latLng) {
+                addMarker(latLng, name);
             }
         });
     }

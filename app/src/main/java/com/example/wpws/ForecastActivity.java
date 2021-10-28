@@ -107,7 +107,8 @@ public class ForecastActivity extends AppCompatActivity {
                         else
                         {
                             //open edit dialog
-                            createEditDialog();
+                            createEditDialog(forecast.getName(), forecast.getLatitude()
+                                    , forecast.getLongitude());
                         }
                         return false;
                     }
@@ -118,8 +119,25 @@ public class ForecastActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+
+        super.onActivityResult(requestCode, resultCode, intent);
+        if(requestCode == 2)
+            switch(resultCode){
+                case 4:
+                    String name = intent.getStringExtra("name");
+                    float latitude = (float)intent.getDoubleExtra("latitude", forecast.getLatitude());
+                    float longitude = (float)intent.getDoubleExtra("longitude", forecast.getLongitude());
+                    createEditDialog(name, latitude, longitude);
+                    break;
+                default:
+                    break;
+            }
+    }
+
     //done
-    private void createEditDialog() {
+    private void createEditDialog(String name, float latitude, float longitude) {
         View view = getLayoutInflater().inflate(R.layout.add_forecast_dialog, null);
         TextView forecastTitle = (TextView) view.findViewById(R.id.add_forecast_title);
         EditText forecastName = (EditText) view.findViewById(R.id.add_forecast_name);
@@ -130,14 +148,30 @@ public class ForecastActivity extends AppCompatActivity {
 
         //set texts
         forecastTitle.setText("Edit Forecast");
-        forecastName.setText(forecast.getName());
-        forecastLatitude.setText("" + forecast.getLatitude());
-        forecastLongitude.setText("" + forecast.getLongitude());
+        forecastName.setText(name);
+        forecastLatitude.setText("" + latitude);
+        forecastLongitude.setText("" + longitude);
 
         //show dialog
         dialogBuilder.setView(view);
         dialog = dialogBuilder.create();
         dialog.show();
+
+        //choose from map
+        Button mapButton = (Button) view.findViewById(R.id.map_button);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //open map activity to get coordinates
+                Intent intent = new Intent(ForecastActivity.this, MapsActivity.class);
+                intent.putExtra("editMode", true);
+                intent.putExtra("latitude", forecastLatitude.getText().toString());
+                intent.putExtra("longitude", forecastLongitude.getText().toString());
+                intent.putExtra("name", forecastName.getText().toString());
+                startActivityForResult(intent, 2);
+                dialog.dismiss();
+            }
+        });
 
         //save button
         forecastSaveButton.setText("Save forecast");

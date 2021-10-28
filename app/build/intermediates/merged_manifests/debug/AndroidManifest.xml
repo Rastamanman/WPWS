@@ -37,7 +37,6 @@
         android:label="WhenWeather"
         android:roundIcon="@mipmap/app_icon_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity android:name="com.example.wpws.ForecastActivity" />
@@ -61,7 +60,7 @@
             android:value="&quot;6c5da0a9e9694b94aa82f50bfd5e39d5&quot;" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="&quot;AIzaSyAQeX8CBP2B1NnXPxptWMOG7y14tIt4KJk&quot;" />
+            android:value="AIzaSyAGZtj-C37fndLy2_NbK1o9RIqJkCaC6iQ" />
         <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"

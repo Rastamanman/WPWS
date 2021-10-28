@@ -6,137 +6,137 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="28"
-8-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml
+8-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml
+9-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-12-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:6:5-81
-12-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:6:22-78
+12-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:6:22-78
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:7:5-79
-13-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:7:22-76
+13-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:7:22-76
 14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-14-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:9:5-81
-14-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:9:22-78
+14-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:5-81
+14-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:22-78
 15    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-15-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:9:5-81
-15-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:9:22-78
+15-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:5-81
+15-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:22-78
 16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-16-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:9:5-81
-16-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:9:22-78
+16-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:5-81
+16-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:9:22-78
 17
 18    <!-- Include required permissions for Google Maps API to run. -->
 19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-19-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
-19-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:23:22-76
+19-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:5-79
+19-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:23:22-76
 20
 21    <uses-feature
-21-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
+21-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:26:5-28:35
 22        android:glEsVersion="0x00020000"
-22-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
+22-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:27:9-41
 23        android:required="true" />
-23-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
+23-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:28:9-32
 24
 25    <queries>
-25-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
+25-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:30:5-34:15
 26
 27        <!-- Needs to be explicitly declared on Android R+ -->
 28        <package android:name="com.google.android.apps.maps" />
-28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
-28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:9-64
+28-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:33:18-61
 29    </queries>
 30
 31    <application
-31-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:15:5-45:19
+31-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:15:5-45:19
 32        android:allowBackup="true"
-32-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:16:9-35
+32-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:16:9-35
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.5.0] C:\Users\Augu\.gradle\caches\transforms-3\d3fba2379ddbf259fc3f9b1b6a796e5e\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+33-->[androidx.core:core:1.5.0] C:\Users\user\.gradle\caches\transforms-3\d3fba2379ddbf259fc3f9b1b6a796e5e\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 34        android:debuggable="true"
 35        android:extractNativeLibs="false"
 36        android:icon="@mipmap/app_icon"
-36-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:17:9-40
+36-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:17:9-40
 37        android:label="WhenWeather"
-37-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:18:9-36
+37-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:18:9-36
 38        android:roundIcon="@mipmap/app_icon_round"
-38-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:19:9-51
+38-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:19:9-51
 39        android:supportsRtl="true"
-39-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:20:9-35
-40        android:testOnly="true"
-41        android:theme="@style/AppTheme"
-41-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:21:9-40
-42        android:usesCleartextTraffic="true" >
-42-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:22:9-44
-43        <activity android:name="com.example.wpws.ForecastActivity" />
-43-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:23:9-63
-43-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:23:19-51
-44        <activity android:name="com.example.wpws.MapsActivity" />
-44-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:24:9-49
-44-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:24:19-47
-45        <activity android:name="com.example.wpws.AlarmActivity" />
-45-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:25:9-51
-45-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:25:19-48
-46        <activity android:name="com.example.wpws.MainActivity" >
-46-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:26:9-31:20
-46-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:26:19-47
-47            <intent-filter>
-47-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:27:13-30:29
-48                <action android:name="android.intent.action.MAIN" />
-48-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:28:17-69
-48-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:28:25-66
-49
-50                <category android:name="android.intent.category.LAUNCHER" />
-50-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:29:17-77
-50-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:29:27-74
-51            </intent-filter>
-52        </activity>
-53
-54        <service
-54-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:33:9-36:72
-55            android:name="com.example.wpws.AlarmsJobService"
-55-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:34:13-45
-56            android:exported="false"
-56-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:35:13-37
-57            android:permission="android.permission.BIND_JOB_SERVICE" />
-57-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:36:13-69
-58
-59        <meta-data
-60            android:name="weatherKey"
-60-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:39:13-38
-61            android:value="&quot;6c5da0a9e9694b94aa82f50bfd5e39d5&quot;" />
-61-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:40:13-38
-62        <meta-data
-63            android:name="com.google.android.geo.API_KEY"
-63-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:43:13-58
-64            android:value="&quot;AIzaSyAQeX8CBP2B1NnXPxptWMOG7y14tIt4KJk&quot;" />
-64-->C:\Users\Augu\Documents\WhenWeather\app\src\main\AndroidManifest.xml:44:13-44
-65        <!-- Needs to be explicitly declared on P+ -->
-66        <uses-library
-66-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
-67            android:name="org.apache.http.legacy"
-67-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
-68            android:required="false" />
-68-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\Augu\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
-69
-70        <activity
-70-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-71            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-71-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-72            android:exported="false"
-72-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-73            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-73-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-74
-75        <meta-data
-75-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\7b67ae7a7ac2c85fa8460fe9db399117\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-76            android:name="com.google.android.gms.version"
-76-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\7b67ae7a7ac2c85fa8460fe9db399117\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-77            android:value="@integer/google_play_services_version" />
-77-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Augu\.gradle\caches\transforms-3\7b67ae7a7ac2c85fa8460fe9db399117\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-78    </application>
-79
-80</manifest>
+39-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:20:9-35
+40        android:theme="@style/AppTheme"
+40-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:21:9-40
+41        android:usesCleartextTraffic="true" >
+41-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:22:9-44
+42        <activity android:name="com.example.wpws.ForecastActivity" />
+42-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:23:9-53
+42-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:23:19-51
+43        <activity android:name="com.example.wpws.MapsActivity" />
+43-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:24:9-49
+43-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:24:19-47
+44        <activity android:name="com.example.wpws.AlarmActivity" />
+44-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:25:9-51
+44-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:25:19-48
+45        <activity android:name="com.example.wpws.MainActivity" >
+45-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:26:9-31:20
+45-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:26:19-47
+46            <intent-filter>
+46-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:27:13-30:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:28:17-69
+47-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:28:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:29:17-77
+49-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:29:27-74
+50            </intent-filter>
+51        </activity>
+52
+53        <service
+53-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:33:9-36:72
+54            android:name="com.example.wpws.AlarmsJobService"
+54-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:34:13-45
+55            android:exported="false"
+55-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:35:13-37
+56            android:permission="android.permission.BIND_JOB_SERVICE" />
+56-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:36:13-69
+57
+58        <meta-data
+59            android:name="weatherKey"
+59-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:39:13-38
+60            android:value="&quot;6c5da0a9e9694b94aa82f50bfd5e39d5&quot;" />
+60-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:40:13-38
+61        <meta-data
+61-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:42:9-44:71
+62            android:name="com.google.android.geo.API_KEY"
+62-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:43:13-58
+63            android:value="AIzaSyAGZtj-C37fndLy2_NbK1o9RIqJkCaC6iQ" />
+63-->C:\Users\user\AndroidStudioProjects\WPWS\app\src\main\AndroidManifest.xml:44:13-68
+64        <!-- Needs to be explicitly declared on P+ -->
+65        <uses-library
+65-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:39:9-41:40
+66            android:name="org.apache.http.legacy"
+66-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:40:13-50
+67            android:required="false" />
+67-->[com.google.android.gms:play-services-maps:17.0.1] C:\Users\user\.gradle\caches\transforms-3\441d56e070cc4d41cc6fea711c2cef46\transformed\jetified-play-services-maps-17.0.1\AndroidManifest.xml:41:13-37
+68
+69        <activity
+69-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+70            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+70-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+71            android:exported="false"
+71-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+72            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+72-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\user\.gradle\caches\transforms-3\9967f18b4e7f73dcd0c17682cfbe3b3b\transformed\jetified-play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+73
+74        <meta-data
+74-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\user\.gradle\caches\transforms-3\7b67ae7a7ac2c85fa8460fe9db399117\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+75            android:name="com.google.android.gms.version"
+75-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\user\.gradle\caches\transforms-3\7b67ae7a7ac2c85fa8460fe9db399117\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+76            android:value="@integer/google_play_services_version" />
+76-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\user\.gradle\caches\transforms-3\7b67ae7a7ac2c85fa8460fe9db399117\transformed\jetified-play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+77    </application>
+78
+79</manifest>

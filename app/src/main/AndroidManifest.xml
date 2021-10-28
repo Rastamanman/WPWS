@@ -20,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ForecastActivity"></activity>
+        <activity android:name=".ForecastActivity"/>
         <activity android:name=".MapsActivity"/>
         <activity android:name=".AlarmActivity" />
         <activity android:name=".MainActivity">
@@ -41,7 +41,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
+            android:value="AIzaSyAGZtj-C37fndLy2_NbK1o9RIqJkCaC6iQ" />
     </application>
 
 </manifest>

@@ -1,50 +1,50 @@
 [
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\forecast_item.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\forecast_item.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\day_cond_item.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\day_cond_item.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_alarm.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_alarm.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_day_item.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\add_day_item.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\alarm_item.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\alarm_item.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\alarm_item.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\alarm_item.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\alarms_settings.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\alarms_settings.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\alarms_settings.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\alarms_settings.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_forecast_dialog.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_forecast_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_forecast_dialog.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\add_forecast_dialog.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\forecast_item.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\forecast_item.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\day_cond_item.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\day_cond_item.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\are_you_sure_dialog.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\are_you_sure_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_maps.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_maps.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_alarm_dialog.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_alarm_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_forecast.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_forecast.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_day_item.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\add_day_item.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\add_alarm_dialog.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\add_alarm_dialog.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_forecast.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_forecast.xml"
     },
     {
-        "merged": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\are_you_sure_dialog.xml",
-        "source": "C:\\Users\\Augu\\Documents\\WhenWeather\\app\\src\\main\\res\\layout\\are_you_sure_dialog.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_alarm.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\WPWS\\app\\src\\main\\res\\layout\\activity_alarm.xml"
     }
 ]
